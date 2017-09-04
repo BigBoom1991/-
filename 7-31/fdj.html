@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				background: black;
+				margin: 0;
+			}
+			div{
+				position:absolute;
+				left:500px;
+				background:yellow;
+				top:50px;
+				height:200px;
+				width:200px;
+				/*border-radius: 100px;*/
+			}
+			p{
+				position:absolute;
+				display: none;
+				width:100px;
+				height:100px;
+				opacity: 0.5;
+				background: black;
+				margin:0;
+			}
+			img{
+				width:400px;
+				height:200px;
+			}
+		</style>
+	</head>
+	<body>
+			<img src="tp.png" id="tp"/>
+			<div id="fd"></div>
+			<p id="zz"></p>
+			<script>
+				document.onmousemove=function(n){
+					
+					var x=n.clientX-tp.offsetLeft;
+					var y=n.clientY-tp.offsetTop;
+					if(x>0&&x<400&&y>0&&y<200){
+						zz.style.display="block";
+						if(y>50&&y<150){
+							zz.style.top=n.clientY-50+"px";
+						}else if(y<50&&y>0){
+							zz.style.top=0;
+							y=50;
+						}else if(y>150&&y<200){
+							zz.style.top="100px";
+							y=150;
+						}
+						if(x>50&&x<350){
+							zz.style.left=n.clientX-50+"px";
+						}else if(x<50&&x>0){
+							zz.style.left=0;
+							x=50;
+						}else if(x>350&&x<400){
+							zz.style.left="300px";
+							x=150;
+						}
+					}else{
+						zz.style="";
+						fd.style="";
+					}
+					
+					fd.style.background="url(tp.png) "+((x-50)*-2)+"px "+((y-50)*-2)+"px/400% 200%"
+				}
+			</script>
+	</body>
+</html>

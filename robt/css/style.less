@@ -1,0 +1,84 @@
+//声明旋转函数
+@a:0deg;
+//声明旋转变量
+@ac:0deg;
+//声明旋转变化
+@A:@a+@ac;
+//声明旋转函数
+@a:0deg;
+//声明旋转变量
+@ac:0deg;
+//声明旋转变化
+@A:@a+@ac;
+//声明旋转函数
+@a:0deg;
+//声明旋转变量
+@ac:0deg;
+//声明旋转变化
+@A:@a+@ac;
+//声明循环
+.js(){
+   @a:@A;
+   @b:@B;
+   @c:@C;
+}
+.wrap{
+    margin:400px auto;
+    background-color:black;
+    width:400px;
+    height:700px;
+    transform-style:preserve-3d;
+    Perspective:1000px;
+}
+.body{
+    transform-style:preserve-3d;
+    position:absolute;
+    top:100px;
+    left:100px;
+    width:200px;
+    height:300px;
+    @x:200px;
+    @y:300px;
+    @z:100px;
+    *{
+    box-sizing: border-box;
+    border:1px solid #fff;
+    position:absolute;
+    }
+    .item1,.item2{
+    width:@x;
+    height:@y;
+    }
+    .item3,.item4{
+    width:@z;
+    height:@y;
+    }
+    .item5,.item6{
+    width:@x;
+    height:@z;
+    
+    }
+}
+//立方体变换
+
+
+//.item1,.item6,.item4{
+//  transform:translateZ(@z/2);
+//}
+//.item2,.item3,.item5{
+//  transform:translateZ(@z/-2);
+//}
+//.item3{
+//  transform:rotateY(270deg);
+//}
+//.item4{
+//  transform:rotateY(90deg);
+//  left:@x;
+//}
+//.item5{
+//  transform:rotateX(90deg);
+//}
+//.item6{
+//  transform:rotateX(270deg);
+//  top:@y;
+//}

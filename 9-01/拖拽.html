@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				top: 0;
+				left: 300px;
+			}
+			#box2 {
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			#box3 {
+				width: 500px;
+				height: 30px;
+				border: 1px solid #000;
+				position: relative;
+				margin-top: 120px;
+			}
+			#bar {
+				width: 30px;
+				height: 100%;
+				background: blue;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box2">
+		</div>
+		<div id="box3">
+			<div id="bar"></div>
+		</div>
+		<script>
+			class newGlz{
+				constructor(){
+					this.dhb={};
+				}
+				tj(dx,phone){
+					if(!this.dhb[dx]){
+						this.dhb[dx]=[]
+					}
+					this.dhb[dx].push(phone)
+				}
+				fb(dx){
+					let arr=this.dhb[dx];
+					if(arr){
+						for(let i=0;i<arr.length;i++){
+							arr[i]();
+						}
+					}
+				}
+				qxdy(phone){
+					for(let attr in this.dhb){
+						for(let i=0;i<this.dhb[attr].length;i++){
+							if(phone===this.dhb[attr][i]){
+								this.dhb[attr].splice(i,1)
+								break;
+							}
+						}
+					}
+				}
+			}
+			class Drag extends newGlz{
+				constructor(name){
+					super();
+					this.name=name;
+				}
+				init(){
+					this.name.onmousedown=this.downFn.bind(this)
+				}
+				downFn(ev){
+					this.disX = ev.clientX - this.name.offsetLeft;	
+					this.disY = ev.clientY - this.name.offsetTop;
+					document.onmousemove = this.moveFn.bind(this);
+					document.onmouseup = this.upFn.bind(this);
+				}
+				moveFn(ev){
+					this.left = ev.clientX - this.disX;
+					this.top = ev.clientY - this.disY;
+					this.fb('limit-publish');
+					this.fb('move-publish');
+					this.name.style.top=this.top+"px";
+					this.name.style.left=this.left+"px";
+				}
+				upFn(){
+					document.onmousemove = document.onmouseup = null;
+				}
+			}
+			
+			let k=new Drag(box2)
+			k.init();
+			
+			let d=new Drag(bar)
+			d.init();
+			d.tj('limit-publish',function (){
+				d.top = 0;
+				if(d.left < 0){
+					d.left = 0;
+				}
+				console.log(d.left)
+				if(d.left>470){
+					d.left=470;
+				}
+			})
+			d.tj('move-publish',function (){
+				d.top = 0;
+				box2.style.left = d.left + 'px';
+			})
+			d.fb();
+		</script>
+	</body>
+</html>

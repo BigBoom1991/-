@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:50px;
+				height:50px;
+				position: absolute;
+				line-height: 50px;
+				text-align: center;
+				border: 1px solid #000000;
+			}
+			#box{
+				border:none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script>
+			var box=document.getElementById("box")
+			var arr=["red","blue"]
+			window.onload=function(){
+				for(var i=0;i<100;i++){
+					if(i%2==0){
+						box.innerHTML+='<div style="background-color:'+arr[0]+';top:'+parseInt(i/10)*50+'px;left:'+i%10*50+'px;">'+i+'</div>'
+					}else if(i%2==1){
+						box.innerHTML+='<div style="background-color:'+arr[1]+';top:'+parseInt(i/10)*50+'px;left:'+i%10*50+'px;">'+i+'</div>'
+					}				
+				}
+			}
+			var arr2 = [
+					[1,2,3,4],
+					[2,3,4,5],
+					[3,4,5,6],
+					[4,5,6,7]
+					]
+				//取出数组中的每一项
+				for(var i = 0;i<arr2.length;i++){
+					for(var j = 0;j<arr2[i].length;j++){
+					console.log(arr2[i][j])
+					}
+				}
+		</script>
+	</body>
+</html>

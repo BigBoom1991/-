@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				width:500px;
+				height:600px;
+				background:url(bg.png);
+				margin:20px auto;
+				overflow: hidden;
+			}
+			#box{
+				width:350px;
+				height:48px;
+				margin:140px auto 0;
+				background:#e4e4fe;
+				border-radius:24px;
+				border:1px solid #3736ae;
+				overflow: hidden;
+				padding:4px;
+				box-sizing: border-box;
+			}
+			#box *{
+				display: inline-block;
+				width:340px;
+				height:38px;
+				border-radius:19px;
+				font:16px/38px "微软雅黑";
+				text-indent:30px;
+			}
+			#sr{
+				background:#d9d9e2 url(fd1.png) 5% 50% no-repeat;
+				margin:0 0 5px 0;
+				border:1px solid #c9c9d5;
+				box-sizing: border-box;
+				text-indent:40px;
+			}
+			#box span:hover{
+				background: #fd635e;
+				color:#FFFFFF;
+			}
+			#yf{
+				display:none;
+			}
+			#yj{
+				width:120px;
+				height:200px;
+				background:#ffffff;
+				position: absolute;
+				border: 1px solid red;
+			}
+			#yj span{
+				display:block;
+				height:50px;
+				width:100%;
+				text-indent:50px;
+				font:18px/50px "微软雅黑";
+				color:#f5726c; 
+				box-sizing:border-box;
+			}
+			#yj span:hover{
+				background-color:#fde9e9;
+				color:#e6423c;
+			}
+			.x1{
+				background:url(xz.png) 15% 50% no-repeat;
+			}
+			.x2{
+				background:url(sc.png) 15% 50% no-repeat;
+			}
+			.x3{
+				background:url(yd.png) 15% 50% no-repeat;
+			}
+			.x4{
+				background:url(cm.png) 15% 50% no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div id="box">
+				<p id="sr"></p>
+				<span>第七个读者</span>
+				<span>心理罪 画像</span>
+				<span>心理罪 教化场</span>
+				<span>心理罪 城市之光</span>
+				<span>地球往事</span>
+			</div>
+		</section>
+		<div id="yj">
+			<span class="x1">下载</span>
+			<span class="x2">删除</span>	
+			<span class="x3">移动到</span>
+			<span class="x4">重命名</span>
+		</div>
+		<script>
+			box.kg=false;
+			box.onclick=function(n){
+				if(box.kg==true){
+					box.style.height="48px";
+					box.kg=false;
+					sr.style="";
+				}else{
+					box.style.height="250px";
+					box.kg=true;
+					sr.style.borderColor="#fd635e";
+					sr.style.background="#fff url(fd2.png) 5% 50% no-repeat";
+				}
+			}
+			box.oncontextmenu = function (n){
+				console.log(document.body.scrollTop);
+				yj.style.display="block";
+				yj.style.top=n.clientY+document.body.scrollTop+"px";
+				yj.style.left=n.clientX+document.body.scrollLeft+"px";
+				return false;	
+			}
+			document.onclick=function(){
+				yj.style.display="none";
+			}
+			var s=document.querySelectorAll("#box span");
+			for(var i=0;i<s.length;i++){
+				s[i].onclick=function(){
+					sr.innerHTML=this.innerHTML;
+					sr.style="";
+				}
+			}
+		</script>
+	</body>
+</html>

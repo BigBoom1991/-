@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/public.css">
+		<style>
+			header{
+				margin:0 auto;
+				width:100%;
+				background-color:#f5103b;
+				text-align: center;
+				position: fixed;
+				z-index: 2;
+			}
+			header .gg1{
+				margin:0 auto;
+				}
+			header nav{
+				background-color: #f8f8f8;
+				line-height:29px;
+				text-align:left;
+				padding-left:95px;
+				padding-right:45px;
+				color:#ccd8e4;
+				border-bottom: 1px solid #eee;
+			}
+			header nav a{
+				color:#404040;
+			}
+			header nav .fr i{
+				width:85px;
+				color:#ff8800;
+			}
+			header nav .fr a{
+				width:85px;
+				background:url(images/tb.png) no-repeat 50px 10px;
+			}
+			header nav .fr b{
+				background:url(images/tb.png) no-repeat;
+				width:45px;
+				float:left;
+				height:29px;
+				}
+			section{
+				background:url(images/ggbj.png) no-repeat 0 0/100% 440px;
+				min-height: 500px;
+			}
+			.ss{
+				padding-top:90px;
+				background:url(images/ggbj.png) no-repeat 0 90px/100% 132px;
+				height:132px;
+				border-bottom:2px solid #38c249;
+				position:relative;
+			}
+			.ss .dq{
+				margin-left:250px;
+				margin-top:35px;
+				width:68px;
+				height:20px;
+				background:url(images/tb.png) no-repeat 44px 4px;
+				font:14px "宋体";
+				}
+			.ss .dq p{
+				background-color:#f3f3f3;
+				margin-top:6px;
+				border-radius:2px;
+				padding:4px;
+				font:12px "宋体";
+				
+			}
+			.serch{
+				margin-top:30px;
+				margin-left:62px;
+				background:url(images/tb.png) 450px -138px no-repeat #ff8800;
+				height:40px;
+				width:492px;
+				position:relative;
+			}
+			.serch p{
+				line-height: 34px;
+				margin:3px 0px 3px 3px;
+				width:89px;
+				text-indent:15px;
+				border-right:1px solid #e5e5e5;
+				background:url(images/tb.png) no-repeat 65px -106px #f8f8f8;
+				color:#999999;
+			}
+			.serch div{
+				vertical-align: middle;
+				margin:3px 0;
+				width:332px;
+				text-indent:15px;
+				border-right:1px solid #e5e5e5;
+				background:#ffffff;			
+			}
+			.serch div input{
+				line-height: 34px;
+				color:#999999;
+			}
+			.serch div a{
+				line-height:28PX;
+				background: #f3f3f3;
+				border-radius: 8px/12px;
+				text-indent:0;
+				text-align: center;
+				width:34px;
+				margin:3px 10px 0 0 ;
+			}
+			.serch i{
+				display: inline-block;
+				position:relative;
+				left:80px;
+				top:10px;
+				color:#999999;
+				background:url(images/tb.png) no-repeat 48px 2px #fff;
+				width:60px;
+			}
+			.ss .nav{
+				position:absolute;
+				bottom:0;
+				left:80px;
+			}
+			.ss ul li{
+				padding:0 17px;
+				font:16px/32px "微软雅黑";
+				color:#4e8f60;
+				background-color:#fff;
+			}
+			.ss ul li:hover{
+				background-color:#4e8f60;
+				color:#fff;
+			}
+			.top{
+				width:1192px;
+				margin:0 auto;
+				border-top:10px solid transparent;
+				border-bottom:10px solid transparent;
+			}
+			.top .left{
+				width:225px;
+			}
+			.top .left .fl li{
+				width:84px;
+				height:59px;
+				background-color:#38414c;
+				color:#fff;
+				text-align:center;
+				border-bottom:1px dotted #000;
+			}
+			.top .left .fl .spa{
+				width:86px;
+				background-color:#fff;
+				color:#2ea536;
+				margin-left:-2px;
+			}
+			.top .left .fl div{
+				height:34px;
+			}
+			.top .left .fr{
+				width:141px;
+				height:420px;
+				overflow: hidden;
+				background-color: #fff;
+				}
+			.top .left .fr li{
+				height:45px;
+				border-bottom:1px dotted #dcdcdc;
+				margin:0 7px;
+			}
+			.top .left .fr div{
+				font:bold 14px/30px "微软雅黑";
+				height:25px;
+				}
+			.top .left .fr p{
+				font:12px/22px "微软雅黑";
+				color:#999999;
+			}
+			.top .center{
+				padding-left:15px;
+				width:708px;
+				font-size:0;
+			}
+			.top .center li{
+				width:116px;
+				height:18px;
+				background-color:#ffb5c3;
+				margin-right:2px;
+				text-align: center;
+				font:12px/18px "微软雅黑";
+				color:#4d0210;
+				margin:273px 2px 7px 0;
+				
+			}
+			.top .center li:hover{
+				color:#ffb5c3;
+				background-color:#4d0210;
+			}
+			.top .right{
+				width:230px;
+				height:420px;
+				background-color: #fff;
+			}
+			.top .right p{
+				width:120px;
+				padding-right:20px;
+				font:12px/24px "宋体";
+				color: #999999;
+				padding-top:22px;
+			}
+			.top .right p i{
+				color:#887e73;
+			}
+			.top .right .we{
+				padding:5px 10px 39px;
+				line-height: 22px;
+				border-bottom: 1px solid #ececec;
+			}
+			.top .right .we span,.top .right .we i{
+				color:#999;
+			}
+			.top .right .yg{
+				text-align: center;
+				font-size: 0;
+			}
+			.top .right .yg span{
+				text-align:center;
+				display: inline-block;
+				width:48px;
+				height:45px;
+				font-size:12px;
+				margin:0 12px;
+				padding-top:60px;
+				background: url(images/img9.png) 0px 20px no-repeat;
+			}
+			.top .right .dqrd{
+				text-align: center;
+				background:url(images/bg1.png);
+			}
+			.top .right .dqrd span{
+				font-weight:bold;
+				padding:0 20px;
+				background-color:#fff;
+				color:#b0b0b0;
+			}
+			.top .right .dqrd dd{
+				padding:0 7px;
+				border:1px solid #eeeeee;
+				border-radius:8px/10px;
+				font:12px/20px "微软雅黑";
+				margin:10px 0 0 10px;
+				color: #404040;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a href="#" class="gg1"><img src="images/tngg_1.png"/></a>
+			<nav class="clearfix">
+				<p class="fl">
+				<a href="#">登录</a> | <a href="#">注册</a>
+				</p class="fr">
+				<p class="fr">
+					<i class="fl">会员俱乐部</i>
+					<a class="fl">我的订单</a>
+					<a class="fl">网站地图</a>
+					<b style="background-position:0px -25px;"></b>
+					<b style="background-position:0px -55px;"></b>
+					<b style="background-position:0px -85px;"></b>
+				</p>
+			</nav>
+		</header>
+		<form class="ss">
+			<div class="fl dq">
+				<div>北京站</div>
+				<p>本地分公司</p>
+			</div>
+			<div class="fl serch">
+				<p class="fl">所有产品</p>
+				<div class="fl">
+					<input type="text" value="323旅游节"/>
+					<a class="fr">泰国</a>
+					<a class="fr">三亚</a>
+					<a class="fr">欧洲</a>
+				</div>
+				<i>高级搜索</i>
+			</div>
+			<ul class="nav">
+				<li class="fl">首页</li>
+				<li class="fl">跟团游<img src="images/img1.png"/></li>
+				<li class="fl">自助游<img src="images/img1.png"/></li>
+				<li class="fl">邮轮<img src="images/img1.png"/></li>
+				<li class="fl">自驾<img src="images/img1.png"/></li>
+				<li class="fl">特卖<img src="images/img1.png"/></li>
+				<li class="fl">牛人专线</li>
+				<li class="fl">门票<img src="images/img1.png"/></li>
+				<li class="fl">酒店<img src="images/img1.png"/></li>
+				<li class="fl">机票<img src="images/img1.png"/></li>
+				<li class="fl">火车票</li>
+				<li class="fl">定制游<img src="images/img1.png"/></li>
+				<li class="fl">金融<img src="images/img1.png"/></li>
+				<li class="fl">攻略<img src="images/img1.png"/></li>
+			</ul>
+		</form>
+		<section>
+			<div class="top clearfix">
+				<div class="left fl">
+					<ul class="fl">
+						<li class="spa">
+							<div><img src="images/img2.png"/></div>
+							<p>度假旅游</p>
+						</li>
+						<li>
+							<div><img src="images/img3.png"/></div>
+							<p>机票</p>
+						</li>
+						<li>
+							<div><img src="images/img4.png"/></div>
+							<p>酒店</p>
+						</li>
+						<li>
+							<div><img src="images/img5.png"/></div>
+							<p>超级自由行</p>
+						</li>
+						<li>
+							<div><img src="images/img6.png"/></div>
+							<p>火车票</p>
+						</li>
+						<li>
+							<div><img src="images/img7.png"/></div>
+							<p>邮轮 签证</p>
+						</li>
+						<li>
+							<div><img src="images/img8.png"/></div>
+							<p>门票 玩乐</p>
+						</li>
+					</ul>
+					<ul class="fr">
+						<li>
+							<div>主题游 海岛</div>
+							<p>蜜月 亲子 户外 周末游</p>
+						</li>
+						<li>
+							<div>北京周边游</div>
+							<p>按天数分 名山胜水</p>
+						</li>
+						<li>
+							<div>国内旅游</div>
+							<p>三亚 云南 广西 华东</p>
+						</li>
+						<li>
+							<div>马尔代夫</div>
+							<p>玛娜法鲁岛 翡诺岛</p>
+						</li>
+						<li>
+							<div>欧洲 美洲</div>
+							<p>瑞士 法国 美国 加拿大</p>
+						</li>
+						<li>
+							<div>韩国 日本</div>
+							<p>大阪 首尔 东京 济州岛</p>
+						</li>
+						<li>
+							<div>东南亚 南亚  泰国</div>
+							<p>巴厘岛 普吉岛 长滩岛</p>
+						</li>
+						<li>
+							<div>香港 澳门 台湾</div>
+							<p>香港迪士尼乐园 台北市</p>
+						</li>
+						<li>
+							<div>澳新 中东 非洲</div>
+							<p>新西兰 斐济 迪拜 埃及</p>
+						</li>
+					</ul>
+				</div>
+				<div class="center fl clearfix">
+					<li class="fl">旅游节3折起</li>
+					<li class="fl">欧美澳新中东非</li>
+					<li class="fl">出境自由行</li>
+					<li class="fl">国内跟团游</li>
+					<li class="fl">银行联合特惠</li>
+					<li class="fl">日韩东南亚跟团</li>
+					<a><img src="images/pic1.png"></a>
+					<a><img src="images/pic1.png"></a>
+					<a><img src="images/pic1.png"></a>
+					<a><img src="images/pic1.png"></a>
+					<a><img src="images/pic2.png"></a>
+					<a><img src="images/pic1.png"></a>
+					<a><img src="images/pic1.png"></a>
+				</div>
+				<div class="right fr">
+					<img src="images/pic3.png"/>
+					<p class="fr">
+						<span>出游人数：<i>23600000+</i></span>
+						<span>点评人数：<i>1500000+</i></span>
+					</p>
+					<div class="we">
+						[五一]<樱花特辑 大阪 琵琶湖 丰中民宿集落 东京六日游>两晚温泉酒店 东京
+						<span class="fl">用户***137</span>
+						<i class="fr">2分钟前预定</i>
+					</div>
+					<div class="yg">
+						<span>阳光行程</span>
+						<span>阳光行程</span>
+						<span>阳光行程</span>
+					</div>
+					<dl class="dqrd">
+						<dt><span>当前热点</span></dt>
+						<dd class="fl">香港迪士尼乐园</dd>
+						<dd class="fl">香港迪士尼乐园</dd>
+						<dd class="fl">香港迪士尼乐园</dd>
+						<dd class="fl">香港迪士尼乐园</dd>
+					</dl>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

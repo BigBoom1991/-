@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body,
+			ul,
+			li,
+			h2 {
+				margin: 0;
+				padding: 0;
+			}
+			
+			li {
+				list-style: none;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="qq.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="list">
+				<h2><span></span>我的好友</h2>
+				<ul>
+					
+					<li>小佳Love</li>
+					<li>从来就是这么正经</li>
+					<li>leo是个胖子</li>
+					<li>momo不是陌陌</li>
+				</ul>
+				<h2><span></span>企业好友</h2>
+				<ul>
+					<li>习近平</li>
+					<li>普京</li>
+					<li>奥巴马</li>
+				</ul>
+				<h2><span></span>黑名单</h2>
+				<ul>
+					<li>安倍</li>
+					<li>杜特尔特</li>
+				</ul>
+			</div>
+		</div>
+		<script src="./utils.js"></script>
+		<script>
+			var list=$("h2");
+			var listj=$("h2 span")
+			var lists=$("ul");
+			var listss=$("li");
+			console.log(listss)
+			function clear(){
+				for(var i=0;i<3;i++){
+					list[i].kg=false;
+					lists[i].style.display="none";
+					list[i].className="none";
+					listj[i].className="";
+				}
+				}
+				
+			function clear2(){
+				for(var i=0;i<listss.length;i++){
+					listss[i].className="";
+					listss[i].kg=false;
+					}
+				}
+			for(var i=0;i<3;i++){
+				list[i].nb=i;
+				list[i].kg=false;
+				list[i].onclick=function(){
+					if(list[this.nb].kg==false){
+						clear();
+						clear2();
+						this.className="active"
+						lists[this.nb].style.display="block";
+						list[this.nb].kg=true;
+						listj[this.nb].className="active";
+					}else{
+						lists[this.nb].style.display="none";
+						list[this.nb].kg=false;
+						this.className="none";
+						listj[this.nb].className="";
+					}
+				}
+			}
+			for(var i=0;i<listss.length;i++){
+				listss[i].kg=false;
+				listss[i].onclick=function(){
+					if(this.kg==false){
+						clear2();
+						this.className="selected";
+						this.kg=true;
+					}else{
+						this.kg=false;
+						this.className="none";
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

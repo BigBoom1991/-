@@ -1,0 +1,40 @@
+.color1{
+  color: #6c6c6c;
+}
+/*头部导航烂颜色*/
+.color2{
+  color: #aaaaaa;
+}
+/*头部导航烂hi字体颜色*/
+@font-face {
+  font-family: logo;
+  src: url('fangzheng.ttf');
+}
+/*导入艺术字体*/
+.top_nav .color3{
+  color: #3ea3ff;
+}
+.index_menu_serch .color4{
+  color: #9fa4aa;
+}
+.wrap .color5{
+  color: #ff684d;
+}
+.index_column_left .color6{
+  color: #ff684d;
+}
+.wrap .margin_right_clear{
+  margin-right: 0;
+}
+.wrap .margin_bottom_clear{
+  margin-bottom: 0;
+}
+.wrap .border_clear{
+  border: 0;
+}
+body .margin_right_clear{
+  margin-right: 0;
+}
+.wrap .margin_left_clear{
+  margin-left: 0;
+}

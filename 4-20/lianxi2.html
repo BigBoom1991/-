@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/reset.css">
+<style>
+	.wrap{
+		margin:10px auto;
+		background-color:pink;
+		width:400px;
+		padding:20px 0px;
+		}
+	.box{
+		height:160px;
+		width:226px;
+		position:relative;
+		margin:0 auto 40px;
+		background-color:red;
+		}
+	.box img{
+		height:160px;
+		width:226px;
+		}
+	.box .title{
+		position:absolute;
+		bottom:0px;
+		}
+	.title p{
+		float:left;
+		font:12px/26px "宋体";
+		text-align:center;
+		}
+	.nb{
+		width:20px;
+		background-color:red;
+		color:white;
+		}
+	.nr{
+		width:206px;
+		color:white;
+		z-index:1;
+		position:relative;
+		}
+	.title .bg{
+		position:absolute;
+		right:0;
+		width:206px;
+		opacity:0.4;
+ 		height:26px;
+		background-color:black;
+		}
+	
+</style>
+</head>
+	<div class="wrap clearfix">
+    	<div class="box">
+            <img src="images/p1.png">
+            <div class="title">
+                <p class="nb">1</p>
+                <p class="nr">微信支付：告别收银台，告别排...</p>
+                <p class="bg"></p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/p2.png">
+            <div class="title">
+                <p class="nb">2</p>
+                <p class="nr">马化腾：腾讯将专注于做互联网...</p>
+                <p class="bg"></p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/p3.png">
+            <div class="title">
+                <p class="nb">3</p>
+                <p class="nr">马化腾：通过互联网向未来的七个...</p>
+                <p class="bg"></p>
+            </div>
+        </div>
+    </div>
+<body>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,dl,dd{
+	margin:0;
+	font-weight:normal;
+	font-size:12px;
+	font-family:"宋体";
+	line-height:1;
+	color:#5f728f;
+}
+a{
+	text-decoration:none;
+	color:inherit;	
+}
+ul,ol,li{
+	list-style:none;
+	margin:0;
+	padding:0;	
+}
+b,strong{
+	font-weight:normal;	
+}
+i,em{
+	font-style:normal;	
+}
+mark{
+	background:none;
+	color:inherit;	
+}
+img{
+	vertical-align:top;
+	border:0;	
+}
+
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+	height:0;
+	overflow:hidden;
+}
+.clearfix{
+	zoom:1;	
+}
+input,fieldset,textarea{
+	padding:0;
+	margin:0;
+	background:none;
+	border:none;
+	vertical-align:top;
+	resize:none;
+	}

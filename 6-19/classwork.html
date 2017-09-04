@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				background:url(img/bg.png) no-repeat;
+				width:800px;
+				height:850px;
+				margin:0 auto;
+				padding-top:150px;
+			}
+			.box{
+				background:url(img/bg1.png) no-repeat;
+				width:290px;
+				height:490px;
+				margin:0 auto;
+				position: relative;
+				text-align: center;
+			}
+			div[class^="clock"]{
+				display: block;
+				width:50px;
+				height:50px;
+				text-align: center;
+				font:30px/50px "微软雅黑";
+				position:absolute;
+				margin:200px 120px;
+				background-color:#FFFFFF;
+			}
+			.clock1{
+				top:100px;
+				left:-100px;
+			}
+			.clock2{
+				top:50px;
+				left:-50px;
+			}
+			.clock4{
+				top:50px;
+				left:50px;
+			}
+			.clock5{
+				top:100px;
+				left:100px;
+			}
+			#kg{
+				display: none;
+			}
+			#btn{
+				width:40px;
+				height:20px;
+				background:red;
+				display: inline-block;
+				margin-top:420px;
+				border-radius:10px;
+				color:black;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="box">
+				<div id="kg">
+					<div class="clock1" style="display: block;">1</div>
+					<div class="clock2">2</div>
+					<div class="clock3">3</div>
+					<div class="clock4">4</div>
+					<div class="clock5">5</div>
+				</div>			
+				<div id="btn">按钮</div>
+			</div>
+		</section>
+		<script type="text/javascript">
+			var clock = document.querySelectorAll('div[class^="clock"]');
+			var btn =document.getElementById("btn")
+			var x=-1;
+			var a=0;
+			var b=0;
+			var arr1 = [[100,-100],[50,-50],[0,0],[50,-50],[100,-100]];
+			var arr2 = [[-100,100],[-50,50],[0,0],[50,-50],[100,-100]];
+			btn.onclick=function(){				
+				if(kg.style.display=="block"){
+					x+=1;
+					if(x%2==0){
+						b+=1;
+					}else{
+						a+=1;
+					}
+					for(var n=0;n<5;n++){
+							if(n<3){
+									clock[n].style.top=arr1[n][a%2]+"px";
+									clock[n].style.left=arr2[n][b%2]+"px";
+									
+								}else{
+									clock[n].style.top=arr1[n][b%2]+"px";
+									clock[n].style.left=arr2[n][a%2]+"px";
+								}	
+					}												
+				}else{
+					kg.style.display="block"
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/public.css">
+		<style>
+			nav{
+				width:100%;
+				background-color:#333436;
+				position:fixed;
+				top:0;
+				z-index:2;
+			}
+			body{
+				padding-top:50px;
+			}
+			nav div{
+				width:1010px;
+				margin:0 auto;
+				background:url(images/bg1.png) no-repeat;
+				height:50px;
+				padding-left:170px;
+			}
+			nav div .fl{
+				width:80px;
+				line-height:50px;
+				color:#898a8c;
+			}
+			nav div .fr{
+				width:70px;
+				line-height:32px;
+				margin:9px 0;
+				background-color:#6bc30d;
+				text-align:center;
+				color:#fff;
+				}
+			nav div .spe{
+				background-color:#505050;
+				color:#acacac;
+			}
+			header{
+				background:url(images/bg2.png) ;
+				height:120px;
+				text-align:center;
+				vertical-align:middle;
+				padding:40px;
+			}
+			header span{
+				display:inline-block;
+				width:400px;
+				height:116px;
+			}
+			header i{
+				font:42px/1  "宋体";
+				color:#00efde;
+			}
+			header em{
+				font:12px/30px "宋体";
+				color:#5e8ba2;
+			}
+			header b{
+				color:#486d7f;
+			}
+			.topbox{
+				background:#f7f9f8;
+			}
+			.top{
+				height:42px;
+				padding:10px 0;
+				width:1180px;
+				margin:0 auto;
+				
+			}
+			.top .fl{
+				height:40px;
+				width:126px;
+				text-align: center;
+				line-height:40px;
+				background:url(images/tb.png) no-repeat 90px 15px
+			}
+			.top .fl:hover{
+				background-color:#edefee;
+			}
+			section{
+				background:#f1f1f1;
+			}
+			section ul{
+				width:1180px;
+				margin:0 auto;
+				display:flex;
+				justify-content:space-between;
+				flex-wrap:wrap;
+				height:1800px;
+				align-self:space-between;
+				padding:50px 0;
+			}
+			footer{
+				background:url(images/bg3.png) repeat-x 0 bottom #f1f1f1;
+				border-bottom:1px solid #222325;
+			}
+			footer div{
+				width:1180px;
+				height:757px;
+				margin:0 auto;
+				background:url(images/t1.png);
+				z-index:2;
+			}
+			@media (max-width:1232px){
+				nav div{
+					width:710px;
+					}
+				nav div .fl{
+					display:none;
+				}
+				.top,section ul,footer div{
+					width:880px;
+				}
+				section ul{
+					height:2484px;
+				}
+				footer div{
+					height:521px;
+					background:url(images/t2.png);
+					margin-bottom:10px;
+				}
+			}
+			@media (max-width:932px){
+				nav div{
+					width:410px;
+					}
+				.top,section ul,footer div{
+					width:580px;
+				}
+				section ul{
+					height:3430px;
+				}
+				footer div{
+					height:517px;
+					background:url(images/t3.png);
+					margin-bottom:0px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div class="flearfix">
+				<a class="fl">发现</a>
+				<a class="fl">文章</a>
+				<a class="fl">设计师</a>
+				<a class="fl">帮帮忙</a>
+				<a class="fl">更多</a>
+				<a class="fr">注册</a>
+				<a class="fr spe">登录</a>
+			</div>
+		</nav>
+		<header>
+			<span>
+				<i>02<em> 天</em> 00<em> 时</em><b>|</b>27<em> 分</em><b>|</b>33<em> 秒</em></i><br/><em>周二抢u码！送个人网站！有码！任性！</em><br/>
+				<img src="images/anniu.png" />
+		</header>
+		<div class="topbox">
+			<div class="top">
+				<a class="fl">行业</a>
+				<a class="fl">最新</a>
+				<a class="fl">颜色</a>
+				<a class="fl">所有者</a>
+			</div>
+		</div>
+		<section>
+			<ul>
+				<li><img src="images/pic1.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+					<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+					<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+				<li><img src="images/pic2.png"/></i>
+			</ul>
+		</section>
+		<footer><div></div></footer>
+	</body>
+</html>

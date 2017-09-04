@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				background:url(img/bg.png);
+				width:980px;
+				height:800px;
+				margin:0 auto;
+				padding-top:20px;
+			}
+			.phone{
+				margin:0 auto;
+				background:url(img/bg1.png);
+				width:384px;
+				height:708px;
+				box-sizing: border-box;
+				padding-top:50px;
+			}			
+			.phone [class^=list]{
+				width:280px;
+				height:50px;
+				background:rgba(0,0,0,0.5);
+				color:#FFFFFF;
+				font:14px/50px "微软雅黑";
+				overflow:hidden;
+			}
+			.phone .list{
+				margin:30px auto;
+				background-image:url(img/j1.png);
+				background-position:20px 20px;
+				background-repeat: no-repeat;
+			}
+			.phone .list span{
+				width:280px;	
+				height:50px;
+				display: inline-block;
+				text-indent:0;
+				text-indent: 40px;
+			}
+			.phone .list div{
+				text-indent: 40px;
+			}
+			.list [class^=list]:hover{
+				background:rgba(255,255,255,0.5); ;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="phone">
+			</div>
+		</section>
+		<script>
+			var listName = ["我的好友","企业好友",'黑名单']
+			var phone = document.querySelector(".phone");
+			for(var i=0;i<listName.length;i++){
+				phone.innerHTML+='<div class=list><span>'+listName[i]+"</span></div>"
+			}
+			var list =document.querySelectorAll('.list');
+			
+			console.log(btn);
+			var listsName = [['雷军','马化腾','王思聪','林更新'],['习近平','特朗普','普京'],['李彦宏','崔永元','马云']];			
+			for(var i=0;i<list.length;i++){
+				for(var x=0;x<listsName[i].length;x++){
+					list[i].innerHTML+='<div class=list'+i+'>'+listsName[i][x]+'</div>';
+				}
+			}	
+			var btn =document.querySelectorAll('.list span');
+			function clear(){
+				
+			}
+			
+			for(var i=0;i<list.length;i++){
+				
+				btn[i].cd=listsName[i].length+1;
+				btn[i].kg=false;
+				btn[i].nb=i;
+				btn[i].onclick =function(){
+					if(this.kg){
+						this.kg= false;
+						list[this.nb].style.height = '50px';
+						this.style.backgroundColor='';
+					}else{
+						for(var i=0;i<list.length;i++){
+							btn[i].kg=false;
+							list[i].style.height="";
+							btn[i].style.backgroundColor='';
+							for (var x=0;x<lists.length;x++){
+								lists[x].style.backgroundColor="";	
+							}
+						};
+						this.kg= true;
+						list[this.nb].style.height = this.cd*50+'px';
+						this.style.backgroundColor="rgba(255,0,0,0.5)";
+					}
+				}
+			}
+			var lists=document.querySelectorAll('.list [class^=list]');
+			var n=0;
+			console.log(lists[0]);
+			for(var i=0;i<lists.length;i++){
+				lists[i].kg=i;
+				lists[i].onclick=function(){
+					lists[n].style.backgroundColor="";
+					this.style.backgroundColor="rgba(255,0,0,0.5)";
+					n = this.kg;
+				}
+			}
+		</script>
+	</body>
+</html>

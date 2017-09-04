@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img{
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id="btn"/>
+		<input type="text" id="txt"/>
+		<ul id="list">
+		</ul>
+		<img src="./1.jpg" id="img">
+		<script type="text/javascript">
+//			btn.onclick=function(){
+//				list.innerHTML="<li>"+txt.value+"</li>"+list.innerHTML;
+//			if(img.style.display==''||img.style.display=='none' ){
+//				img.style.display="block"
+//			}else{
+//				img.style.display='none'
+//			}
+//			}
+			var state="none"//声明图片的状态
+			img.style.display=state//改变图片的状态
+			btn.onclick=function(){
+				if(state=="none"){//条件
+				state="block"//改变图片状态的声明
+				}else{
+				state="none"//改变图片状态的声明
+				}
+				
+			}
+		</script>
+	</body>
+</html>

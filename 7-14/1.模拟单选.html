@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            display: inline-block;
+            border: 2px solid #bdcec6;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        div.checked {
+            border-color: rgb(228, 57, 60);
+            background: url(images/1.png) no-repeat right bottom;
+        }
+    </style>
+   
+</head>
+<body>
+    <div>男</div>
+    <div>女</div>
+    <div>保密</div>
+    <script src="./utils.js"></script>
+    <script>
+    	var x=$("div");
+    	function clear(){
+    		for(var i=0;i<x.length;i++){
+    			x[i].className="";
+    		}
+    	}
+    	for(var i=0;i<x.length;i++){
+    		x[i].onclick=function(){
+    			clear();
+    			this.className="checked";
+    		}
+    	}
+    </script>
+</body>
+</html>

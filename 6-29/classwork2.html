@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				width:400px;
+				height:400px;
+				background: rgba(0,0,0,0.2);
+				margin:40px auto;
+				overflow: hidden;
+			}
+			.t{
+				float: right;
+				height:400px;
+				width:300px;
+			}
+			img{
+				width:300px;
+				height:300px;
+				border:0;
+				vertical-align: top;
+			}
+			span{
+				display: inline-block;
+			}
+			.t1,span{
+				width:100px;
+				height:100px;
+				background: rgba(0,0,0,0.2);
+				border:2px solid #EEEEEE;
+				box-sizing: border-box;
+				font:bold 40px/96px "微软雅黑";
+				text-align: center;
+			}
+			.t1:hover,span:hover{
+				background-color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="t">
+				<img src="images/0.jpg"/>
+				<div class="t2">
+					<span>1</span><span>2</span><span>3</span>
+				</div>
+			</div>
+			<div class="t1">1</div>
+			<div class="t1">2</div>
+			<div class="t1">3</div>
+			<div class="t1">4</div>
+		</section>
+		<script>
+			var arr=[4,3,3,4];
+		</script>
+	</body>
+</html>

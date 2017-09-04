@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		section{
+			background:url(img/bg.png) no-repeat;
+			width: 618px;
+			height:390px;
+			margin:20px auto;
+			padding-top:40px;
+			
+		}
+		.box{
+			width:480px;
+			height:260px;
+			padding:20px 0;
+			background:#fff;
+			margin:0px auto 0;
+			position: relative;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+		.logo{
+			width:100%;
+			height:100%;
+			background: url(img/logo.png) no-repeat 50% 25%;
+			opacity: 0.1;
+			position: absolute;
+			top:0;
+		}
+		nav{
+			position: absolute;
+			bottom:0;
+			width:100%;
+			background-color:#e15671;
+			height:48px;
+		}
+		.lists{
+			position: relative;
+			z-index: 2;
+		}
+		.lists div{
+			height:36px;
+			font:14px/36px 微软雅黑;
+			color:#000000;
+			text-indent: 64px;
+			background-image: url(img/k.png);
+			background-repeat: no-repeat;
+			background-position:20px 10px ;
+		}
+		.lists .ch{
+			background-image: url(img/k2.png);
+			background-color:rgba(225,86,113,0.8);
+			color:#fff;
+		}
+		.fh{
+			background-color:rgba(225,86,113,0.45);
+		}
+		.lists div:hover{
+			background-color:rgba(225,86,113,0.8);
+			color:#FFFFFF;
+		}
+		.lists div .gs{
+			float:right;
+			padding-right:32px;
+			}
+		nav{
+			font-size:0;
+			text-align: center;
+			vertical-align: middle;
+		}
+		nav span[class^=xx]{
+			box-sizing: border-box;
+			display: inline-block;
+			padding-left:40px;
+			color:#FFFFFF;
+			width:25%;
+			height:20px;
+			font:14px/22px "微软雅黑";
+			text-align: center;
+			background:url(img/1.png) no-repeat;
+			margin:13px 0;
+			vertical-align: middle;
+		}
+		nav span[class^=xx]:hover{
+			color:#000;
+		}
+		section nav .xx{
+			background:url(img/k.png) no-repeat 40px;
+		}
+		section nav .xx1{
+			background:url(img/k2.png) no-repeat 40px;
+		}
+		section nav .xx2{
+			background-position:40px 0;
+		}
+		section nav .xx3{
+			height:24px;
+			background-position:40px -21px;
+		}
+		section nav .xx4{
+			height:24px;
+			background-position:40px -44px;
+		}
+	</style>
+	<body>
+		<section>
+			<div class="box">
+				<div class="lists"></div>
+				<div class="logo"></div>	
+				<nav>
+					<span class="xx">11</span>
+					<span class="xx2">22</span>
+					<span class="xx3">33</span>
+					<span class="xx4">44</span>
+				</nav>	
+			</div>
+		</section>
+		<script src="./utils.js"></script>
+		<script>
+			var lists =document.querySelector(".lists");
+			var listName = [["私奔",'梁博'],['北京北京','梁博 黄勇'],['我爱你中国','梁博'],['花火','梁博'],['回来','梁博'],['爱要有你才完美','梁博 那英']];
+			for(var i=0;i<listName.length;i++){
+				lists.innerHTML+='<div><span>'+listName[i][0]+'</span><span class="gs">'+listName[i][1]+'</span></div>';
+			}
+			var list=document.querySelectorAll('.lists div');
+			var n=0;
+			var qx=$(".xx")[0];
+			qx.kg=false;
+			for(var i=0;i<listName.length;i++){
+				list[i].nb=i;
+				list[i].kg=false;
+				if(i%2!=0){
+					list[i].className="fh";
+				}
+				list[i].onclick=function(){
+					if(this.kg==false){
+						this.className="ch";
+						n++;
+						this.kg=true;
+						if(n==6){
+							qx.kg=true;
+							qx.className="xx1";
+						}
+					}else{
+						n--;
+						this.kg=false;
+						if(this.nb%2!=0){
+							this.className="fh";
+						}else{
+							this.className="";
+						}
+						qx.kg=false;
+						qx.className="xx";
+					}
+				}
+			}
+			qx.onclick=function(){
+				if(this.kg==false){
+					for(var i=0;i<listName.length;i++){
+						if(list[i].kg==false){
+							list[i].onclick();
+						}
+					}
+				}else{
+					for(var i=0;i<listName.length;i++){
+						if(list[i].kg==true){
+							list[i].onclick();
+						}
+					}
+					
+				}
+			}
+			
+		</script>
+	</body>
+</html>

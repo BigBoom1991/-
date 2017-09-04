@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				width:700px;
+				height:500px;
+				background:url(img/logo.png) 50% 15% no-repeat,url(img/bg.png);
+				padding-top:150px;
+				box-sizing: border-box;
+				position: relative;
+			}
+			#box{
+				display: flex;
+				justify-content:center;
+				flex-wrap:wrap;
+				
+			}
+			#box div{
+				width:100px;
+				height:100px;
+				text-align: center;
+				position: relative;
+				border-radius:8px;
+				background:url(img/wj.png) no-repeat 50% 50%;
+				margin:10px;
+				border:3px solid transparent;
+			}
+			#box div:hover{
+				background-color:rgba(0,0,0,0.5);
+				border:3px solid #bbbbbb;
+				
+			}
+			section #box .cho{
+				background-color:rgba(200,200,200,0.5);
+				border:3px solid #bbbbbb;
+				
+			}
+			#box div p{
+				color:#FFFFFF;
+				font:14px "微软雅黑";
+				position: absolute;
+				width:100px;
+				text-align: center;
+				bottom: -40px;
+				
+			}
+			#btn{
+				position:absolute;
+				bottom:80px;
+				left:300px;
+				width:100px;
+				height:30px;
+				background:rgba(255,255,255,0.4);
+			}
+			#del{
+				position:absolute;
+				bottom:40px;
+				left:300px;
+				width:100px;
+				height:30px;
+				background:rgba(255,255,255,0.4);
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div id="box">
+				<!--<div>
+					<p></p>
+				</div>
+				<div>
+					<p></p>
+				</div>-->
+			</div>
+			<input type="button" id="btn" value="新建文件夹"/>
+			<input type="button" id="del" value="删除文件"/>
+		</section>		
+		<script>
+			var arr=[];
+			var box=document.getElementById("box");
+			btn.onclick=function(){
+				var n =document.createElement("div");
+				var n1 =document.createElement("p");
+				n1.innerHTML="新建文件夹";
+				n.appendChild(n1);
+				n.kg=false;
+				n.onclick=function(){
+					if(n.kg){
+						n.kg=false;
+						arr.splice(arr.indexOf(this),1);
+						this.className="";
+					}else{
+						this.className="cho";
+						arr.push(this);
+						n.kg=true;
+					}
+				};
+				box.appendChild(n);
+			}
+			del.onclick=function(){
+				for(var i=0;i<arr.length;i++){
+					arr[i].remove();	
+				}
+				arr=[];
+			}			
+		</script>
+	</body>
+</html>

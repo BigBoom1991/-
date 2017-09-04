@@ -1,0 +1,241 @@
+16:46 2017/6/22<scripe></scripe>在body最下方，head里会被解析
+onclick:点击
+onload：读取完成
+
+documen.getElementById('id名字')
+.onclick=function(){}
+var id=documen.getElementById=("id"） 声明
+
+onclick 点击
+function 函数
+var 声明，=有方向，右边给左边，没声明默认undefined
+alert 提示框
+console.log 输出到控制台,只能读取行内样式
+console.dir 输出目录到控制台
+元素的属性：id class value(form) innerHTML href src(获取绝对路径)
+变量可以由数字字母$组成，不能以数字开头
+样式font-size需要符合变量规则，用fontSize
+
+js出现的位置：
+1行间样式
+2内嵌标签<scripe></scripe>写在body后边
+3外部样式，新建一个外部样式表<scripe src=""><scripe/>
+
+alert（） 浏览器提供的一个弹出框，括号内为内容
+
+先布局，在js
+获取元素:document.getElementById("id")
+
+
+
+变量：
+var *声明变量
+var *=数据/值（有属性值的属性的值的数字） =右边赋值给左边
+变量名命名规则：
+1默认underfined；
+2由字母数字_$组合；17:11 2017/6/22
+3不能数字开头
+4不能是关键字和保留字
+
+大驼峰：XxxXxxx；
+小驼峰：xxxXxxx；
+
+
+按钮：
+1获取按钮；
+2绑定点击事件onclick；
+3点击发生事件；
+btn.onclick=function(){} 事件
+onclick点击
+onmouseover鼠标移入
+onmouseout鼠标移13:57 2017/6/20出
+function 函数名 (){函数体} 函数，把多行代码放入函数中，形成代码块
+function Xxx(){}函数声明
+var Xxx =function(){}函数表达式
+function(){}匿名函数声明
+Xxx（）调用函数
+
+属性：事务所具有不可缺少的性质；标记的属性，选择符的属性；
+赋值：改；
+取值：读；
+. [] 语法“的”
+js中直接写的第一个单词会被视为变量名，“”才能被视为属性名或属性值
+console.log()打印一个结构或属性值
+console.dir()打印一个结构的全部样式或一个展开项
+xx-xx属性用xxXx代替或.xx-xx用[xx-xx]代替
+xx.style.xxXx="" 改变的是行间样式，也只能读取行间样式
+
+可读可写的元素属性：
+1id
+2className
+3value(input)
+4innerHTML一个元素（标记）内的html结构
+5src,href(获取的是绝对路径)
+
+留言板保留：
+list.innerHTMl=message+list.innerHTML；
+
+字符串：
+由8一对引号包起来的n个字符组成的串，包括空格。
+字符串中间用+号连接。两个数字可以相加，有一个字符串就都视为字符串
+
+寻找不存在的属性，返回值是underfined。
+
+******************6-14*******************************************
+
+
+可以用console检查变量，看到是否获取到元素。
+
+当scripe写在较高时，可以用windows.onload在页面加载完成时获取元素。
+
+if(x=/</>/==* 判断语句){执行语句1}else{执行语句2}
+if只能改变结构内行间样式
+==代表比较，单个=代表赋值
+
+默认的行内样式是空的，所以条件判断在一些情况下需要点两下，可以通过更改条件或赋予初始值改变。
+
+可以用一个变量标记元素的状态，可以是无意义的字符串，或布尔值(ture/false默认为ture)或者本身就是属性的值。
+
+调试通过js改变图片的方法：
+1看结构src有无变化，看是否走到if语句；
+2没有走到if中，怀疑if条件不成立
+3在if之前打出来看不到的值
+
+改变样式的方法：
+1直接写在行间
+2改变class（需要写上本身的class）；(如果用单引号写值，那么中间所需的css样式用双引号写)
+
+xx.style=“*”可以直接写，但是建议xx.style.xxx="" xx.style.xxxx=""写
+
+
+******************6-15*******************************************
+
+图片切换：通过变量x,点击x+1实现
+通过if判断实现防止x超过图片上限（x超出，要重新赋值）
+通过if判断赋值，实现x计数重置
+
+var x=[x,xx,xxx]数组赋值
+1，数组从0开始计数
+2,x.length 数组长度
+3,通过x[*]提取数组中数据（*是小于数组最大长度-1的自然数）
+
+n++ == n=n+1
+n-- == n=n-1
+
+******************6-16*******************************************
+
+for循环
+for(初始值；条件；语句){循环体} 执行顺序为：初始赋值-（判断条件-执行循环体-执行语句）-（）-
+for(var 1=0;i<100;i++)
+break 停止for循环，之后的同循环组代码也不执行
+continue 跳过之后的循环体代码，执行语句
+
+每个元素的同一个事件只能触发一次，后写的覆盖先写的
+
+
+******************6-19*******************************************
+%求余（）2%5值为2,12%7值为5
+parseInt保留整数部分
+Math.floor向下取整
+Math.ceil向上取整
+Math.round四舍五入
+
+二维数组
+var arr = [
+	[1,2,3,4]
+	[2,3,4,5]
+	[3,4,5,6]
+	[4,5,6,7]
+	]
+取出数组中的每一项
+for(var i = 0;i<arr.length;i++){
+	for(var j=0;j<arr[i].length;j++){
+	console.log(arr2[i][j])}
+}
+
+获取元素的方式：
+	document.getElementsById(id名) 全兼容
+	document.getElementsByTagName(标签名) 全兼容
+	document.getElementsByClassName(class类名)
+	获取的是集合，使用时：类名or标签名[x]
+	document.querySelector('css选择器')第一个符合选择器条件的标签
+	document.querySelectorAll('css选择器')所有符合条件的选择器的集合
+
+
+******************6-20*******************************************
+<scripe>标签写在结构前，用windows.onload最后获取元素
+for循环套for循环，不要用相同的变量
+
+this是已经定义好的变量，值是不固定的，根据执行环境决定this的值
+利用this.属性=属性值，在for循环中来给不同的事件定义不懂的固有属性，便于选择。
+定义属性名不需要声明
+
+******************6-21*******************************************
+
+一般将结构中的div等叫做标签。
+将js获取的标签叫做元素。
+
+函数被调用，函数块中的代码都会重新执行一次。
+函数中的变量使用的值是函数中定义的变量，如果没有，使用的是全局的变量值。
+
+******************6-27*******************************************
+
+get.ElementByTagName get.ElementById 有动态特性，后添加的会自动获取。
+get.querySelectorAll 没有动态特性
+
+javascripe数据类型
+一，基本数据类型（简单数据类型）
+1，String 字符串：一对引号包含的0个或多个字符连组成串;
+2，Number 数字：整数 浮点数（js不能精确计算小数计算）；范围-无穷到+无穷，超出infinity;
+3，Boolean布尔值 0 false 1 ture;
+4,undefined 未定义
+5，Null 空
+二，复合数据类型（引用数据类型）
+Object 对象; 是由零个或多个属性名/属性值组成的集合。
+
+内置函数：
+字符串：String();打印时出现native code,代表内置函数;
+数字:Number();
+布尔值：Boolean();
+对象:Object();
+
+一元运算符 typeof 会返回一个表示变量数据类型的字符串，有6个值。
+string number boolean undefined object function
+用typeof检测null，返回object;
+
++二元运算符 
+三元运算符 条件 ? 条件成立走这里 : 条件不成立走这里
+
+
+数组、函数属于对象，但是不属于数据类型，对象才属于数据类型。函数式可执行的对象，特殊。js中重要。
+
+Number()转化数据类型为数值；
+字符串转换为NaN，NaN类型为数字，代表不能转换的数字 NaN!=NaN NaN和任何数值比较、运算都返回false； 
+通过isNaN()或一个函数不等于他自身来判断是否为NaN；
+parseInt（）从数据头部开始转化为数字，只能提取整数
+parseFloat（） 从数据头部开始转化为数字，可以转化为浮点数
+js不能正确的进行小数运算；
+
+转换为字符串
+String(X) 和 X.toString相同
+X+""
+将一个对象转换为字符串，输出[数据类型，构造函数]
+所有的对象都是函数创建出来的。
+函数和数组和一般对象有区别。
+
+转换为布尔值
+Boolean(X)
+X！转换成布尔值取反
+X!!转换成布尔值
+字符串：非空ture
+数值：非0ture
+null、underfind:false
+将一个空或非空对象转换为Boolean，得到ture;
+
+显式类型转换 开发者自己手动调用方法进行转化
+String Number parseInt Boolean 
+隐式类型转换
+解析器为了运算方便，会隐式把一种类型转成另一种类型
+X+“” ！！X
+
+str[x]取出字符串的x位，和str.cha(x)一样。

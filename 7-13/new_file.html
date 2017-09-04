@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			span{
+				display: inline-block;
+				width:100px;
+				height:100px;
+				background: red;
+				font:80px "微软雅黑";
+				vertical-align: middle;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="xq">向前</button>
+		<button id="xh">向前</button>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+		<span>5</span>
+		<div id="x"></div>
+		<script>
+			var arr=[];			
+			var s=document.querySelectorAll("span");
+			for(i=0;i<s.length;i++){
+				arr.push(s[i].innerHTML);
+			}
+			xq.onclick=function(){
+				var x=0;
+				arr.push(arr.shift());
+				arr.forEach(
+					function(n,n1){s[n1].innerHTML=n;}
+					)
+				
+			}
+			xh.onclick=function(){
+				arr.unshift(arr.pop());
+				arr.forEach(
+					function(n,n1){s[n1].innerHTML=n;}
+					)
+				
+			}
+			var n=arr.map(function(n){return n});
+			x.innerHTML=n.join("");
+			console.log(n.toString())
+		</script>
+	</body>
+</html>

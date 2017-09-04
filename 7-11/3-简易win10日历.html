@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>win10日历</title>
+  <style>
+    body {
+      margin:0;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    .calendar {
+      width: 460px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.5);
+      padding-bottom: 20px;
+      position: absolute;
+    }
+    .l{
+    	left:-460px;
+    }
+    .r{
+    	left:460px;
+    }
+    #zs{
+    	left:0;
+    }
+    .box{
+    	width: 460px;
+    	height:480px;
+    	overflow: hidden;
+    	margin: 0 auto;
+    	position: relative;
+    }
+    .date-month {
+      width: 100%;
+      height: 66px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0 32px;
+    }
+    .cur-month {
+      height: 100%;
+      color: #ccc;
+      font: 16px/66px Arial;
+    }
+    .set-month a, .cur-month {
+      cursor: default;
+      -webkit-user-select: none;
+    }
+    .set-month a:hover, .cur-month:hover {
+      color: #fff;
+    }
+    .set-month {
+      width: 88px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .set-month a {
+      color: #ccc;
+      font-size: 24px;
+    }
+    .prev {
+      transform: rotate(90deg);
+    }
+    .next {
+      transform: rotate(-90deg);
+    }
+    .date-days, .date-nums{
+      width: 100%;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .date-nums {
+      height: auto;
+      flex-wrap: wrap;
+    }
+    .date-days span, .date-nums span{
+      width: 60px;
+      height: 55px;
+      border: 2px solid rgba(0,0,0,0);
+      text-align: center;
+      color: #fff;
+      line-height: 55px;
+      cursor: default;
+    }
+    .date-days span:hover, .date-nums span:hover {
+      border-color: #ccc;
+    }
+    .current-day {
+      background: rgb(141, 214, 237);
+    }
+    .date-nums span.other-month-date {
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+	<div class="box">
+	  <div class="calendar l">
+	  </div>
+	  <div class="calendar" id="zs">
+	    <div class="date-month">
+	      <div class="cur-month"></div>
+	      <div class="set-month">
+	        <a href="javascript:;" class="prev"><</a>
+	        <a href="javascript:;" class="next"><</a>
+	      </div>
+	    </div>
+	    <div class="date-dates">
+	      <div class="date-days">
+	        <span>一</span>
+	        <span>二</span>
+	        <span>三</span>
+	        <span>四</span>
+	        <span>五</span>
+	        <span>六</span>
+	        <span>日</span>
+	      </div>
+	      <div class="date-nums">
+	      </div>    
+	    </div>
+	  </div>
+	  <div class="calendar r">
+	  </div>
+	</div>
+	<script src="utils.js"></script> 
+  <script>
+  		var calendar=document.getElementsByClassName("calendar");
+  		var datelists= document.getElementsByClassName("date-nums");
+  		for(var i=0;i<42;i++){
+  			datelists[0].innerHTML+='<span></span>'
+  		}
+  		var datelist=document.querySelectorAll("#zs .date-nums span");
+  		console.log(datelist)
+  		function clear(){
+  			for(var i=0;i<42;i++){
+  				datelist[i].style.borderColor="";
+  			}
+  		};
+  		var curMonth=document.querySelector('.cur-month');
+  		var d = new Date();
+  		var f1=new Date();
+  		var f2=new Date();
+  		var p=d.getMonth();
+  		console.log(p);
+	  	function sc(t){
+	  		var month=t.getMonth();
+	  		console.log(month);
+	  		curMonth.innerHTML=t.getFullYear()+"年"+(month+1)+'月';
+	  		var d2= new Date();
+	  		d2.setMonth(month+1);
+	  		d2.setDate(0);
+	  		var ts=d2.getDate();
+	  		var d3= new Date();
+	  		d3.setMonth(month);
+	  		d3.setDate(0);
+	  		n = d3.getDay();
+	  		var ldays=d3.getDate();
+	  		var days=d2.getDate();
+	  		var x= 1;
+	  		var m=1;
+	  		var nx=n;
+	  		for(var i=0;i<42;i++){
+	  			if(i<n){
+	  				console.log(datelist);
+	  				datelist[i].innerHTML=ldays-nx+1;
+	  				datelist[i].style.color="#0000FF";
+	  				datelist[i].onclick=function(){
+	  					console.log(this.style.color)
+	  					var n3=this.innerHTML;
+	  					prev.onclick();
+	  					clear();
+	  					for(var h=0;h<42;h++){
+	  						if(datelist[h].innerHTML==n3){
+	  							if(datelist[h].style.color!="rgb(0,0,255)"){
+	  								datelist[h].style.borderColor="yellow";
+	  							}
+	  						}
+	  					}
+	  				}
+	  				nx--;
+	  			}else{
+	  				if(x<=ts){
+		  			datelist[i].innerHTML=x;
+		  			datelist[i].style.color="";
+		  			datelist[i].onclick=function(){
+		  				clear();
+		  				this.style.borderColor="yellow";
+		  			}
+		  			x++;
+		  			}else{
+		  				datelist[i].innerHTML=m;
+		  				datelist[i].style.color="#0000FF";
+		  				datelist[i].onclick=function(){	  					
+	  						var n4=this.innerHTML;
+		  					next.onclick();
+		  					clear();
+		  					for(var h=0;h<42;h++){
+	  						if(datelist[h].innerHTML==n4){
+	  							if(datelist[h].style.color!="rgb(0,0,255)"){
+	  								datelist[h].style.borderColor="yellow";
+	  							}
+	  						}
+	  					}
+	  				}
+		  				m++;
+		  			}
+	  			}
+	  		}
+	  	}
+	  	var prev=document.querySelector("#zs .prev");
+	  	var next=document.querySelector("#zs .next");
+	  	prev.onclick=function(){
+	  		var n2=d.getMonth();
+	  		d.setMonth(n2-1);
+	  		mTween(zs,"marginLeft",-480,1000,"linear",function(){
+	  			zs.style.marginLeft="0";
+	  			calendar[2].style.marginLeft="0";
+	  			fz();
+	  			sc(d);
+	  		});
+	  		mTween(calendar[2],"marginLeft",-480,1000,"linear",function(){
+					zs.style.marginLeft="0";
+	  			calendar[2].style.marginLeft="0";
+	  			fz();
+	  			sc(d);
+	  		});
+	  		
+	  	}
+	  	
+	  	next.onclick=function(){
+	  		var n2=d.getMonth();
+	  		d.setMonth(n2+1);
+	  		mTween(zs,"marginLeft",480,1000,"linear",function(){
+	  			zs.style.marginLeft="0";
+	  			calendar[0].style.marginLeft="0";
+	  			fz();sc(d);
+	  		});
+	  		mTween(calendar[0],"marginLeft",480,1000,"linear",function(){
+					zs.style.marginLeft="0";
+	  			calendar[0].style.marginLeft="0";
+	  			fz();
+	  			sc(d);
+	  		});
+	  		
+	  	}
+	  	var fz=function(){
+	  			var q1=d.getMonth();
+	  			var q2=d.getFullYear();
+			  			f1.setFullYear(q2);
+			  			f1.setMonth(q1-1);
+			  			sc(f1);
+	  			calendar[2].innerHTML=zs.innerHTML;	
+			  			f2.setFullYear(q2);
+			  			f2.setMonth(q1+1);
+			  			sc(f2);
+	  			calendar[0].innerHTML=zs.innerHTML;
+	  	}
+	  	fz();
+	  	sc(d);
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script>
+			var arr=[
+				{title:"第1季",child:[
+					{title:"第2季",child:[
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+					]},
+					{title:"第2季"},
+					{title:"第2季"},
+					{title:"第2季"},
+					{title:"第2季",child:[
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"}
+					]}
+				]},
+				{title:"第1季"},
+				{title:"第1季"},
+				{title:"第1季",child:[
+					{title:"第2季",child:[
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+					]},
+					{title:"第2季"},
+					{title:"第2季"},
+					{title:"第2季"},
+					{title:"第2季",child:[	
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+						{title:"第3季"},
+					]}
+				]}]
+			var html="";
+			var y=0;
+			function hs(x){
+				html+=`<ul>`;			
+				x.forEach(function(n){
+					html+=`<li><span>${n.title}</span>`;
+					if(n.child){
+						hs(n.child);
+					}
+					html+=`</li>`;	
+				})
+				html+=`</ul>`;
+			}
+			hs(arr);
+			box.innerHTML=html;
+		</script>
+	</body>
+</html>

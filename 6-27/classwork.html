@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			section{
+				width:478px;
+				height:208px;
+				background: url(img/bg.png);
+				margin:20px auto;
+				text-align: center;
+				box-sizing: border-box;
+				padding-top:80px;
+			}
+			section *{
+				height:40px;
+				padding:0;
+				margin: 0;
+				border-radius: 8px;
+				border: 0;
+				}
+			label{
+				color:#FFFFFF;
+				font:16px '微软雅黑';
+			}
+			#btn{
+				width:60px;
+				background:#000000;
+				color:#fff;	
+			}
+			#hm{
+				width:250px;
+				font:16px/40px "微软雅黑";
+				color:#000000;
+				text-indent: 20px;
+			}
+			section p{
+				text-align: center;
+				padding-top: 10px;
+			}
+			section p span{
+				display:none;
+				font:16px/50px "微软雅黑";
+				color:#fff776;
+				background:url(img/tc.png) 50% 20% no-repeat;
+				height:45px;
+				width:180px;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<label>请输入qq号码：</label>
+			<input type="text" id="hm"/>
+			<input type="button" id="btn" value="保存" />
+			<p><span>1111111</span></p>
+		</section>
+		<script>
+			var ts=document.querySelector("span");
+			var hm=document.getElementById("hm")
+			var sr="";
+			btn.onclick=function(){
+				sr=hm.value;
+//				if(sr.length!=String(parseInt(sr)).length){
+//						ts.innerHTML="输入不合法";
+//					ts.style.display="inline-block";
+//					}else{
+//						ts.innerHTML="成功";
+//					ts.style.display="inline-block";
+//					}; //绕过了错误层级，放弃
+				if(sr==""){//判断值是否为空
+					ts.innerHTML="输入值不能为空";
+					ts.style.display="inline-block";
+				}else{
+					if(sr[0]==" "|sr[sr.length]==' '){//判断前后最后一位是不是空格
+						ts.innerHTML="前后不能有空格 ";
+						ts.style.display="inline-block";
+					}else{
+						if(Number(sr)!=Number(sr)){//判断输入的字符串能否直接转化为数值
+							ts.innerHTML="请输入数字";
+							ts.style.display="inline-block";
+						}else{
+							if(Number(sr)!=parseInt(sr)){//判断输入的内容是不是小数
+								ts.innerHTML="不能输入小数";
+								ts.style.display="inline-block";
+							}else{
+								if(sr[0]==0){//判断第一位是不是0
+									ts.innerHTML="第一位不能为0";
+									ts.style.display="inline-block";
+								}else{
+									if(Number(sr)>999999999999|Number(sr)<10000){//判断位数
+										ts.innerHTML="最少5位最多13位";
+										ts.style.display="inline-block";
+									}else{
+										ts.innerHTML="成功";
+										ts.style.display="inline-block";
+									}
+								}
+							}
+						}
+					}
+					
+				}
+			}
+		</script>
+	</body>
+</html>

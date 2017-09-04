@@ -1,0 +1,35 @@
+/* CSS Document */
+#biaoti{
+	width:500px;
+	height:120px;
+	background-image:url(../images/biaoti.png);
+	}
+#box{
+	width:496px;
+	height:498px;
+	border:#a9e8f7 2px solid;
+	border-top:none;
+	}
+#pic1{
+	width:496px;
+	height:100px;	
+	background:#f4c3cd url(../images/email.png) 39px 36px no-repeat;
+	border-bottom:2px solid #ecf4fa;
+	}
+#pic2{
+	width:496px;
+	height:100px;	
+	background:#f8d7de url(../images/shubiao.png) 39px 30px no-repeat;
+	border-bottom:2px solid #ecf4fa;
+	}
+#pic3{
+	width:496px;
+	height:100px;	
+	background:#fbe7eb url(../images/xiaolian.png) 39px 33px no-repeat;
+	border-bottom:2px solid #ecf4fa;
+	}
+#pic4{
+	width:496px;
+	height:192px;	
+	background:#fdf3f5 url(../images/xingxing.png) 39px 32px no-repeat;
+	}

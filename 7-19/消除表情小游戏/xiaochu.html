@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet"  href="css/reset.css"/>
+	<link rel="stylesheet"  href="css/xiaochu.css"/>
+	<body>
+		<div class="wrap">
+			<p class="p1">你的鼠标有多快？</p>
+			<p class="p2">游戏说明：“点击游戏”,随机掉下表情点中它，千万别让它掉下去！！</p>
+			<div class="box">
+				
+				<div class="zhezhao">
+					<div class="jf">
+						<p class="defen"><span class="span1">0分</span><span>得分</span></p>
+						<p class="shifen"><span class="span2">0分</span><span>失分</span></p>
+					</div>
+					<input type="button" id="btn" value="开始游戏">
+					<div class="pm">
+							<img src="images/gui1.png" class="gui1"/>
+							<img src="images/gui2.png" class="gui2"/>
+							<img src="images/gui3.png" class="gui3"/>
+							<img src="images/gui4.png" class="gui4"/>
+							<img src="images/gui5.png" class="gui5"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="utils.js"></script>
+		<script>
+			var jf=document.getElementsByClassName("jf")[0]
+			var img=document.getElementsByTagName("img");
+			btn.onclick=function(){
+				jf.style.left="-100px";
+				btn.style.bottom="-65px";
+				var r=setInterval(dl,2000);	
+				
+			}
+			var arr = [];
+				for( var i = 10; i >= 0; i-=1 ){
+					arr.push(i,-i)
+				}
+			function dl(){
+				var n2=parseInt(Math.random()*6);
+				n2=hd1(n2);
+				console.log(n2)
+				img[n2].onmouseover=function(){
+					var p=this;
+					var n=0;
+					this.src="images/gui7.png";
+					var t=setInterval(function (){			
+						p.style.marginLeft=arr[n]+"px";
+						n++;
+						if(arr[n]==0){
+						p.style="none";
+						p.src="images/gui"+(n2+1)+".png";
+						console.log("images/gui"+n2+".png")
+						clearInterval(t);
+						}
+
+					},4,[p,n2])
+					clearInterval(this.timer);
+//					
+				};
+				setTimeout(yd,100,[n2]);
+				
+			};
+			function hd1(x){
+				if(img[x].style.left!=0){
+					x=x+1;
+					if(x>=6){
+						x=0;
+					}
+					return hd1(x);
+				}else{
+					return x;
+				}
+				
+			}
+			var box=document.getElementsByClassName("box")[0];
+			function yd(x){
+				console.log(x);
+				var n1=parseInt(Math.random()*(676-57));
+				console.log(x);
+				img[x].style.left=n1+"px";
+				mTween(img[x],"top",400,4000,"linear",function(){
+					img[x].style="";
+					var p=box;
+					var n=0;
+					var t2=setInterval(function (p){	
+						box.style.left=arr[n]+"px";
+						n++;
+						if(arr[n]==0){
+						p.style="none";
+						clearInterval(t2);
+						}
+
+					},4,[p])
+				})
+			}
+		</script>
+	</body>
+</html>

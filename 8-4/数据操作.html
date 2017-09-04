@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        td {
+            text-align: center;
+        }
+        .red{
+            background: red;
+        }
+        .color{
+            background-image: linear-gradient(135deg, #41c8ff 0, #41c8ff 25%,#46e6fe 75%);
+        }
+    </style>
+    <script>
+
+        //在页面加载完成的时候，把下面这个数据动态添加到表格中
+        var data = [
+            {
+                 'id' : 1,
+                'username' : 'LEO',
+                'age' : 36,
+                'sex' : '男'
+            },
+            {
+                'id' : 2,
+                'username' : 'MOMO',
+                'age' : 16,
+                'sex' : '男'
+            },
+            {
+                'id' : 3,
+                'username' : 'DUODUO',
+                'age' : 29,
+                'sex' : '男'
+            },
+            {
+                'id' : 4,
+                'username' : '勇升',
+                'age' : 46,
+                'sex' : '男'
+            },
+            {
+                'id' : 5,
+                'username' : '小美',
+                'age' : 40,
+                'sex' : '女'
+            }
+        ];
+    </script>
+</head>
+
+<body>
+
+<form action="" name="form">
+    <p>
+        姓名:<input type="text" id="userName" name="username"/>
+    </p>
+    <p>
+        年龄:<input type="text" id="age" name="age"/>
+    </p>
+    <p>
+        性别: <select name="sex" id="sex">
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+    </p>
+    <p>
+        <input type="button" id="add" value="添加" name="add"/>
+    </p>
+</form>
+    <input type="button" id="delectAll" value="删除选中"  class="btn"> 
+    <input type="button" value="年龄从小到大" id="ageSort"  class="btn"> 
+    <table id="tab1" width="100%" border="1">
+        <thead>
+        <tr>
+            <th>
+                <input id="checkAll" type="checkbox" /> 全选
+            </th>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script type="text/javascript">     
+	    var data = [
+	            {
+	                 'id' : 1,
+	                'username' : 'LEO',
+	                'age' : 36,
+	                'sex' : '男'
+	            },
+	            {
+	                'id' : 2,
+	                'username' : 'MOMO',
+	                'age' : 16,
+	                'sex' : '男'
+	            },
+	            {
+	                'id' : 3,
+	                'username' : 'DUODUO',
+	                'age' : 29,
+	                'sex' : '男'
+	            },
+	            {
+	                'id' : 4,
+	                'username' : '勇升',
+	                'age' : 46,
+	                'sex' : '男'
+	            },
+	            {
+	                'id' : 5,
+	                'username' : '小美',
+	                'age' : 40,
+	                'sex' : '女'
+	            }
+	        ];
+	    var n=6;
+	    var del=document.getElementsByTagName("a");
+	    var tr=document.getElementsByTagName("tr");
+		var n2=0;
+	    function xr(){
+			var tb=document.getElementsByTagName("tbody")[0];
+			tb.innerHTML="";
+		    for(var i=0;i<data.length;i++){
+		    	tb.innerHTML+=
+		    		`<tr>
+		                <td>
+		                    <input type="checkbox"/>
+		                </td>
+		                <td>${data[i].id}</td>
+		                <td>${data[i].username}</td>
+		                <td>${data[i].age}</td>
+		                <td>${data[i].sex}</td>
+		                <td>
+		                    <a href="javascript:;">删除</a>
+		                </td>
+		            </tr>`
+		    }
+		    for(var i=0;i<del.length;i++){
+				del[i].onclick=function(){
+					var n=this.parentNode.parentNode.children[1].innerHTML;			
+					this.parentNode.parentNode.remove();
+					ss();
+					data=data.filter(function(item){
+						return item.id!=n;
+					})
+					if(this.parentNode.parentNode.children[0].children[0].checked){
+						n2--;
+					}
+					if(n2==tr.length-1){
+						tr[0].children[0].children[0].checked=true;
+					}else{
+						tr[0].children[0].children[0].checked=false;
+					}
+				}
+			}
+		    for(var i=1;i<tr.length;i++){
+				tr[i].children[0].children[0].onclick=function(){
+					console.log(data)
+					console.log(n2,tr.length-1);
+					if(!this.checked){
+						n2--;
+						
+					}else{
+						n2++;
+					}
+					if(n2==tr.length-1){
+						tr[0].children[0].children[0].checked=true;
+					}else{
+						tr[0].children[0].children[0].checked=false;
+					}
+				}
+			}
+		    tr[0].children[0].children[0].onclick=function(){
+		    	if(!this.checked){
+						n2=0;
+						for(var i=1;i<tr.length;i++){
+							tr[i].children[0].children[0].checked=false;
+						}
+					}else{
+						n2=tr.length-1;
+						for(var i=1;i<tr.length;i++){
+							tr[i].children[0].children[0].checked=true;
+						}
+					}
+		    }
+		}
+	    function ss(){
+		    var tr=document.getElementsByTagName("tr")
+		    for(var i=0;i<tr.length;i++){
+		    	if(i%2==1){
+		    		tr[i].style.backgroundColor="red";
+		    	}else{
+		    		tr[i].style.backgroundColor="";
+		    	}
+		    }
+		}
+	    xr();
+	    ss();
+	    var op=document.getElementsByTagName("option");
+		add.onclick=function(){
+			data.push({"id":n,"username":userName.value,"age":age.value,'sex':sex.value});
+			n++;
+			xr();
+			ss();
+			userName.value="";
+			age.value="";
+			sex.options.selectedIndex=0;
+		}
+		ageSort.onclick=function(){
+			data.sort(function(a,b){
+				return a.age-b.age;
+			})
+			console.log(data);
+			xr();
+			ss();
+			n2=0;
+		}
+		
+		delectAll.onclick=function(){
+			var arr1=[];
+			for(var i=0;i<del.length;i++){
+				if(del[i].parentNode.parentNode.children[0].children[0].checked){
+					arr1.push(i);
+				}
+				
+			}
+			for(var i=0;i<arr1.length;i++){
+				del[arr1[i]-i].onclick();
+			}
+			tr[0].children[0].children[0].checked=false;
+			n2=0;
+		}	
+    </script>
+</body>
+</html>

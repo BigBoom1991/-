@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				overflow: auto;
+			}
+			section{
+				background: url(bg1.png);
+				margin:0 auto;
+				overflow: hidden;
+				width:1200px;
+				height:700px;
+			}
+			.box{
+				background:rgba(64,33,150,0.5);
+				margin:120px auto 0;
+				width:850px;
+				height:450px;
+				overflow: hidden;
+				border-radius:20px;
+				position: relative;
+				text-align: center;
+			}
+			textarea{
+				margin:60px 50px;
+				width:280px;
+				height:320px;
+				padding:10px;
+				font:16px "微软雅黑";
+				position: absolute;
+				left:0;
+			}
+			img{
+				margin:200px auto 0;
+			}
+			.r{
+				top:0px;
+				right:0;
+				left:inherit;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="box">
+				<textarea></textarea>
+				<span><img src="anniu.png"/>
+				<p>0/0</p>
+				</span>
+				<textarea class="r"></textarea>			
+			</div>
+		</section>
+		<script src="utils.js"></script>
+		<script>
+			var txt=document.querySelectorAll("textarea");
+			var n=0;
+			function x(t,t2){
+				var ys=txt[0].value;
+				var i=ys.charAt(0);
+				if(i!=""){
+					txt[1].value+=i;
+					txt[0].value=ys.slice(1);
+					n++;
+					p.innerHTML=n+"/"+t2;
+				}
+				else{
+					clearInterval(yd);
+					yd=null;
+					j="";
+					k="";
+					n=0;
+				}
+				
+			}
+			var an=document.getElementsByTagName("img")[0];
+			var p=document.getElementsByTagName("p")[0];
+			var yd=null;
+			an.onclick=function(){
+				if(yd==null){
+					txt[1].value="";
+					j="0/0";
+					k=txt[0].value.length;
+					p.innerHTML=j.slice(0,-1)+k;
+					var x1=txt[0].value.length;
+					yd=setInterval(x,100,x1,k);
+				}
+			}
+		
+		</script>
+	</body>
+</html>

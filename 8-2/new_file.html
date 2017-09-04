@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				height:120px;
+				overflow: hidden;
+				width:100px;
+				position: relative;
+			}
+			#gdt{
+				position:absolute;
+				right:0;
+				top:0;
+				width:20px;
+				height:100%;
+				border:1px solid #000000;
+				box-sizing: border-box;
+			}
+			p{
+				background: red;
+				height:20px;
+				width:100%;
+				margin:0;
+				position: absolute;
+			}
+			ul{
+				margin:0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="list">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>
+				<li>13</li>
+				<li>14</li>
+				<li>15</li>
+			</ul>
+			<div id="gdt"><p id="hk"></p></div>
+		</div>
+		<script>
+			function mousewheel(element,upFn,downFn){
+				element.onmousewheel = fn;
+				if(element.addEventListener){
+					element.addEventListener("DOMMouseScroll",fn);
+				}
+
+				function fn(ev){
+					var e = ev || event;
+					var direction = true;  // 上
+
+					if(e.wheelDelta){
+						direction = e.wheelDelta > 0 ? true : false;
+					}
+					if(e.detail){
+						direction = e.detail < 0 ? true : false;
+					}
+
+					if(direction){
+						upFn(e);
+					}else{
+						downFn(e);
+					}
+
+				};	
+			}
+			var n=0;
+			mousewheel(box,function(ev){
+				n++;
+				yun();	
+			},function(ev){
+				n--;
+				yun();
+			});
+			function yun(){
+				if(n<-100){
+					n=-100;
+				}else if(n>0){
+					n=0;
+				}
+				list.style.marginTop=1.2*n+'px';
+				hk.style.top=-1*n*0.98+"px";
+			}
+
+			
+		</script>
+	</body>
+</html>

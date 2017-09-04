@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/public.css"/>
+		<style>
+			.wrap{
+				width:1000px;
+				height:800px;
+				margin:20px auto;
+				background:url(img/bg.png);
+				overflow: hidden;
+				position: relative;
+			}
+			.box{
+				box-sizing:border-box;
+				width:680px;
+				height:506px;
+				border:1px solid #d8d7db;
+				border-radius:18px;
+				background-color:#fff;
+				margin:152px auto;
+			}
+			.pm{
+				width:560px;
+				height:410px;
+				border:1px solid #d8d7db;
+				margin:46px 0px 46px 44px;
+				text-align: center;
+				background-color: #000;
+			}
+			#reset{				
+				display:inline-block;
+				height:57px;
+				width:46px;
+				background: url(img/logo.png);
+				margin:228px 10px;
+			}
+			
+			.qh input{
+				color:white;
+				border:1px solid #d8d7db;
+				margin-top:15px;
+				margin-left:-1px;
+				font:16px/34px "微软雅黑";
+				width:128px;
+			}
+			.qh .ch{
+				color:black;
+				background-color:white;
+			}
+			.qh{
+				font-size:0;
+			}
+			.pm #js{
+				color:#8e8e8e;
+				font:14px/38px "微软雅黑";
+			}
+			.pic{
+				position: relative;
+			}
+			#img{
+				margin:6px auto;
+				width:550px;
+				height:310px;
+			}
+			
+			#btn3,#btn4{
+				height:57px;
+				width:46px;
+				position:absolute;
+				opacity:0.2;
+				background-color:#000;
+				font:30px/57px "微软雅黑";
+				color:white;
+			}
+			#btn3{
+				left:0px;
+				top:50%;
+				margin-top:-28px;
+			}
+			#btn4{
+				right:0px;
+				top:50%;
+				margin-top:-28px;
+			}
+			#btn3:hover,#btn4:hover{
+				opacity:0.8;
+			}
+			#tips1,#tips2{
+				position:absolute;
+				color:white;
+				font:16px "微软雅黑";
+				width:560px;
+			}
+			#tips1{
+				padding-top: 10px;
+				left:0;
+				top:0px;
+				background-image:-webkit-repeating-linear-gradient(top,black 0%,transparent 100%);
+				height:25px;
+			}
+			#tips2{
+				bottom:0px;
+				left:0;
+				background:rgba(0,0,0,0.6);
+				padding-bottom: 15px;
+				padding-top:10px;
+			}
+			#fg{
+				position:absolute;
+				top: 0;
+				left:0;
+				width:1000px;
+				height:800px;
+				display:none;
+			}
+			#win{
+				width:300px;
+				height:150px;
+				box-sizing: border-box;
+				border:1px solid #d8d7db;
+				margin:312px auto;
+				background:rgba(0,0,0,0.8);
+				color:white;
+				text-align: center;
+			}
+			#win p{
+				text-align:center;
+				margin-top:20px;
+				font:18px "微软雅黑";
+				height:18px;
+			}
+			#sure{
+				color:white;
+				border:1px solid #fff;
+				font:18px/25px "微软雅黑";
+				width:80px;
+				border-radius: 3px;
+				margin-top:20px;
+			}
+			#win #tip3{
+				color:#8e8e8e;
+				font:14px "微软雅黑";
+			}
+			#sure:hover{
+				background-color:#fff;
+				color:#000;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="wrap">
+			<div class="box">
+				<div class="pm fl">
+					<div class="qh">
+						<input type="button" id="btn1" value="循环切换" class="ch"/>
+						<input type="button" id="btn2" value="顺序切换"/>
+					</div>
+					<p id="js">图片可以从最后一张到第一张循环切换</p>
+					<div class="pic">
+						<img id="img" src="img/img1.png"/>
+						<input type="button" id="btn3" value="<"/>
+						<input type="button" id="btn4" value=">"/>
+						<span id="tips1">1/4</span>
+						<span id="tips2">文字描述1</span>
+					</div>
+				</div>
+				<a id="reset" href=""></a>				
+			</div>
+			<div id="fg">
+				<div id="win">
+					<p>JavaScript提醒</p>
+					<p id="tip3"></p>
+					<input type="button" id="sure" value="确定" />
+				</div>
+			</div>
+		</div>
+		<input type="button" name="btn" id="btn" value="111" />
+		<script>
+			var ms = true;//循环模式
+			var n = 0;//数组下标
+			var arr = ["img1","img2","img3","img4"]//图片数组
+			var arr2 =["文字描述1","文字描述2","文字描述3","文字描述4"]//文字描述数组
+			function fz(赋值){
+				img.src="./img/"+arr[n]+".png";//图片切换
+				tips1.innerHTML=n+1+"/"+arr.length;//文字计数切换
+				tips2.innerHTML=arr2[n]//文字描述切换
+			}
+			btn1.onclick=function(){
+				ms=true;
+				btn1.className="ch";
+				btn2.className="";
+				js.innerHTML="图片可以从最后一张到第一张循环切换"
+			}
+			btn2.onclick=function(){
+				ms=false;
+				btn2.className="ch";
+				btn1.className="";
+				js.innerHTML="图片不能从最后一张到第一张循环切换"
+			}
+			btn3.onclick=function(){
+				n--
+				if (n<0) {
+					if(ms){
+						n=arr.length-1
+					}else{//当开启顺序切换且处于最后张时，点击下一张的状况
+						fg.style.display="block";
+						tip3.innerHTML="已经是第一张了，不能再往前了~"
+						n=0
+					}
+				}
+				fz()
+				
+			}
+			btn4.onclick=function(){
+				n++
+				if (n>arr.length-1) {
+					if(ms){
+						n=0
+					}else{//当开启顺序切换且处于第一张时，点击上一张的状况
+						fg.style.display="block";
+						tip3.innerHTML="已经是最后一张了，不能再往后了~"
+						n=arr.length-1
+					}
+				}
+				fz()
+				
+			}
+			sure.onclick=function(){//关闭弹出框
+				fg.style.display="none";
+			}
+			var x =function(){
+				alert(2)
+			}
+			function(){
+				alert(2)
+			}
+		</script>
+		</body>
+		
+</html>

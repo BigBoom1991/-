@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<section class="wrap">
+		<div class="wrap-left">
+			<ul class="list">
+				<li>
+					<span>jQuery</span>
+					<div class="btn">
+						<a href="javascript:;"  class="up">上移</a>
+						<a href="javascript:;" class="down">下移</a>
+					</div>
+				</li>
+				<li>
+					<span>AJAX</span>
+					<div class="btn">
+						<a href="javascript:;"  class="up">上移</a>
+						<a href="javascript:;" class="down">下移</a>
+					</div>
+				</li>
+				<li>
+					<span>JS基础-2</span>
+					<div class="btn">
+						<a href="javascript:;"  class="up">上移</a>
+						<a href="javascript:;" class="down">下移</a>
+					</div>
+				</li>
+				<li>
+					<span>移动端实战</span>
+					<div class="btn">
+						<a href="javascript:;"  class="up">上移</a>
+						<a href="javascript:;" class="down">下移</a>
+					</div>
+				</li>
+				<li>
+					<span>canvas游戏</span>
+					<div class="btn">
+						<a href="javascript:;"  class="up">上移</a>
+						<a href="javascript:;" class="down">下移</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--<div class="wrap-right">
+			<ul class="list">
+				<li>
+					<span>jQuery</span>
+					<div class="btn">
+						<a href="javascript:;" class="up"></a>
+						<a href="javascript:;" class="down"></a>
+					</div>
+				</li>
+				<li>
+					<span>小程序</span>
+					<div class="btn">
+						<a href="javascript:;"  class="up"></a>
+						<a href="javascript:;" class="down"></a>
+					</div>
+				</li>
+				<li>
+					<span>jQuery</span>
+					<div class="btn">
+						<a href="javascript:;"  class="up"></a>
+						<a href="javascript:;" class="down"></a>
+					</div>
+				</li>
+				<li>
+					<span>面向对象-上</span>
+					<div class="btn">
+						<a href="javascript:;"  class="up"></a>
+						<a href="javascript:;" class="down"></a>
+					</div>
+				</li>
+				<li>
+					<span>面向对象-下</span>
+					<div class="btn">
+						<a href="javascript:;"  class="up"></a>
+						<a href="javascript:;" class="down"></a>
+					</div>
+				</li>
+			</ul>
+		</div>-->
+	</section>
+	<script>
+		var left=document.querySelectorAll(".wrap-left .list li");
+		var up=document.getElementsByClassName("up");
+		var down=document.getElementsByClassName("down");
+		var btn=document.getElementsByClassName("btn");
+		for(var i=0;i<left.length;i++){
+			left[i].style.top=i*62+"px";
+			btn[i].nb=i;
+			left[i].nb=i;
+		}
+		function xr(){
+			for(var x=0;x<left.length;x++){
+				left[x].style.top=left[x].nb*62+"px";
+				btn[x].nb=left[x].nb;
+			}
+		}
+		
+		for(var i=0;i<left.length;i++){
+			up[i].onclick=function(){
+				if(this.parentElement.parentElement.nb==0){
+					this.parentElement.parentElement.nb=left.length;
+					for(var b=0;b<left.length;b++){
+						left[b].nb--;
+					}
+				}else{
+					for(var x=0;x<left.length;x++){
+						if(left[x].nb==this.parentElement.parentElement.nb-1){
+							left[x].nb=this.parentElement.nb;
+						}
+					}
+					this.parentElement.parentElement.nb--;
+				}	
+				xr();
+			}
+			down[i].onclick=function(){
+				if(this.parentElement.parentElement.nb==left.length-1){
+					this.parentElement.parentElement.nb=-1;
+					for(var b=0;b<left.length;b++){
+						left[b].nb++;
+					}
+				}else{
+					for(var x=0;x<left.length;x++){
+						if(left[x].nb==this.parentElement.nb+1){
+							left[x].nb=this.parentElement.nb;
+						}
+					}
+					this.parentElement.parentElement.nb++;
+				}
+				xr();
+			}
+		}
+	</script>
+</body>
+</html>

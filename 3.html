@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.wrap{
+				height:100px;
+				width:100px;
+				border:10px solid red;
+				transform-style:preserve-3d;
+				perspective:1500px;
+				}
+			.box{
+				transform-style:preserve-3d;
+				position:relative;
+				transition:20s;
+				transform-origin:center center -50px;
+				height:100px;
+				width:100px;
+				
+			}
+			.box div{
+				width:100px;
+				height:100px;
+				font:80px/100px "微软雅黑";
+				text-align:center;
+				background:blue;
+				position:absolute;
+			}
+			.item1{
+				
+			}
+			.item2{
+				top:-100px;
+				transform:rotateX(90deg);
+				transform-origin:bottom;
+			}
+			.item3{
+				top:100px;
+				transform:rotateX(-90deg);
+				transform-origin:top;
+			}
+			.item4{
+				left:100px;
+				transform:rotateY(90deg);
+				transform-origin: left;
+			}
+			.item5{
+				left:-100px;
+				transform:rotateY(-90deg);
+				transform-origin: right;
+			}
+			
+			.item6{
+				transform: translateZ(-100px);
+				
+				
+			}
+			.wrap .box:hover{
+				transform: rotateZ(1000deg) rotateY(2000deg) rotateZ(500deg) scaleZ(4)
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="box">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">5</div>
+				<div class="item6">6</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

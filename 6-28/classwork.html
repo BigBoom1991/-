@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				width:1200px;
+				height:800px;
+				margin:0 auto;
+				background:url(img/bg.png);
+				overflow: hidden; 
+			}
+			.sj{
+				width:600px;
+				box-sizing: border-box;
+				border-radius:8px;
+				border:2px solid #DDDDDD;
+				margin:230px auto 0;
+				height:150px;
+				padding:0px 50px;
+				font:16px/30px "微软雅黑",Regular;
+				color:#FFF;
+			}
+			p{
+				padding-left:300px;
+				color:#FFFFFF;
+				font:16px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<section>
+			<div class="sj">var arr = ['100px', 'abc' - 6, [], -98765, 34, -2, 0, '300', , function() {alert(1);}, null, document, [], true, '200px' - 30, '23.45Ԫ', 5, Number('abc'), function() {alert(3);}, 'xyz' - 90];</div>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</section>
+		<script>
+			var arr = ['100px', 'abc' - 6,[], -98765, 34, -2, 0, '300',' ', function() {alert(1);}, null, document,  [], true, '200px' - 30, '23.45Ԫ', 5, Number('abc'), function() {alert(3);}, 'xyz' - 90];
+			var n=document.getElementsByTagName("p");
+			console.log(n);
+			var x=-Infinity;
+			for(i=0;i<arr.length;i++){
+				if(typeof(arr[i])=="number"&&!isNaN(arr[i])){
+						n[0].innerHTML+=arr[i]+",";
+				}
+				if(!isNaN(parseFloat(arr[i]))){
+					n[1].innerHTML+=arr[i]+",";
+				}
+				if(Number(arr[i])>x){
+					n[2].innerHTML=arr[i];
+					x=Number(arr[i]);
+				}
+				if(typeof(arr[i])=="number"&&isNaN(arr[i])){
+					n[3].innerHTML+=i+",";
+				}
+			}
+		</script>
+	</body>
+</html>

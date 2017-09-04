@@ -1,0 +1,38 @@
+/* CSS Document */
+
+body,p,h1,h2,h3,h4,h5,h6,dl,dd,dt{
+	margin:0;
+	font:12px/1 "宋体";
+	font-weight:normal;
+	text-indent:0;
+	}
+ol,ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+	}
+a{
+	text-decoration:none;
+	color:inherit;
+	}
+img{
+	border:none;
+	vertical-align:top;
+	}
+b,strong{
+	font-weight:normal;
+	}
+i,em{
+	font-style:normal;
+	}
+mark{
+	background:none;
+	color:inherit;	
+	}
+.clearfix:after{
+	content:"";
+	display:block; 
+	clear:both;
+	height:0;
+	overflow:hidden;
+	}

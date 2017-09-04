@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function deepClone(obj){
+				let gdobj = obj instanceof Array ?[]:{};
+				for(let attr in obj){
+					if(typeof obj[attr]==="object"){
+						gdobj[attr]=deepClone(obj[attr])
+					}else{
+						gdobj[attr]=obj[attr]
+					}
+				}
+				return gdobj;
+			}
+		</script>
+	</body>
+</html>

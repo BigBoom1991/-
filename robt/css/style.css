@@ -1,0 +1,36 @@
+.wrap {
+  margin: 400px auto;
+  background-color: black;
+  width: 400px;
+  height: 700px;
+  transform-style: preserve-3d;
+  Perspective: 1000px;
+}
+.body {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 200px;
+  height: 300px;
+}
+.body * {
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  position: absolute;
+}
+.body .item1,
+.body .item2 {
+  width: 200px;
+  height: 300px;
+}
+.body .item3,
+.body .item4 {
+  width: 100px;
+  height: 300px;
+}
+.body .item5,
+.body .item6 {
+  width: 200px;
+  height: 100px;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			p{
+				margin:0;
+				text-align: center;
+				font:16px/30px "微软雅黑";
+			}
+			.box1{
+				width:1200px;
+				height:1000px;
+				background: url(bg.png);
+				padding-top:170px;
+				padding-left:100px;
+				box-sizing: border-box;
+			}
+			.box{
+				width:240px;
+				height:400px;
+				background: #ffffff;
+				margin-right:10px;
+				float:left;
+				position:relative;
+			}
+			.box .ti{
+				color:#e15671;
+				background:#000000;
+				margin:0;
+				font:16px/40px "微软雅黑";
+				padding:0 10px;
+			}
+			.fr{
+				float: right;
+			}
+			.box .djs{
+				font:16px/30px "微软雅黑";
+				color:#3969696;
+				padding:20px 20px;
+			}
+			.box .djs span{
+				background: #e15671;
+				display: inline-block;
+				padding:0 4px;
+				margin:0 2px;
+				border-radius:4px;
+				color:#FFFFFF;
+			}
+			.tp{
+				text-align: center;
+				padding-top:30px;
+				box-sizing: border-box;
+			}
+			.tp img{
+				width:180px;
+				height:150px;
+			}
+			.zz{
+				position: absolute;
+				width:100%;
+				height:100%;
+				top:0;
+				background:transparent;
+				z-index:5;
+				box-sizing: border-box;
+				padding-top:200px;
+				text-align: center;
+			}
+			.zz img{
+				display: none;
+				width:100%;
+			}
+			.jg{
+				color:#ababab;
+			}
+			i{
+				font-style: normal;
+				color:#e15671;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box">
+				<p class="ti">November26 2013<span class="fr">确定</span></p>
+				<p class="djs">剩余:<span>0</span><span>0</span>:<span>0</span><span>0</span>:<span>0</span><span>0</span></p>
+				<p class="tp"><img src="t0.png"></p>
+				<p class="zz"><img src="z.png"/></p>
+				<p class="bt">Apple iPhone 7 Plus 64g</p>
+				<p class="jg">抢购价：<i>￥5799</i></p>
+			</div>
+			<div class="box">
+				<p class="ti">November26 2013<span class="fr">确定</span></p>
+				<p class="djs">剩余:<span>0</span><span>0</span>:<span>0</span><span>0</span>:<span>0</span><span>0</span></p>
+				<p class="tp"><img src="t1.png"></p>
+				<p class="zz"><img src="z.png"/></p>
+				<p class="bt">27 英寸配备 Retina 5K显示屏</p>
+				<p class="jg">抢购价：<i>￥15999</i></p>
+			</div>
+			<div class="box">
+				<p class="ti">November26 2013<span class="fr">确定</span></p>
+				<p class="djs">剩余:<span>0</span><span>0</span>:<span>0</span><span>0</span>:<span>0</span><span>0</span></p>
+				<p class="tp"><img src="t2.png"></p>
+				<p class="zz"><img src="z.png"/></p>
+				<p class="bt">iPad mini 4</p>
+				<p class="jg">抢购价：<i>￥1799</i></p>
+			</div>
+			<div class="box">
+				<p class="ti">November26 2013<span class="fr">确定</span></p>
+				<p class="djs">剩余:<span>0</span><span>0</span>:<span>0</span><span>0</span>:<span>0</span><span>0</span></p>
+				<p class="tp"><img src="t3.png"></p>
+				<p class="zz"><img src="z.png"/></p>
+				<p class="bt">Apple iPhone 7 Plus 64g</p>
+				<p class="jg">抢购价：<i>￥5799</i></p>
+			</div>
+			<div class="xbt">
+			</div>
+		</div>
+		<script src="utils.js"></script>
+		<script>
+			var now=new Date();
+			var arr=[new Date(now.getTime()+6000),new Date(now.getTime()+3000),new Date(now.getTime()+5000),new Date(now.getTime()+8000)];
+			var p=document.getElementsByClassName("box");
+			var zz=document.getElementsByClassName("zz");
+			var bt=document.getElementsByClassName("bt");
+			var i1=document.getElementsByTagName("i");
+			var xbt=document.getElementsByClassName("xbt")[0];
+		
+			var n=setInterval(
+				function(){
+					now=new Date();
+					for(var i=0;i<4;i++){
+						fn(i,now.getTime());
+					}
+				},1000)
+			function fn(x,w){
+				if(!p[x].kg){
+						x1=p[x].querySelectorAll(".djs span");
+						if(w<arr[x].getTime()){
+							x1[0].innerHTML=parseInt(((arr[x].getTime()-now.getTime())%86400000)/36000000);
+							x1[1].innerHTML=parseInt(((arr[x].getTime()-now.getTime())%86400000)/3600000%10);
+							x1[2].innerHTML=parseInt(((arr[x].getTime()-now.getTime())%3600000)/600000);
+							x1[3].innerHTML=parseInt(((arr[x].getTime()-now.getTime())%3600000)/60000%10);
+							x1[4].innerHTML=parseInt(((arr[x].getTime()-now.getTime())%60000)/10000);
+							x1[5].innerHTML=parseInt(((arr[x].getTime()-now.getTime())%60000)%10000/1000);
+						}else{
+							p[x].kg=true;
+							var n=-15;
+							var k =setInterval(function(){
+								p[x].style.left=n+'px';
+								n=-n
+								if(n>2){
+									n--
+								}else if(n<-2){
+									n++
+								}else{
+									n=0;
+									clearInterval(k);
+								}
+							},100)
+							for(i=0;i<6;i++){
+								x1[i].innerHTML="0";
+								zz[x].style.backgroundColor="rgba(0,0,0,0.5)";
+								var m= zz[x].getElementsByTagName("img");
+								m[0].style.display="inline-block";
+								
+								mTween(m[0],"width",132,500);
+								
+							}
+							xbt.innerHTML+="<div>"+bt[x].innerHTML+"<span class='fr'>"+i1[x].innerHTML+"</span></div>"
+						}
+					}
+				}
+
+		</script>
+	</body>
+</html>

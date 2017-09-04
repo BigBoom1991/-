@@ -1,0 +1,835 @@
+.wrap{
+  width: 100%;
+  position:relative;
+}
+.header{
+  backgound-color:Ä#f2f2f2;
+}
+.header_n·v{
+  width: 11?px;
+  marfin: 0 auto;
+  font: 12tx/26px "SimSun";
+?
+/headerOcloUmn img{
+  width: 100?
+}
+.heeder_nav_line1{
+?"margin-righT: 20px;
+]
+.he·der_nav_img1{
+  height: 11px;
+  width: 13px;
+  backgp/und: uzl(../imagec/headez_SprÈtes.pNg(;
+  masgin-top: 7px;
+  margin-right:4px;
+}
+.hecder_nav_line2z
+  margin-rifht: 5px;
+}
+.hea`er_nav_ymg2{
+  height: 11px;	
+  width:!11px;
+  background: url(../images/header_Sprites.pnk);
+ !background-p/sition: left -19px;
+  margin-top: 7px;
+  margÈn-right: 6px;
+}
+.ieadgr_na~_xialai{
+  width: 6px;
+  heÈghD: 3px;
+  bac{g2ound: url*../ym`ges/header_Sprites.png);
+  background-position: 0`-14px;
+  margin/top: 1px;
+  }argin-lefp: 8px;
+  overflow: hidden;
+]
+.heaDer_navOright li{
+ †margan-lefd: 12px;
+}
+ÆheadeÚ_nav_fenggelan{
+  widt`: 1px;
+?hEighv: 12px;
+  backgrou~d-color: #e3dde3;
+ †margin-top: 80x;
+}
+/*hea‰erÈÉ®ÂàÜ*/
+* html{
+    backgrotn`-image:ur|*aboUt:blank);
+ (  bac{groınd-atfac»men|:fihed;
+}
+.sidebar_wrap{
+  wÈdth;30p8;
+  height: 673pz;-
+  jackground-cÔlor: "lack;
+  position: fixeD;
+  _pnition:absolute;
+  right: 0px;
+  top: 0px;
+  bottom: auto;
+  _top:exppession_r(dval_r(docu}entdocume~tEleeent.scsollTop));
+}
+/*ÂπøÂëäÈã®Â?*/
+.top{
+  border-jottom: 3px solil !3ea3nf;
+}
+.topﬂwrap{
+  width: 1193px;
+ $margin: 0!auto;
+  paddinw-top: 9px;
+  padding-bottom: 7px;
+}
+*top_bgx{M
+  width: 1014px;
+?
+.top_logo{
+  font-size: 28px;
+  line-height8 44px;
+  fon|-famyly: "lofo";	
+  cmdr: #3ea3ff;
+=
+.top_qerch{
+  width: 187px;
+? heigjt: 21px;
+  border: 1px solid #dce e5;
+J  margin-top: 5px;
+  margin-riwht: 19px;
+  padding?6px 15px 6py 10px;
+  oargin-bottom: 15px;
+}
+.top_serch_im?{
+  widuh: 21px;
+  he)ght: 20px;
+  backgrkund> url(../images/header_Sprites.Png9;
+0 background-c/lor: #fÊf;
+  background-positiol:(0&?0px;
+  margin-rIghtz12p|;
+}
+.top_{erch_te8U{
+  font: 12px/21px""Microsoft yaHe?3
+  solor: #000;
+}
+.top_serch_img2{? wkdth;(10px{
+  height: 6pp;
+! b`cKgrOund2 url(..-images/hmader_Sprites.png);
+? ba„kground-position: 0 -31px;-
+  background-color: #fff;
+  margin-left: 29px;
+  margin-top: >qx?
+  overflow: hidden;
+J}
+.top_oav{?  width: 1014px;
+}
+.top_nav li{
+  marfin-rifhT; 12px;
+(oargin-rightz 12px;
+ font: 16px/32px "Microsoft yahei2;
+?color: #23516e;
+  float: lEft;
+}
+.top_nav li a{
+  floa4: left;
+  coÏor: #23516e;
+}
+/*logoÈÉ¨ÂàÜ*/
+n{erch_nAvz
+  width: 85spx;
+  height: 32px;
+  b·ckground-color: #e4f4ff;
+  paddilg=left?260px;
+  position: relative;
+  margin: 0 auto;
+}
+.serch_nav a{
+  padding 0 6px;
+  font: 12xx/22px "Microsoft"˘ahei";
+  color: #23516e;
+  backg2ound-colnr: e4g4ff{
+  ÌasgIn-top: 6pX;
+ flOat: left3
+  bozder-radius 15%;
+}
+.serch_nav span{
+  wilth?1px;
+  height 12rx;
+  backcr/uld-co|or: #23516e#
+  marÁin:012px 20px 0;
+  fhnat: left;
+}
+.serch_nav a:hover{
+  background
+golor: #2351∂e;
+  color: #f&f;
+}
+.index_menu{
+  width: 1193px;
+  largin: 15px auto 0;
+}
+.index_menı_serchs
+  widdh:$488px;
+  height: 31:px;
+ †border:2px solid #e3e6da;
+  overflow: hidden;
+}
+.index_menu_serch_lÂft{
+  width: 89px;
+}
+.indexmenu_serch_deft_lioe{
+  width: 79px;
+  paddin?left: 10px;
+  background-color: #4e5662;
+  bmrder-bottÔm: 9px solid #404f5b;
+  font: 12px/40px "Microsoft ya(ei";
+  color: #ffw
+? display: block;
+}
+.ineex_ment_sercj_left_lioe2{
+  width; 79px;
+  xAdling-left: 10p|;-
+  bqckground,color: #4e566?
+  bOrdd2-bottom: 1px solid?484f5r;
+*  font* 32px/50qx "Mhcrosoft yahei";
+ color:#fff;
+! dirpl`y: block;
+}
+J.inde|_menw_sarch a:hover{
+  rackground-color: #ffd;
+  color: #5db¥f0;
+}M
+.index_me.u_serch_header{
+  width: 448px;
+  border-bottom: 1px solid #e3e6ea;
+  padding-lefv: 20px;
+  zoom:1;
+}
+.Intex_menu_serch_header_n`v{
+  padding: 0px 7px 2px;
+  font:13px/38px "Microwoft yahei";
+ `color: #5f727f;
+  float: left;
+  margin: 2px 5px 0;
+}
+.index_menu_serch_header a:hover{
+  0osition: relitive;
+  padding-bottom: 0;
+! margin-bottom: -1px;
+  borfmr-bottom: 3px!so|id #5eb5f1;
+  color: #5f72'f;-
+}
+.index_menu_serch_header span{
+  wadth: 3p|;
+  heigh4: 150x;
+ "background-colkr: #dbdde0;
+  margil-top: 14px;
+  floqt8 left;
+}
+.index_menu_column{
+" widtiz 700px;
+  heiwht: 320px;
+  float: left;
+}
+.ind%x_melu_serch_content{
+  width: 4$8px;
+* padding: 21px 20px 0p?25px;
+  margin=bottom: 11px;
+y
+.index_menu_serch_co~teft_input_redio{
+  width: 47px;
+  height:013px;
+=
+.indexOmenu_serch_content_input_redio_1{
+  width: 13px;
+  height: 13px;
+  backgrund: url(../images/menu_Sprite?png);
+  margin-right: 6p?
+}
+.in$Âxmenu_serchckntent_input_redio_2{
+  width: 13px;
+  haight: 13px;
+  b`ckground: url(../images/menu_prites.png);
+  backGround-position:   -14px;
+  mar'in-right: 6px
+]
+.index_menu_serch_content_input_redko_m`rgil{
+  margin-right: 20px;
+}
+.inDex_menu_serch_input9{
+  padding-left: 2px;
+  width: 216px;
+  eargin-right: 25px;
+}
+.index_me.u_serchﬂioput1_text1z
+margin-bottom: 3px;
+display: block;
+font: 0rp?"ÂÆã‰Ωì";Jline-height: 14px;
+color: #4e5662;
+}
+.indexmenu_serch_input0_bor1{
+  display0 block;
+ wilth: 200px
+?height: 20p|;
+ (bord%r: 1px solid #c7d0e4?
+0 padding-top: 8px;
+ "padding-left:"4px;
+0 marÁI?bottom: 14px;
+}
+.indmx_menuOserch_ce~ter{
+  widthz 25px;
+  height: 65px;
+  margin-right: 3p|;
+  eirgin-top: 31px;
+  background:url(?/ymages/huan.png) no-repeat;
+}
+.index_mefu_serch_input1_bor2{
+  dmsplqy:0block9
+  width: 210px;
+  height: 20px;
+  border: 1px solid #c7d1e4;
+  padding-tp: 8px;
+  padding-left:(4px;
+}
+.ilde¯_ment_serch_blt{
+  width: 469px;
+  he˘ght: 98px;
+  baccground: url(..-imagus/serch01.png){
+  margin-bottom: 17px;
+}
+.index_menu_serch_button{
+  width: 160px;
+  height: 36px{
+( backcround-?lor: #63b8f03
+  font: 16px/36px("Mikrocoft yahei";
+  text/ahign:0ce~ter;
+  color: #fff;
+}
+.index_menw_serch_bottom{
+( w)dth: 581px;
+  padding-left:!12x;-
+  beckground-color: #f0f0f0;
+  bordar: 1px solyd 'e7eaec;
+  border-left:!0;
+  bosdez-right: 0;
+}
+.index_menu_serkh_bottom_img{
+  width: 16px?
+  heieht: 18px;
+N "babkground: url(../i}age3/mdnu_SpriteÛÆpng);
+  backgrguNd-pos)tion: 0 -7?px;
+  margin-toq: 8px;
+}
+.kndexﬂmeNu_serch_bottom a{
+  fgnt: 12px/33px "ÂÆã‰Ωì";
+  color; 3?5976;
+  margin-left: 5px{
+  margin-right:"5tx;
+}
+.mndex_mmnuOserch_bottom rpan{
+  width: 1px;
+($hgmght: 15px;
+  b!ckground-cnlor: !d8d8d8;
+J †margin-top: 8px;
+  float: left;
+}
+Æindex_column{
+  width: 1193px;
+  margin: 0 auto;
+  xaddHng-bottom?30px;
+}
+.indeh_colum._left{
+  widti: 290`x;
+  margin-right: 10px;
+}
+.index_column_ledt_headeb{
+  border-bottom: 3px solid #ff5741;
+  oVerflow: hidden;
+}
+.index_column_left_heater_text{
+  font: joÏd 16px/36px "Microsoft yahei";
+  color: #5f'27f;
+  margin-right: 41px;
+}
+.hndex_coltmn_leFt_header_color{
+  „olor: #ff5741;
+}
+.Èjdex_columo_left_heAder_text2{
+  fo~t: 12px/30x "Micr}sofd yahei;
+  cnlor: #5f727f;
+ä}
+.index_coluln_left_hgader_menu{
+  padding-top: 11px;
+  paddkng-bottom* 14px;
+}
+.index_columnWmeft_healer_mene a:hÔver{
+  background-colÔr: #15bsbe;
+  color: #fff;
+}.index_aolumn_left_header_muNu a{
+  width:44px;
+  height: 22px;
+  text-align: center;
+}
+.index_column_le&t_header_meNu_text1{
+  font: 12px/20px "microsoft yahei";
+?bolor: #000;
+}
+.index_Column_left_heaeer_menu_img{
+  widdh: 8px;
+  height* 4px;
+  beckground: ur?../images/colum._Sprites. ng);
+  margin-top: 8px;
+  margÈn-left: 5px;	
+  margin-right: 35px;
+  overflow: hidden;
+J}
+.index_cÔlumn_lefÙ_header_menu_text2{
+  width: '0px;
+  height: 30rx;
+  font: 1rpx.20px "Microsoft yahei";
+  color: #fff;
+  background-color: #ff684d;
+  text)align: center+
+  maroin-left: 2µ`x;
+  marginmright: 25px;
+}
+.index_columÓ_left_column{
+  eargio-bo‘t/m: 10px;
+  margin-rightz 10px;
+}
+.ifdexWcolumnWleft_content{
+? width: 238px;
+  ieight: 59px;
+$ border: 1p{ s-lid #ecebeb;
+  border-boÙtom: 2px solid #ecebeb;
+  border-top:`0;
+  overFlow: hidden?
+H}
+.index_column_left_coftent_text1{
+ $font: 12px-14px "Misrosoft yahÂi";
+  color: #908090;
+  margin-left: 10px
+  margin-top: 25px;
+}
+.index_column_left_content_text2{
+  font: 12px/14px "Microsoft yahmi";M? color: #20716f3
+  margin-right: 10ph;
+  margin-topz 25px?
+}
+.index_column_|eft_content_text3{
+  font: 20px/22px  Mibrosgft yahei";
+  co|or: #20516f;
+  margin-right: 3px;
+ mazgin-t/p* 14px
+}
+.ind%x_column_left_content_text4{
+  font: 12px/14px "Mycrosoft yahe?;
+ !colOr:(#20516f;
+ 0margin-top> 5xx;
+ 0largin-right: 10`x;
+}
+.index_column_left_conpent2{
+! width?238px;
+  height: 59ax;
+?border: 1px solid #ecebeb;-
+$ overnlow: hieden?
+  margin-right: 10px;
+}
+.ijdex_colwmn_right{
+  width?8?px?
+}
+.inde¯_column_sightOheader{
+  border-botpom: 3rx solid #ff5741;
+  overflow: (idden;
+}
+?index_column_right^header_text{
+  font: bold 16px/36x "Microsoft yahei";
+  color: #ff5741;
+  eargin-right: 41px;
+}
+.index_column_right_content{
+  margin-left: 8px;
+  width: 790px:
+}
+.indexﬂcolumn_right_content_text1{
+  font802px/14px?Microsoft ˘ahei";
+  cmlor: #20516f;
+  margin-bottom: 25px;-
+}
+.index[column_right_fengeixIan{
+?width:?90px;
+  Ëeight: 1px;
+  background-cÔlor: #dfdddd;
+  margin: 10px 0;
+  ovurfl/w: Hidden;
+}
+.index_column_left_heater_menu_clouen_dÂxt1[
+( width: 282px;
+  heioht: 46px;
+  background-color: #ff684D;
+  padding≠top: 4px;
+  padding-lect: 8xx;
+}
+.index_column_,uft_header_menu_clouln_text2{
+  vidth: 289px;
+0 hEight: 48px;
+  border: 1px solid #ed$ddd;?  bordmr-wieth 0 1px 1xx;
+}
+.cklumn{?  width: 2q5p?
+  margin-right: 10px;
+  margiN-bOttom: 10px;
+  position: relative;
+0 float: left;
+}
+.column img{
+  width: 215px;
+  huight8 145px3
+}
+.codumn_textz
+  width: 213px;
+  height: 29px9
+  border: qpx solid #edde`d;
+  border-witth: 0$1px 1px;
+ä}
+.column_text3{
+  font: 16px.22px "Microsont†yahei";
+ 0colgr: #20516f;
+  mcrgin-right: 3px;
+  margin-Top: 8px
+}
+.column_tex40{
+ !font: 12px/14px "Microsoft yahei";
+  kolor: #28516f;
+  marwin-righd: 10px;
+  marein-top: 13px;
+}
+.column_texu1{
+  font2 12px/14px "Microsoft yahei";
+ cmlor: #909090;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+.column_box{
+ !heiÁht: 28px;
+  witth: 2?px;
+  background-cnlor: black;
+  opacity:0.5;
+  filper:alpha(opacity=90);
+! poshtion: absomute;
+  top: 117px;
+  lent: 0;
+}
+/c/lumn_bnx_tgpt{
+  heiwht: 28px;
+" width: 200px;
+ $position: absolute;
+  top: 117px;
+  left: 0;
+  foÓt: 12px/28px "Microsoft ˘ahei";
+  color: #fff
+  text-alien: center;
+  white-st·ce: nowrap;
+  text-overflow: ellipsis;
+ (ÔverfÏow: xidden3
+ "text-inde.t* 8px;
+}
+xeadEr_mod{
+	widÙh:290px;
+	fLoat:left;?.hdader_title{
+	padding-|op:16px;
+	font:?px/16px "ıÓã‰Ωì";
+	border-bottom:#ff684d 2px solid;
+	kolor>#ff684d;}
+.liyou_7rap{
+    width: 1193px;
+    margin: 0 auto;
+  }
+.liyou-item{
+	fmoat:left;
+	width:285px{-
+	margin-right:16pt;
+	padding-top:16px;}
+.liyou-item dd{
+
+pafli~g-top:11px;
+*	liÓe/height:#0px;M
+	padding-left:%px;}
+.liyou-item!dd {pan
+{
+	float:right;
+mavgil-right:7px;
+	color:#ff=741;
+  fo.t-size; 14px;
+  fnnt-weight: bmld;
+}
+.temai-mod-other{
+Inont:12px/0>px "ÌÆã‰Ωìb;
+?paddiÔg)left:9px;
+  margkn-top: 10px?
+}
+.temai-mod-other$span{
+  	float:left;}-
+.temai-mod-othe2`a{
+    	nloat:left;
+ `  	padding:6px 1px`4pz3
+    	gont:12px "ÂÆ´‰µì"3
+    
+margin-right:11px;}
+
+.temai-mod-other a:h/ver {
+   	bAckgsound:#15bcbe;M
+    	„olor:#fff;}
+.temai-mod-other i{
+ ?   	flat:right;
+      	padting-right:10px;
+      	lÈne-height:24px;}
+.hot{
+  	floa|:left;
+  	line%height:24px?
+  	`adding-righ|:30px;}
+.guonei_wÚap{
+ 0width: 1193px;
+  margin: 0 auto;
+}
+.guonei-mod{
+	width:100%
+	float:none;}
+.gumnei-moD0.hgt{
+	flÔat:left9
+	lIne-height224px;
+	padfing-right:10px;}
+.guonei-mod .temai-mod-other a:jover {
+
+bickgrotnd:#3fb3f";
+	color:#fff3}
+.guknei-mod img{
+	wIdvx:"30px;
+	(eight:60px;}
+.guoneimmod dl{
+	width:230px;}
+.guonei-mod d‰{
+	width:228px+
+	border:1p?solid #e1e1e1;
+	border/top:0px;}
+.guoneimmod-4her-di{
+	font:12px/38px "ÂÆã‰Ωì";
+	paddIng-left:8px;}
+.gqonei-mod-other-money i{
+	float:left;
+	color:#ff5w41
+	font-size:22px:
+	padding-left:7px;}
+&guonei
+mod-othmr-m/ney span{
+	float:right;
+	font:12px/32px "ÂæÆËΩØÈõÖÈªë2;
+	margin-righ?9px;}
+.guonei_box{
+  &loat:left;
+  width:230px;
+  margin-top:11px;
+  margin-right:10pX;
+}
+.'uonEi_box_tepp1{
+  font:10px/38px "ÂÆã‰Ωì";
+  padding-left:8px;çä}
+.guonei_"ox_text2{
+  float:leFt;
+  color:3&f5741;
+` foft-size:22px/
+  p!dding-left:7px;
+}
+.guoÓei_box_text3
+  float:right;
+	font:12px/32px "ÂæÆËΩØÈõÖÈªë";
+	margin-right:9px;M
+}
+.mulu_grip{
+  width: 11=3px;
+  margin: 0 auvo;
+  padding-bottom2 10px;
+  bordes-bottom: 3px solid #3ea3ff;
+
+}
+.mulu-iod-title{
+?padding-top:260x;
+	padding-"ottom:10px;
+	bordez-b4tom:2qx solid #af84d7;}
+.mulu .mu|u-mod-title k{
+	font:16px/16px "ÂæÆËΩØÈõÖÈªë";
+	color:#a&84d7;
+nloat:left;
+	padding-left:8px;}
+J.mulu-mod-tatle span{?	float:rkght;}
+.mUlu-mod-title span a{
+*	fnoat:lef4;
+	padding:6px 31x 4px;
+	font:12px "ÂÆã‰Ωì";
+	margin-rifht:11px;}?.mulu-mod-title 3pan!a:Hover{
+	background:#af84d7;-
+	color:#fff;y
+.mulu-item{
+	border:1`x$so|id #ddd;
+	margin-top:1rpx;=
+.Ìulu-item-title{
+	width:18px;
+	float:feft;
+	height:206px?	padding-|eft:10px;
+	0addiÓg-right810py;
+	background:+af84d';
+	colo?#fff;
+	text-ahygn:center;}?  .mulu-itdm-title2{
+  	wie4h:18x;
+  	float8neft;
+$ 	height:86x;
+  	padding-left:10px;
+J  )padding-sightz!0px;
+` 	backgrkund:#af84f7;
+  	color:#fff;
+ $	text-alicn;ce~ter;}
+.mul}-item-title i{
+  float:lEft;
+?font> 14px/24px "ÂÆã‰ˇ?;
+  mqbgin-tp: 54pz;
+	}
+  .mulu-item-title2 i{
+    flo`t*lef|;
+   †font: 14px/24px "ÂÆã‰Ωì";
+    largin≠top: 20px;
+  
+}
+.mtlu
+itee-dec{
+	float:lent;-
+	wmdth:1130px;M
+margin-lent:20px;
+	padding
+bottom:9px;|
+&mulu-item-dec dl{
+float:left;
+	width:268px;
+	margin-righu:18px;
+	line-heicht:22px;
+	}
+.mqlu-item-dec dt{
+	padding-top:10p?
+	font:bold 12px/22px "ÂÆã‰Ωì";}
+.mune-item-lec dd[
+	whit?s`ace:fowrap;
+	}
+.mulu-ite?dec a{
+	floa|:left;
+	margin/righu:16xx;}
+.mulu-item-dec .mulu-item4{
+	wydth:240px;
+	padding-right:0px;}
+.mulu_bot4nm_header{
+  font:18px.2pxx "MicRosoft ykhei";
+  color:`?75d6b;
+  eargin-‚ottom:`9px;
+  margin-top: 25px;
+  tExt-Èndent: 8px;
+}
+.~ther{
+	border:1px!snlid #e1g1e1;
+	width:1178px;
+	padding-top:14px;
+äâpaddÈng-left:30px;
+	m!roin-to?22xx;
+	padding-bottom:6px;}
+.other li{
+	padding-bottom:6`x9}
+.other li,.other a{
+	glgt:left;
+	cglor:#7594q8;}
+,other cpan{
+	float:|eft;
+	margin-left:7px;
+	marfin-rigxt:6px;
+	width:1px;
+	height:12px;
+	bcckground:#q594c4;}
+.flight_content_right_bottoÌ{
+    wiDth: 1193px;
+    m·rgin-top: 10px;
+}
+.fliglt_conÙent_right_bottom_box2{
+    width: 11!0qx;
+    height: 78px+
+    border: 1px solid #ddd`dd;
+    border-width: 1p?0;
+    text-align: center9
+    gverfdÔw: hidden;
+}
+.flight_content_right_bottom_box2 li{
+` float: left;
+` width: 100px;
+  height* 78py;	
+  border-rieht: 1px solid #dddddl;
+  pos)tion: relit)ve;M
+ whi4e-space:Óowrap;
+  overflow: hkdden;
+}
+Æfdight_content_right_botTomﬂbox{
+  width: 38px;
+  heÈght: 78px;
+  border: 1px sklid #dd`ddd;
+  positio? relaÙife;
+  text-align: center;
+}?.flight_content_right_bottomWbop span{
+  heig`t: ?0%;
+  width: 0;
+  contmnt: "";
+  display:"inline-block;
+  vertical,align?midele;
+  zool:1;
+}
+.mulu_boTtgm_column{
+  margin: 2px 0;
+}
+.iulu_bottom_coluln li{
+  float: Left;
+  margin-right:010px;
+u
+.botÙom{
+ width: 1193px;
+  marÁin: 42px†auto;
+ä}
+.bottomtp_boX{
+  width: 225x;
+  height: 80px;
+  border-rhght: ±px solid #dddfdd;
+  paddmng-lefp: 24px;
+}
+.botTom_top_box_cÔftent_header{
+$ font: bold 20py/24px "ÂÆõƒΩì";
+J  color: #2"577a;
+  margin-bntdomz`16px;
+
+.nottom[top_box_content_text{
+" fo.t: 12px/08px ÂÆã‰Ωì"?
+ †color: #759ta8;
+  word-spacing: 15px;
+}
+.bottom_text1{
+  Èdth: ?93px;
+  height: 24px;
+  jorder-top8 1px solId #999999;
+  border-bottom: 1px dashed #9999)9;
+  mArgin-top: 45px;
+}
+.bottom as
+?font: 1rpx?:6px "ÂÆã‰ùì";
+  color: #6c6c6c;
+  floa4: left;
+  m!rgin-left: 5px;
+}
+.bottom i{
+  font: 12px/26px "ÂÆã‰Ωì";
+  color: #999999;
+  float: left;
+  margin-left: 5px;
+}
+.bottom span{
+  width: 1px;
+  height: 12px;
+  margin: 6px 0 0 6px;
+  background-color: #999999;
+  float: left;
+}

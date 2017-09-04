@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				margin-left:300px;
+				width:100px;
+				height:100px;
+				background-color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script>
+			var box=document.getElementById("box")
+			box.onmousedown=function(n){
+				console.log(n.clientX)
+//				box.onmousemove=function(){
+//					box.style=
+//				}
+			}
+			var x;
+			document.onmousedown=function(){
+			console.log(x.clientX)
+			}
+		</script>
+	</body>
+</html>

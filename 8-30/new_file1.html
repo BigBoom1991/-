@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				background: #000000;
+				height:100px;
+				width:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id="red"/>
+		<input type="button" id="blue"/>
+		<script>
+			class CreatDiv{
+				constructor(){
+					this.newDiv=document.createElement("div")
+				}
+			}
+			class redDiv extends CreatDiv{
+				constructor(n){
+					super();
+					console.log(this.newDiv)
+					this.n=n;
+					this.n.onclick=this.tj.bind(this);
+				}
+				tj(){
+					document.body.appendChild(this.newDiv)
+					console.log(this.newDiv)
+				}
+			}
+			new redDiv(red);
+		</script>
+	</body>
+</html>

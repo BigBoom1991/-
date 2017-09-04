@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			class newGlz{
+				constructor(){
+					this.dhb={};
+				}
+				tj(dx,phone){
+					if(!this.dhb[dx]){
+						this.dhb[dx]=[]
+					}
+					this.dhb[dx].push(phone)
+				}
+				fb(dx){
+					let arr=this.dhb[dx];
+					if(arr){
+						for(let i=0;i<arr.length;i++){
+							this.tz(arr[i]);
+						}
+					}
+				}
+				qxdy(phone){
+					for(let attr in this.dhb){
+						for(let i=0;i<this.dhb[attr].length;i++){
+							if(phone===this.dhb[attr][i]){
+								this.dhb[attr].splice(i,1)
+								break;
+							}
+						}
+					}
+				}
+				tz(x){
+					console.log(x)
+				}
+			}
+			let bb= new newGlz;
+			bb.tj("200","小明153")
+			bb.tj("200","小红186")
+			bb.tj("100","小黑010")
+			bb.fb("200")
+			bb.qxdy("小红186")
+			bb.fb("200")
+		</script>
+	</body>
+</html>

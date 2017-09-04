@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var a=1;
+//			obj={
+//				[a]:a,
+//			}
+//			console.log(obj);
+//			
+		function fn(a=10){
+			return a;
+		}//a的默认值为10
+		
+		fn();console.log(fn());
+		function fb(){
+			console.log(this)
+		}
+		fb2=fb.bind("a");
+		b=fb2();
+		console.log(b)
+		var arr=new Array(3);
+		
+		arr=new Array();console.log(arr)
+		</script>
+	</body>
+</html>

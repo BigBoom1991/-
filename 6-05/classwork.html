@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/bootstrap.css" rel="stylesheet"/>
+		<link href="css/font-awesome.css" rel="stylesheet"/>
+		<style>
+			header{
+				overflow: hidden;
+			}
+			.jumbotron{
+				background:url(img/bg1.png);
+				color:#FFFFFF;
+				margin-bottom:0px;
+				padding-bottom:10px;
+			}
+			.btn{
+				border-radius:0;
+				background-color:transparent;
+				border:1px solid #f1362f;
+			}
+			.btn3{
+				border:0;
+			}
+			.jumbotron .box{
+				margin-top:50px;
+			}
+			nav{
+				border-top:1px solid #e1e1e1;
+				border-bottom:1px solid #e1e1e1;	
+					
+			}
+			.navbar{
+				background-color:#fff;
+				margin:0;
+			}
+			.modal-header{}
+			.modal-header h3{
+				line-height: 26px;
+			}
+			.panel{
+				margin: 0;
+			}
+			section{
+				background-color:#ebebeb;
+				height:1000px;
+				padding-top:36px;
+			}
+			section .container *{
+				height:100px;
+				background-color:#FFFFFF;
+				margin-bottom:36px;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="jumbotron text-center">
+				<div><span class="icon-3x">为WEB艺术家创造的PHP框架。</span></div>
+				<div class="row box">					
+					<button class="btn btn-danger">5.1中文文档</button>
+					<button class="btn btn-danger">5.0中文文档</button>
+					<div class="btn btn3">
+						<span class="input-group">
+							<input class="form-control" type="text" placeholder="Serch"/>
+							<button type="button" class="btn btn-danger">搜索</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<button type="button" class="btn btn-default navbar-toggle" data-toggle="collapse" data-target="#navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				</button>
+				<ul class="nav navbar-nav collapse navbar-collapse" id="navbar">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">Laravel中文文档</a></li>
+					<li><a href="#" class="hidden-sm">免费模板</a></li>
+					<li><a href="#" class="hidden-sm">Packagist 中国镜像</a></li>
+					<li><a href="#">Composer 中文文档</a></li>
+					<li><a href="#">Lumen中文文档</a></li>
+					<li><a href="#">PHP中文手册</a></li>
+				</ul>
+				<ul class="nav navbar-nav">	
+					<li class="dropdown">
+						<a data-toggle="dropdown" data-target="#dl">
+							<b>登录</b><span class="caret"></span>
+						</a>
+							<ul class="dropdown-menu" id="#dl">
+								 <li>
+								 	<a data-toggle="modal" data-target="#Modal">登录</a>
+								 	
+								 </li>
+				    			<li><a href="#">注册</a></li>
+							</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<section>
+			<div class="container">
+				<div class="col-lg-8">
+					
+				</div>
+				<div class="col-lg-4"></div>
+			</div>
+		</section>
+		<div class="modal fade" id="Modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="panel panel-primary">
+						<div class="panel-heading">这里是头部</div>
+						<div class="panel-body">这里是内容</div>
+						<div class="panel-footer">这里是底部</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	</body>
+</html>

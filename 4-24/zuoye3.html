@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/reset.css"/>
+<style>
+	.wrap{
+		background:url(images/beijing.png) no-repeat;
+		height:961px;
+		width:820px;
+		margin:20px auto;
+		padding-top:39px;
+		}
+	.box{
+		background:url(images/beijing2.png) no-repeat;
+		margin:0 auto;
+		height:867px;
+		width:564px;
+		padding:44px 0 0 26px;
+		}
+	.box form{
+		width:500px;
+		height:40px;
+		margin-bottom:21px;
+		vertical-align:center;
+		}
+	.box form:after{
+		content:"";
+		display:block; 
+		clear:both;
+		height:0;
+		overflow:hidden;
+		}
+	.box form p{
+		color:#fff;
+		width:91px;
+		height:40px;
+		text-align:right;
+		padding-right:10px;
+		float:left;
+		font:14px/40px "微软雅黑";
+		}
+	.box form input{
+		height:38px;
+		border:1px solid #bfbfbf;
+		color:#fff;
+		float:left;
+		text-indent:10px;
+		font:14px/38px "微软雅黑";
+		}
+	.box form .txt{
+		width:288px;
+		}
+	.box form aside{
+		color:#fff;
+		height:40px;
+		float:left;
+		padding-left:12px;
+		font:14px/40px "微软雅黑";
+		position:relative;
+		}
+	.box form .sel{
+		width:138px;
+		background:url(images/jt.png) no-repeat 118px 17px;
+		}
+	.box form .sel2{
+		width:128px;
+		margin-left:20px;
+		background:url(images/jt.png) no-repeat 108px 17px;
+		}
+	.box form label{
+		width:80px;
+		line-height:20px;
+		height:20px;
+		padding:10px 0;
+		float:left;
+		color:#fff;
+		font:14px/20px "微软雅黑";
+		}
+	.box form .sel3{
+		width:88px;
+		background:url(images/jt.png) no-repeat 68px 17px;
+		}
+	.box form .sel4{
+		width:78px;
+		margin-left:20px;
+		background:url(images/jt.png) no-repeat 58px 17px;
+		}
+	.box form button{
+		margin:7px 0px 9px 70px;
+		height:24px;
+		width:50px;
+		background-color:#e7788d;
+		padding:0;
+		border:0;
+		color:#fff;
+		font:14px/24px "微软雅黑";
+		}
+	.box form textarea{
+		height:78px;
+		font:14px/38px "微软雅黑";
+		border:1px solid #bfbfbf;
+		width:288px;
+		color:#fff;
+		text-indent:10px;
+		}
+	.box .js{
+		height:80px;
+		}
+	.box .bc{
+		height:44px;
+		width:131px;
+		margin:0;
+		font:16px/1 "宋体";
+		}
+	.box .qx{
+		height:42px;
+		width:129px;
+		margin:0px 0px 0px 29px;
+		font:16px/1 "宋体";
+		background-color:transparent;
+		border:1px solid #e7788d;
+		}
+	.box .jt{
+		position:relative;
+		top:18px;
+		left:5px;
+		}
+/*	input:checked{
+		border-color:#e7788d;
+		}*/
+	.box .xz{
+		display:none;
+		}
+	.box .wx{
+		position:absolute;
+		}
+</style>
+</head>
+
+<body>
+	<div class="wrap">
+    	<div class="box">
+            <form method="" action="">
+            	<p>*昵称: </p>
+                <input type="text" class="txt"/>
+                <aside>4-20个字符</aside>
+            </form>
+            <form>
+            	<p>真实姓名: </p>
+                <input type="text" class="txt"/>
+            </form>
+            <form>
+            	<p>*所在地: </p>
+                <input type="text" class="sel" value="北京"/>
+                <input type="text" class="sel2" value="朝阳区"/>
+                <aside>所有人可见<img class="jt" src="images/jt.png"/></aside>
+            </form>
+            <form>
+            	<p>*性别： </p>
+                <label for="boy"><img class="wx" src="images/ty.png"/><img class="xz1" src="images/ty2.png"/> 男</label>
+                <label for="girl"><img src="images/ty.png"/><img class="xz1" src="images/ty2.png"/> 女</label>
+
+                <input type="radio" name="sex" id="boy" class="xz"/>
+                <input type="radio" name="sex" id="girl" class="xz"/>
+            </form>
+             <form>
+            	<p>生日: </p>
+                <input type="text" class="sel3" value="2009年"/>
+                <input type="text" class="sel4" value="01月"/>
+                <input type="text" class="sel4" value="01日"/>
+                <aside>保密<img class="jt" src="images/jt.png"/></aside>
+            </form>
+            <form method="" action="">
+            	<p>博客地址: </p>
+                <input type="text" class="txt"/>
+                <aside>所有人可见<img class="jt" src="images/jt.png"/></aside>
+            </form>
+            <form method="" action="">
+            	<p>常用邮箱: </p>
+                 <label for="boy">736810414@qq.com</label>
+                 <button>修改</button>
+            </form>
+            <form>
+            	<p>QQ: </p>
+                <input type="text" class="txt"/>
+            </form>
+            <form class="js">
+            	<p>一句话介绍: </p>
+                <textarea>生命在于折腾</textarea>
+            </form>
+            <form><aside>以下信息，可作为通过客服取回账号的依据</aside></form>
+            <form>
+            	<p>证件类型: </p>
+                <input type="text" class="sel" value="身份证"/>
+            </form>
+            <form>
+            	<p>证件号码: </p>
+                <input type="text" class="txt"/>
+            </form>
+             <form>
+            	<p></p>
+                <button class="bc">保存</button><button class="qx">取消</button>
+            </form>
+    	</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* CSS Document */
+body,ul,li,aa{
+	margin:0px;
+	padding:0px;
+	font:16px "宋体";
+	}
+li{
+	display:inline-block;
+	vertical-align:top;
+	list-style:none;
+	text-align:center;
+	padding-top:13px;
+	margin-left:-8px;
+	}
+body{
+	height:687px;
+	width:700px;
+	background:url(../images/beijing.png) no-repeat;
+	padding-top:113px;
+	}
+.box{
+	height:470px;
+	width:550px;
+	margin:0 auto;
+	background-color:#fff;
+	}
+.bt{
+	padding:40px 34px 0px 36px;
+	border-bottom:2px solid #e15671;
+	margin-bottom:88px;
+	}
+.one{
+	height:27px;
+	width:120px;
+	background-color:#f5f5f5;
+	}
+.one:hover{
+	background-color:#e15671;
+	}
+.two{
+	height:27px;
+	width:120px;
+	background-color:#fff;
+	}
+.two:hover{
+	color:#e15671;
+	background:url(../images/jt.png) 0px bottom no-repeat;
+	}
+.three{
+	height:27px;
+	width:118px;
+	background-color:#f5f5f5;
+	margin-right:2px;
+	}
+.three:hover{
+	background-color:#e15671;
+	}
+.btbt{
+	padding:12px 34px 0px 36px;
+	}

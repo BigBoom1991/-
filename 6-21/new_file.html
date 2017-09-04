@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.btn{
+				border:1px solid #000000;
+				width:80px;
+				height:20px;
+				margin:10px;
+				text-align: center;
+			}
+			div{
+				display: none;
+				padding:20px;
+				border:1px solid #FFFF00;
+				width:80px;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="btn">男</button>
+		<button class="btn">女</button>
+		<button class="btn">不告诉你</button>
+		<div>男性</div>
+		<div>女性</div>
+		<div>未知</div>
+		<script>
+			btn =document.querySelectorAll(".btn");
+			div =document.querySelectorAll("div");
+			function clear (){       //清空原有样式
+				for (var i=0;i<btn.length;i++){
+					btn[i].style.backgroundColor="";
+					div[i].style.display="none";
+				}
+			}
+			for (var i=0;i<btn.length;i++){
+				btn[i].nb = i;//选项卡编号
+				btn[i].onclick=function(){		//选择卡选择弹出框弹出事件			
+					if(this.style.backgroundColor==""){
+						clear();//清空原有样式
+						this.style.backgroundColor="red";//改变选项卡样式
+						div[this.nb].style.display="block";//控制弹出框
+					}else{
+						this.style.backgroundColor="";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+.wrap{
+	width:1000px;
+	height:595px;
+	background: url(../images/bg.png) no-repeat;
+	margin: 0 auto;
+	padding-top:105px;
+}
+.p1{
+	width: 1000px;
+	height: 24px;
+	font-size: 24px;
+	color: #fff;
+	text-align: center;
+	margin-bottom:20px ;
+}
+.p2{
+	width: 1000px;
+	height: 16px;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	margin-bottom:60px ;
+}
+.box{
+	width: 656px;
+	height: 380px;
+	border: 7px solid #e6d3f4;
+	margin: 0 auto;
+	background:url(../images/bg1.png) no-repeat center;
+	position: relative;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+}
+
+.zhezhao{
+	width: 676px;
+	height: 400px;
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	left:0;
+	top:0;
+}
+.defen,.shifen{
+	width: 76px;
+	height: 58px;
+	background: #78258b;
+	border: 2px solid #9a8ea0;
+	border-radius:38px;
+	padding-top:18px;
+}
+.shifen{
+	background: #59599f;
+}
+.defen span,.shifen span{
+	display: block;
+	width: 76px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+}
+.defen .span1,.shifen .span2{
+	margin-bottom: 8px;
+}
+#btn{
+	width:156px;
+	height:48px;
+	line-height:48px;
+	background:url(../images/kaishi.png) no-repeat;
+	font-size: 16px;
+	color: #fff;
+	position: absolute;
+	bottom: 30px;
+	left:50%;
+	margin-left:-78px;
+	z-index: 2;
+}
+img[class]{
+	position: absolute;
+	left:0px;
+	top:-80px;
+}
+.jf{
+	overflow: hidden;
+	height:160px;
+	width:80px;
+	position: absolute;
+}
+.pm{
+	position: relative;
+	width:100%;
+	height:100%;
+	z-index:1;
+	overflow:hidden;
+}

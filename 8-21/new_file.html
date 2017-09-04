@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">创建按钮</button>
+		<button id="btn2">改变按钮</button>
+		<button id="btn3">表现按钮</button>
+		<script>
+			btn.onclick=function(){
+				var state=true;
+				btn2.onclick=function(){
+					state=!state;
+				}
+				btn3.onclick=function(){
+					console.log(state)
+				}
+			}
+		</script>
+	</body>
+</html>

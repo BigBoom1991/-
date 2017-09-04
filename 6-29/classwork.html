@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				width:764px;
+				height:800px;
+				margin:0 auto;
+				background:url(bg.png);
+				overflow: hidden; 
+				overflow: hidden;
+			}
+			.box{
+				background:#371e23 url(bg1.png) no-repeat;
+				width:440px;
+				margin:50px auto;
+				padding-top:75px;
+				box-sizing: border-box;
+				border-radius: 8px;
+			}	
+			p{
+				margin:0;
+				height:80px;
+				padding:22px 30px;
+				box-sizing: border-box;
+				color:#FFFFFF;
+			}
+			p *{
+				vertical-align: middle;
+			}
+			p input{
+				height:36px;
+				border-radius: 8px;
+				border:none;
+			}
+			.sr{
+				text-indent: 10px;
+				width:250px;
+				margin-right:20px;
+			}
+			p input[type=button]{
+				background-color:#e15671;
+			}
+			span{
+				display:inline-block;
+				width:200px;
+			}
+			.gg{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="box">
+				<!--<div class="title1">
+					<p class="qd" style="display:none"><span>妙味课堂最新开班</span><img src="c.png"/></p>
+					<p class="gg">
+						<input type="text" id="sr" value="妙味课堂最新开班" />
+						<input type="button" id="yes" value="保存" />
+						<input type="button" id="no" value="取消" />
+					</p>
+				</div>-->
+		</section>
+		<script>
+			var box=document.querySelector(".box")
+			var x=4;
+
+			for (var i= 0;i<x;i++){
+				box.innerHTML+=`
+				<div class="title${i}">
+					<p class="qd"><span class="nr">妙味课堂最新开班</span><img src="c.png"/></p>
+					<p class="gg">
+						<input type="text" class="sr" value="妙味课堂最新开班" />
+						<input type="button" class="yes" value="保存" />
+						<input type="button" class="no" value="取消" />
+					</p>
+				</div>`;
+			}
+			var qd =document.querySelectorAll(".qd");
+			var gg =document.querySelectorAll(".gg");
+			var sr =document.querySelectorAll(".sr");
+			var yes=document.querySelectorAll(".yes");
+			var no=document.querySelectorAll(".no");
+			var nr=document.querySelectorAll(".nr");
+			var img=document.querySelectorAll("img");
+			function k(u){
+				img[u].onclick=function(){
+					qd[u].style.display="none";
+					gg[u].style.display="block";
+				}
+				yes[u].onclick=function(){
+					nr[u].innerHTML=sr[u].value;
+					qd[u].style.display="block";
+					gg[u].style.display="none";
+				}
+				no[u].onclick=function(){
+					qd[u].style.display="block";
+					gg[u].style.display="none";
+				}
+			}
+
+			for(i=0;i<x;i++){
+				k(i);
+			}
+			
+		</script>
+	</body>
+</html>

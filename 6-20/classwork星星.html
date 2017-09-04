@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				background:url(img/bg.jpg);
+				width:768px;
+				height:750px;
+				margin:0 auto;
+				padding-top:50px;
+			}
+			.box{
+				width:460px;
+				height:200px;
+				border-radius:10px;
+				background:#ffffff;
+				margin:0 auto;
+				overflow:hidden;
+			}
+			.xx{
+				height:140px;
+			}
+			.ts{
+				height:60px;
+				background-color:#e15671;
+				text-align: center;
+				color:#fff;
+				font:18px/50px "微软雅黑";
+			}
+			.title{
+				padding-top:20px;
+				text-align: center;
+			}
+			.title span{
+				font:28px "微软雅黑";
+				vertical-align: middle;
+				
+			}
+			img{
+				vertical-align: middle;
+			}
+			#box{
+				padding-top:20px;
+				text-align: center;
+			}
+			#xr{
+				display:inline-block;
+				width:60px;
+				height:30px;
+				margin:0 20px;
+				border-radius:4px;
+				vertical-align: middle;
+				font:bold 16px/30px "宋体";
+				color:#ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<section>
+			<div class="box">
+				<div class="xx">
+					<div class="title">
+						<img src="img/logo.jpg"/> <span> | 总体评价</span>
+					</div>
+					<div id="box">
+						<img src="img/x1.png"/>
+						<img src="img/x1.png"/>
+						<img src="img/x1.png"/>
+						<img src="img/x1.png"/>
+						<img src="img/x1.png"/>
+						<span id="xr"></span>
+					</div>
+				</div>
+				<div class="ts">小提示：点击星星就能打分</div>	
+			</div>
+		</section>
+		
+		<script>
+			var img = document.querySelectorAll("#box img");
+			var arr=["极差","一般","不错","推荐","力推"];
+			var jl = 5;
+			var n=-1;//记录点击初始化位置
+			function clear(){
+				for (var x=0;x<5;x++){
+					img[x].src="img/x1.png";
+					xr.innerHTML="";
+					xr.style.backgroundColor="";			
+				}				
+			}
+			function show($this){			
+					if($this.nb>1){
+						for(var x=0;x<$this.nb+1;x++){
+							img[x].src="img/x2.png";
+						}
+					}else{
+						for(var x=0;x<$this.nb+1;x++){
+							img[x].src="img/x3.png";
+						}
+					}
+					xr.innerHTML=arr[$this.nb]
+					xr.style.backgroundColor="#e15671";
+			}
+			for(var i=0;i<5;i++){
+				img[i].nb=i;
+				img[i].onmouseout = function(){
+					clear();
+					if(n>1){
+						for(var x=0;x<n+1;x++){
+							img[x].src="img/x2.png";
+						}
+					}else{
+						for(var x=0;x<n+1;x++){
+							img[x].src="img/x3.png";
+						}
+					}
+					if(n!=-1){
+						xr.innerHTML=arr[n];
+						xr.style.backgroundColor="#e15671";
+					}
+				};
+				img[i].onclick=function(){
+					n = this.nb;
+				}
+				img[i].onmouseover=function(){
+					clear();
+					show(this);
+				}
+			}
+		</script>
+	</body>
+</html>

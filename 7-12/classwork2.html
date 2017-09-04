@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				background: url(bg2.png) no-repeat;
+				padding:120px 100px 0;
+			}
+			.box1{
+				width:560px;
+				height:340px;
+				background-color:yellow;
+				border-radius:20px;
+				padding:60px 30px;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+			#ss{
+				width:350px;
+				height:240px;
+				border:1px solid #00EFDE;
+				border-radius:10px;
+				display: inline-block;
+				background-color: #FFFFFF;
+				padding:20px;
+				font:16px "微软雅黑";
+				overflow: auto;
+				box-sizing: border-box;
+			}
+			.box1 span{
+				width:140px;
+				display:inline-block;
+				height:240px;
+				overflow: hidden;
+				margin:0;
+				padding: 0;
+				position: relative;
+			}
+			.box1 span img{
+				position: absolute;
+			}
+			.box2{
+				width:560px;
+				height:150px;
+				background-color:yellow;
+				border-radius:20px;
+				box-sizing: border-box;
+				overflow: hidden;
+				margin-top:20px;
+				padding:30px;
+				display: none;
+			}
+			.box1 span img{
+				margin:0 0 10px 30px;
+				height:70px;
+				border-radius:10px;
+				display: none;
+			}
+			#zk{
+				display: inline-block;
+			}
+			button{
+				height:40px;
+				padding:0;
+				margin:20px 40px;
+				width:60px;
+			}
+			i{
+				background: red;
+			}
+			.box3{
+				margin-bottom:20px;
+			}
+			.th{
+				display: none;
+			}
+			#th,#cz{
+				float: right;
+				height:100%;
+			}
+			#thz,#thzz,#czz{
+				width:120px;;
+				border-radius:10px ;
+				height:40px;
+				border:1px solid #00EFDE;
+				display: inline-block;
+				background: #FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<span id="ss">妙味课堂是一支独具特色的IT培训团队，妙味反对传统IT教育枯燥乏味的教学模式，妙味提供一途中全新的快乐学习方法！目前主要针对的是javascript培训，同时还提供了css教程、javascript视频、js特效等，最新推出了外地学员们喜欢的javascript网络课程服务，同时还为处于javascript入门阶段的朋友录制了大量javascript视频，其中涉及了大量javascript基础知识，希望妙味课堂推出的javascript网络培训课程能带给大家更多惊喜。</span>
+			<span>
+				<img id="zk" src="zk.png"/>
+				<img id="czk" src="cz.png"/>
+				<img id="thk" src="th.png"/>
+			</span>
+		</div>
+		<div class="box2">
+			<div class="box3">
+				<img id="cz3" src="cz1.png"/>
+				<img id="th3" src="th1.png"/>
+			</div>
+			<div class="cz">
+				<textarea id="czz"></textarea>
+				<img id="cz" src="cz1.png"/>
+			</div>
+			<div class="th">
+				<textarea id="thz"></textarea>
+				<textarea id="thzz"></textarea>
+				<img id="th" src="th1.png"/>
+			</div>
+		</div>
+		<script src="utils.js"></script>
+		<script>
+			var ss=document.getElementById("ss");
+			var x;
+			cz.onclick=function(){
+				x=ss.innerHTML;
+				x=x.split("<i>").join("").split("</i>").join("");
+				var n=czz.value;
+				var w=x.split(n);
+				if(w!=-1){
+				ss.innerHTML=w.join("<i>"+n+"</i>");
+				}
+			}
+			th.onclick=function(){
+				x=ss.innerHTML;
+				x=x.split("<i>").join("").split("</i>").join("");
+				var n=thz.value;
+				var n2=thzz.value;
+				var w=x.split(n);
+				ss.innerHTML=w.join("<i>"+n2+"</i>");
+			}
+			var n1=false;
+			var n2=true;
+			var n3=false;
+			var j=document.getElementsByClassName('box2')[0];
+			var th2=document.getElementsByClassName('th')[0];
+			var cz2=document.getElementsByClassName('cz')[0];
+			console.log(cz3)
+			zk.onclick=function(){
+				if(n1==false){
+					czk.style.display="inline-block";
+					thk.style.display="inline-block";
+					mTween(czk,"top",80,600);
+					mTween(thk,"top",160,600);
+					n1=true;
+					j.style.display="block";
+				}else{
+					mTween(czk,"top",0,600,"linear",function(){czk.style.display="none";
+					thk.style.display="none";});
+					mTween(thk,"top",0,600);
+					
+					n1=false;
+					j.style.display="none";
+				}
+			}
+			czk.onclick=cz3.onclick=function(){
+				if(n2==false){
+					cz2.style.display="block";
+					th2.style.display="none";
+					n2=true;
+					n3=false;
+				}
+			}
+			console.log(thk,th3)
+			thk.onclick=th3.onclick=function(){
+				console.log(1);
+				if(n3==false){
+					th2.style.display="block";
+					cz2.style.display="none";
+					n3=true;
+					n2=false;
+				}
+			}
+		</script>
+		<script src="utils.js"></script>
+	</body>
+</html>

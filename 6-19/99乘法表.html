@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			span{
+				height:60px;
+				width:80px;
+				border:1px solid #0000F0;
+				line-height: 20px;
+				display: inline-block;
+				margin: -1px 0 0 -1px;
+				text-align: center;
+				line-height: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<section id="box">
+			
+		</section>
+		<script>
+			var box = document.getElementById("box");
+			for(var i=1;i<10;i++){
+				for(var j=i;j<10;j++){
+					box.innerHTML+='<span>'+i+'X'+j+'='+i*j+'</span>';
+				}
+				box.innerHTML+="<br/>"	
+			}
+		</script>
+	</body>
+</html>

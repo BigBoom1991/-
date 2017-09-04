@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>百度评分</title>
+		<style>
+			body,h1 {
+				margin: 0;
+				padding: 0;
+				-webkit-font-smoothing: antialiased;
+			}
+			.starts{
+				overflow:hidden;
+			}
+			.starts span{
+				display: block;
+				float: left;
+				padding: 3px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="pingfen.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="baidu">
+				<div class="caption">
+					<h1></h1>
+					<span>总体评价</span>
+				</div>
+				<div class="context">
+					<div class="starts">
+						<span>☆</span>
+						<span>☆</span>
+						<span>☆</span>
+						<span>☆</span>
+						<span>☆</span>
+					</div>
+					<div class="info"></div>
+				</div>
+				<div class="tips">
+					小提示：点击星星就能打分
+				</div>
+			</div>
+		</div>
+		<script src="./utils.js"></script>
+		<script>
+			var arr=["差评","一般","可以","不错","优秀"];
+			var x=$(".starts span");
+			var p=$(".info")[0];
+			function clear (){
+				for(var i=0;i<x.length;i++){
+					x[i].style.color="";
+					p.innerHTML="";
+					p.style.display="none";
+				}
+			}
+			function b(n){
+				for(var i=0;i<=n;i++){
+					if(n<2){
+						x[i].style.color="yellow";
+					}else{
+						x[i].style.color="red";
+					}
+					p.style.display="block";
+					p.innerHTML=arr[n];
+				}
+			}
+			var jl=null;
+			for(var i=0;i<x.length;i++){
+				x[i].nb=i;
+				x[i].onmouseover=function(){
+						clear();
+						b(this.nb);
+					};
+
+				x[i].onmouseout=function(){
+					clear();
+					if(jl!=null){b(jl)};
+				}
+				x[i].onclick=function(){
+					jl=this.nb;
+				}
+			}
+		</script>
+	</body>
+</html>

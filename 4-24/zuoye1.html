@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <style>
+		form{
+			height:455px;
+			width:408px;
+			padding:24px;
+			margin:20px auto;
+			border:1px solid #eee;
+			}
+		form .beizhu{
+			text-align:right;
+			}
+		form fieldset{
+			margin-top:12px;
+			border-top:1px solid #c9dca6;
+			}
+		form .grxx{
+			height:126px;
+			}
+		form fieldset legend{
+			margin-left:5px;
+			font-weight:bold;
+			}
+		form .grxx p{
+			margin:10px 30px;
+			line-height:20px;
+			height:20px;
+			width:189px;
+			}
+		.kt{
+			border:1px solid #7f9db9;
+			height:18px;
+			}
+		form .qtxx fieldset{
+			margin:7px 4px 0px;
+			}
+		form .qtxx fieldset p{
+			margin:7px 0px 4px 29px;
+			}
+		form .jy textarea{
+			height:114px;
+			width:218px;
+			border:1px solid #7f9db9;
+			margin-bottom:6px;}
+		.qtxx .an{
+			margin-left:93px;
+			border:1px solid #003c74;
+			width:113px;
+			line-height:20px;
+			float:left;
+			}
+		.qtxx .jy .an input{
+			border:3px solid #6982ee;
+			width:113px;
+			height:20px;
+			text-align:center;
+			}
+    </style>
+</head>
+
+<body>
+	<form method="" action="">
+        <div class="beizhu">*号所在为必填项</div>
+        <fieldset class="grxx">
+        	<legend>个人信息</legend>
+            <p><label for="xm">姓名* </label><input type="text" id="xm" class="kt"></input></p>
+            <p><label for="dz">地址* </label><input type="text" id="dz" class="kt"></input></p>
+            <p>出生* <select class="kt">
+                        <option selected>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                    <select class="kt">
+                        <option selected>Jan</option>
+                        <option>Feb</option>
+                        <option>???</option>
+                        <option>Apr</option>
+                        <option>May</option>
+                    </select>
+                    <select class="kt">
+                        <option selected>1979</option>
+                        <option>1980</option>
+                        <option>1981</option>
+                        <option>1982</option>
+                        <option>1983</option>
+                    </select>
+        	</p>
+            <p>性别* <select class="kt">
+                        <option selected>女</option>
+                        <option>男</option>
+                        <option>其他</option>
+                    </select>
+           	</p>
+        </fieldset>
+        <fieldset class="qtxx">
+        	<legend>其他信息</legend>
+            <fieldset class="xh">
+            	<legend>你喜欢这个表单吗？</legend>
+            	<p>
+                	<input type="checkbox" name="xh" checked/>喜欢
+                	<input type="radio" name="xh"/>不喜欢
+                </p>
+            </fieldset>
+            <fieldset class="xh">
+                <legend>你喜欢这个表单吗？</legend>
+                <p>
+                	<input type="checkbox" name="xh"/>足球
+                	<input type="checkbox" name="xh"/>篮球
+                	<input type="checkbox" name="xh"/>篮球
+                </p>
+            </fieldset>
+            <fieldset class="jy">
+                <legend>写下你的建议</legend>
+                <p>
+                	<textarea></textarea>
+                	<i class="an"><input type="submit" value="提交个人信息"/></i>
+                </p>
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
+</html>

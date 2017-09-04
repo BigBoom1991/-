@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	.box{
+		width:400px;
+		height:400px;
+		position:relative;
+		background-color:yellow;
+		}
+	.bg{
+		width:400px;
+		height:400px;
+		background-color:red;
+		position:relative;
+		z-index:0;
+		
+		}
+	.bg2{
+		width:400px;
+		height:400px;
+		background-color:blue;
+		position:absolute;
+		z-index:1;
+		
+		}
+</style>
+</head>
+
+<body>
+<div class="box">
+	<div class="box">
+    	<div class="bg2">
+            </div>
+            <div class="box">
+        	
+            <div class="box">
+				<div class="bg"></div>
+	<p>我是div</p>
+</div></div></div></div>
+</body>
+</html>

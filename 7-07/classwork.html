@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width:1100px;
+				height:1100px;
+				position: relative;
+				font:0 "微软雅黑";
+			}
+			.box div{
+				width:100px;
+				height:100px;
+				position: absolute;
+				display: inline-block;
+				margin-right:10px;
+				background:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<script src="utils.js"></script>
+		<script>
+			var box=$(".box")[0];
+			for(var i=0;i<10;i++){
+				box.innerHTML+='<div style="left:'+i*110+'px"></div>';
+			}
+			var div = $(".box div");
+//			var fn=setInterval(
+//				function(){
+//					mTween(div[n],"top",500,1000,"linear",function(){
+//						if(n==10){
+//							clearInterval(fn);
+//							n=0;
+//							var fx=setInterval(function(){
+//								mTween(div[n],"top",0,1000);
+//								n++;
+//								},200)
+//						}
+//					}
+//					)
+//					n++;
+//				}
+//				,200)
+			var p;
+			window.onload=function(){		
+				for(let n=0;n<10;n++){
+					p=n;
+					xx=setTimeout(function(){
+						mTween(div[n],"top",500,500,"linear",xs);
+						if(n>=9){clearTimeout(xx);}
+					},200*n)
+				}
+			}	
+			var x;
+			var xs=function(){
+				if (div[9].style.top=="500px"){
+					div[9].style.backgroundColor="black";
+					for(let x=9;x>=0;x--){
+						var xs=setTimeout(function(){
+							mTween(div[x],"top",0,500);
+							if(x<=0){clearTimeout(xs);}
+						},200*(9-x))
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

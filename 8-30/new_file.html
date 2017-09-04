@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			class People{
+				constructor(name,age,sex){
+					this.name=name;
+					this.age=age;
+					this.sex=sex;
+				}
+				say(){
+					console.log("我能说话")
+				}
+			}
+			class Coder extends People{
+				constructor(name,age,sex,money){
+					super(name,age,sex)
+					this.money=money;
+				}
+				zhuan(n){
+					console.log("我能赚"+n+"k工资")
+				}
+			}
+			let c= new Coder("joe",26,"man",20)
+			console.log(c.age)
+		</script>
+	</body>
+</html>

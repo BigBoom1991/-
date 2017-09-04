@@ -1,0 +1,16 @@
+/* CSS Document */
+#box{
+	width:400px;
+	border:#999999 1px solid;
+	font-size:14px;
+	line-height:30px;
+	text-indent:2em;:;
+	}
+#part1{
+	height:81px;
+	border-bottom:#898989 1px dashed;
+	}
+#part2{
+	height:118px;
+	line-height:24px;
+	}

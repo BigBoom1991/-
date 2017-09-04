@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				background:url(img/logo.png) no-repeat 50% 10%,url(img/logo2.png) no-repeat 80px 100px,url(img/bg.png) 0px;
+				width:1000px;
+				height:700px;
+				padding:140px 0 0;
+				text-align: center;
+				box-sizing: border-box;
+			}
+			.btn{
+				display:inline-block;
+				width:100px;
+				height:40px;
+				background:#e792df;
+				font: 16px/40px "微软雅黑";
+				border-radius:20px;
+				border:1px solid #c088e7;
+				margin:0 20px;
+				color:#FFFFFF;
+			}
+			.fl{
+				float:left;
+				width:160px;
+				height:160px;
+				color:#FFFFFF;
+				font:30px/160px "微软雅黑";
+				position: relative;
+			}
+			.box{
+				padding-left:100px;
+				padding-top:60px;
+			}
+			.box div{
+				margin-right:50px;
+				margin-bottom:60px;
+				}
+			.fl span{
+				position: absolute;
+				display: inline-block;
+				width:110px;
+				height:30px;
+				bottom:-8px;
+				left:24px;
+				background:#FFFFFF;
+				border-radius:15px;
+				font:16px/30px "微软雅黑";
+				color:#000000;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="btn">从小到大</div>
+			<div class="btn">打乱顺序</div>
+			<div class="box">
+				<!--<div class="fl">One<span>1-粉红</span></div>
+				<div class="fl">Two<span>2-粉黄</span></div>
+				<div class="fl">Three<span>3-黄绿</span></div>
+				<div class="fl">Four<span>4-嫩绿</span></div>
+				<div class="fl">Five<span>5-湖蓝</span></div>
+				<div class="fl">Six<span>1-蓝紫</span></div>
+				<div class="fl">Seven<span>1-粉紫</span></div>
+				<div class="fl">Eight<span>1-紫红</span></div>-->
+			</div>
+		</section>
+		<script>
+			var btn=document.getElementsByClassName("btn");
+			var box=document.getElementsByClassName("box")[0];
+			console.log(box)
+			var arr=[];
+			var arr2=["1-粉红","2-粉黄","3-黄绿","4-嫩绿","5-湖蓝","6-蓝紫","7-粉紫","8-紫红"]
+			var arr3=["One","Two","Three","Four","Five","Six","Seven","Eight"]		
+			btn[0].onclick=function(){
+				box.innerHTML='';
+				for(var i=0;i<arr2.length;i++){
+					box.innerHTML+=`<div class="fl" style="background:url(img/logo1.png) no-repeat 50% 50%,url(img/b${i+1}.png) no-repeat;">${arr3[i]}<span>${arr2[i]}</span></div>`
+				}
+			}
+			btn[0].onclick();
+			
+			btn[1].onclick=function(){
+				arr=[];
+				box.innerHTML='';
+				for(var i=0;i<arr2.length;i++){
+					arr.push({
+					background:"background:url(img/logo1.png) no-repeat 50% 50%,url(img/b"+(i+1)+".png) no-repeat;",
+					nr:arr2[i],
+					nr2:arr3[i],
+					nb:Math.random()*100
+					})
+				}
+				arr.sort(function(a,b){return a["nb"]-b["nb"]});
+				for(var i=0;i<arr2.length;i++){
+					box.innerHTML+=`<div class="fl" style="${arr[i]['background']}">${arr[i]["nr2"]}<span>${arr[i]["nr"]}</span></div>`
+				}
+			}
+		</script>
+	</body>
+</html>

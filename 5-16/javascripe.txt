@@ -1,0 +1,87 @@
+<scripe></scripe>在body最下方，head里会被解析
+onclick:点击
+
+documen.getElementById('id名字')
+.onclick=function(){}
+var id=documen.getElementById=("id"） 声明
+
+onclick 点击
+function 函数
+var 声明，=有方向，右边给左边，没声明默认undefined
+alert 提示
+console.log 输出到控制台,只能读取行内样式
+console.dir 输出目录到控制台
+元素的属性：id class value(form) innerHTML href src(获取绝对路径)
+变量可以由数字字母$组成，不能以数字开头
+样式font-size需要符合变量规则，用fontSize
+
+js出现的位置：
+1行间样式
+2内嵌标签<scripe></scripe>写在body后边
+3外部样式，新建一个外部样式表<scripe src=""><scripe/>
+
+alert（） 浏览器提供的一个弹出框，括号内为内容
+
+先布局，在js
+获取元素:document.getElementById("id")
+
+
+
+变量：
+var *声明变量
+var *=数据/值（有属性值的属性的值的数字） =右边赋值给左边
+变量名命名规则：
+1默认underfined；
+2由字母数字_$组合；
+3不能数字开头
+4不能是关键字和保留字
+
+大驼峰：XxxXxxx；
+小驼峰：xxxXxxx；
+
+
+按钮：
+1获取按钮；
+2绑定点击事件onclick；
+3点击发生事件；
+btn.onclick=function(){} 事件
+onclick点击
+onmouseover鼠标移入
+onmouseout鼠标移出
+function[函数名](){函数体} 函数，把多行代码放入函数中，形成代码块
+function Xxx(){}函数声明
+var Xxx =function(){}函数表达式
+function(){}匿名函数声明
+Xxx调用函数
+
+属性：事务所具有不可缺少的性质；标记的属性，选择符的属性；
+赋值：改；
+取值：读；
+. [] 语法“的”
+js中直接写的第一个单词会被视为变量名，“”才能被视为属性名或属性值
+console.log()打印一个结构或属性值
+console.dir()打印一个结构的全部样式或一个展开项
+xx-xx属性用xxXx代替或.xx-xx用[xx-xx]代替
+xx.style.xxXx="" 改变的是行间样式，也只能读取行间样式
+
+可读可写的元素属性：
+1id
+2className
+3value(input)
+4innerHTML一个元素（标记）内的html结构
+5src,href(获取的是绝对路径)
+
+留言板保留：
+list.innerHTMl=message+list.innerHTML；
+
+字符串：
+由8一对引号包起来的n个字符组成的串，包括空格。
+字符串中间用+号连接。两个数字可以相加，有一个字符串就都视为字符串
+
+寻找不存在的属性，返回值是underfined。
+
+
+
+
+
+

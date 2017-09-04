@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				height:100px;
+				width:100px;
+				position: absolute;
+				background:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1"></div>
+		<!--<div id="box2"></div>-->
+		<script type="text/javascript">
+			class Drag{
+				constructor(name){
+					this.xz=name;
+				}
+				init(){
+					this.xz.onmousedown=this.downFn.bind(this)
+				}
+				downFn(ev){
+					this.disX = ev.clientX - this.xz.offsetLeft;	
+					this.disY = ev.clientY - this.xz.offsetTop;
+					document.onmousemove = this.moveFn.bind(this);
+					document.onmouseup = this.upFn.bind(this);
+				}
+				moveFn(ev){
+					this.xz.style.top=ev.clientY-this.disY+"px";
+					this.xz.style.left=ev.clientX-this.disX+"px";
+				}
+				upFn(){
+					document.onmousemove = document.onmouseup = null;
+				}
+			}
+			let k=new Drag(box1)
+			k.init();
+		</script>
+	</body>
+</html>

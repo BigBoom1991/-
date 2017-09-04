@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<span id="box">
+				找我所有的父级
+			</span>
+			<span id="box2">
+				找我所有的父级
+			</span>
+		</div>
+		<script>
+			function find (n){
+				if(n.nodeName!="BODY"){
+					console.log(n);
+					find(n.parentNode)
+				}
+			}
+			find(box);
+			(function find2(n){
+				while(n){
+					console.log(n);
+					n=n.parentElement;
+				}
+			})(box2)
+			var x=box.classList.toggle("ab")
+			console.log(x)
+		</script>
+	</body>
+</html>

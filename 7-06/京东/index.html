@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="slide.css" />
+		<style type="text/css">
+			body{
+				background-color: #ffd800;
+			}
+			.nav .blue {
+				background-color: blue;
+			}
+		</style>
+		<script>
+			/*
+				当给一个元素添加样式，如没有起作用，第一反应
+
+					检查元素
+			*/
+		</script>
+	</head>
+
+	<body>
+		<div class="slide">
+			<div  class="tagClient">
+				<ul class="list">
+					<li><img src="./ads/1.png" /></li> 
+					<li><img src="./ads/2.png" /></li> 
+					<li><img src="./ads/3.png" /></li> 
+					<li><img src="./ads/4.png" /></li> 
+					<li><img src="./ads/5.png" /></li>
+					<li><img src="./ads/1.png" /></li> 
+				</ul>
+			</div>
+			<div class="prev"></div>
+			<div class="next"></div>
+			<div class="nav">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<script src="utils.js"></script>
+		<script>
+			/*
+				1. 切换下一张 运动
+					运动的终点位置：
+					第一张图片 -530*0
+					第二张图片 -530*1px
+					第三张图片 -530*2px
+					第四张图片 -530*3px
+			*/
+
+			var next = $(".next")[0];
+			var list = $(".list")[0];
+			var lis = $("li",list);
+			var n = 0;
+			var span =$("span");
+			
+			var clear=function(){
+				for(var i=0;i<lis.length-1;i++){
+					span[i].style.backgroundColor="";
+				}
+			}
+			next.onclick = function (){
+				if(list.timer){
+					return;
+				}
+				clear();// 如果正在运动，没必要n++和调用mTween
+				n++;
+				if(n==lis.length-1){
+					span[0].style.backgroundColor="blue";
+				}else{
+					span[n].style.backgroundColor="blue";
+				}
+				var target = -530 * n;  // 目标位置
+				mTween(list,"left",target,500,"linear",function(){
+					if(n == lis.length-1 ){
+						n = 0;
+						console.log(n);
+						list.style.left="0px";						
+					}
+				}	
+			);
+			};
+			var prev = $(".prev")[0];
+			prev.onclick = function(){
+				
+				
+				if(list.timer){
+					return;
+				}
+				clear();
+				if(n==0){
+					n=lis.length-1;
+					list.style.left=-530*n+"px";
+				}
+				n--;
+				if(n<0){
+					n=lis.length-1;
+				}
+				var target = -530*n;
+				mTween(list,"left",target,500)
+				span[n].style.backgroundColor="blue";
+			}
+			var lb = setInterval(next.onclick,1000);
+			list.onmouseover=next.onmouseover=prev.onmouseover=function(){
+				clearInterval(lb);
+			}
+			list.onmouseout=next.onmouseout=prev.onmouseout=function(){
+				lb = setInterval(next.onclick,1000);
+			}
+			</script>
+	</body>
+
+</html>

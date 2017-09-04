@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="下一张" /><br/>
+		<img src="./1.png" id="img"/><br/>
+		<input type="button" id="btn2" value="下一张" /><br/>
+		<input type="button" id="btn3" value="上一张" /><br/>
+		<img src="./images/p1.png" id="img2"/>
+		
+		<script>
+		x=1;
+			btn.onclick=function(){
+				x=x+1
+				if(x>4){
+					alert("没有更多图片了")
+					x=1
+				}
+				img.src='./'+x+'.png';
+				
+			}
+		var arr = ["p1","p2","p3"];//直接量定义数组，第一个在数组内是第0个，arr.length数组的长度
+		n=0;
+		btn2.onclick=function(){//下一张
+			n++
+			if(n>arr.length-1){
+				n=0
+				alert("你已经看完了")
+			}
+			img2.src='./images/'+arr[n]+'.png';
+		}
+		btn3.onclick=function(){//上一张
+			n=n-1
+			if(n<0){
+				n=arr.length-1
+				alert('这已经是第一张了')
+			}
+			img2.src='./images/'+arr[n]+'.png';
+		}
+		</script>
+		
+	</body>
+</html>

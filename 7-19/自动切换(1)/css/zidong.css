@@ -1,0 +1,59 @@
+body{
+	background: #000;
+}
+.wrap{
+	width:1000px;
+	height:545px;
+	background: url(../images/bg.png) no-repeat;
+	margin: 0 auto;
+	padding-top:255px;
+}
+.box{
+	width:450px;
+	height:260px;
+	background: #fff;
+	margin: 0 auto;
+}
+.list{
+	width:450px;
+}
+.list li{
+	float: left;
+	width:150px;
+	height:40px ;
+	line-height: 40px;
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+}
+.tuwen{
+	width:410px;
+	height:180px;
+	background:#ffb746;
+	padding: 20px;
+	display: none;
+}
+.tu{
+	float: left;
+	width:180px;
+	height:180px;
+}
+.wen{
+	float: left;
+	width:230px;
+	height:180px;
+}
+.wen1{
+	width: 210px;
+	height: 30px;
+	line-height: 60px;
+	margin:15px 0 30px 20px;
+	font: 14px/30px "微软雅黑";
+	color: #fff;
+	text-indent:20px;
+}
+.ch{
+	color:#000000;
+	background:#44FFFF;
+}

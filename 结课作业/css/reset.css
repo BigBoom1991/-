@@ -1,0 +1,48 @@
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,i{
+	margin:0;
+	font-weight:normal;
+	font-size:12px;
+	font-family:"宋体";
+	line-height:inherit;
+}
+a{
+	text-decoration:none;
+	color:inherit;
+}
+ul,ol,li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+b,strong{
+	font-weight:normal;
+}
+i,em{
+	font-style:normal;
+}
+mark{
+	background:none;
+	color:inherit;
+}/* CSS Document */
+img{
+	border:none;
+	vertical-align:top;
+	}
+
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+	height:0;
+	overflow:hidden;}
+
+.clearfix{
+	zoom:1;
+	}
+input,fieldset,textarea{
+	padding:0;
+	border:none;
+	background:none;
+	margin:0;
+	vertical-align:top;
+	}

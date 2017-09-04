@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/public.css"/>
+		<style>
+			body{
+				background-color:#aaa2c2;
+			}
+			.phone{
+				width:322px;
+				height:660px;
+				border-radius:18px;
+				background-color:#e7e4ee;
+				margin:40px auto;
+				padding:20px 17px 0;
+				text-align: center;
+				
+			}
+			.tt{
+				border:2px solid #a2a1a7;
+				width:54px;
+				border-radius:1px;
+				margin:0 auto 19px;
+				height:0;
+				padding:0;
+			}
+			.ltk{
+				height:482px;
+				background:url(img/bg.png);
+				position: relative;
+				padding-bottom: 80px;
+				overflow: hidden;
+			}
+			#reset{
+				width:50px;
+				height:40px;
+				background:url(img/logo.png);
+				margin:17px auto 0;
+			}
+			.shuru{
+				position:absolute;
+				bottom: 0px;
+				margin:2px;
+				background-color:rgba(0,0,0,0.4);
+				width:318px;
+				height:60px;
+				text-align: left;
+			}
+			.mid{
+				display: inline-block;
+				vertical-align: middle;
+				height:60px;
+			}
+			#player{
+				width:50px;
+				height:40px;
+				background:url(img/p1.png);
+				vertical-align: middle;
+
+			}
+			#txt{
+				background-color:#fff;
+				width:190px;
+				height:40px;
+				vertical-align: middle;
+				box-sizing: border-box;
+				padding:12px;
+				font:14px "微软雅黑";
+			}
+			#send{
+				color:#e15671;
+				font:16px "微软雅黑";
+				width:50px;
+				height:40px;
+				vertical-align: middle;
+			}
+			
+			p{
+				padding:10px;
+				font:14px/20px "微软雅黑";
+				border-radius:4px;
+				white-space: normal;
+				color:white;
+				text-align: left;
+			}
+			.p1 p{
+				background-color:rgba(225,86,113,0.8);				
+			}
+			.p2 p{
+				background-color:rgba(0,0,0,0.8);
+			}
+			.p1{
+				padding:20px 70px 0 20px;
+				background:url(img/p1.png) 260px 20px no-repeat;
+			}
+			.p2{
+				padding:20px 20px 0 70px;
+				background:url(img/p2.png) 20px 20px no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="phone">
+			<p class="tt"></p>
+			<div class="ltk">
+				<ul id="list">
+				</ul>
+				<div class="shuru">
+					<span class="mid"></span>
+					<input type="button" id="player"/>
+					<input type="text" id="txt" value="大家好，我是土豪~"/>
+					<input type="button" id="send" value="发送"/>
+				</div>
+			</div>
+			<input type="button" id="reset"/>
+		</div>
+		<script>
+			//var player =document.getElementById("player")
+			var pState ="p1";//发送状态
+			player.onclick=function(){
+				if(pState=="p1"){
+					player.style.background="url(./img/p2.png)";
+					pState ="p2";
+					console.log("p1")
+				}else{
+					player.style.background="url(./img/p1.png)";
+					pState ="p1";
+					
+				}
+			}			
+			send.onclick=function(){
+				if(txt.value==""){
+					alert("信息不能为空");
+				}else{
+					var message =txt.value
+//					if(pState=="p1"){
+//						list.innerHTML='<li class="p1">'+'<p>'+message+'</p>'+'</li>'+list.innerHTML
+//					}else{
+//						list.innerHTML='<li class="p2">'+'<p>'+message+'</p>'+'</li>'+list.innerHTML
+//					}
+					list.innerHTML='<li class="'+pState+'">'+'<p>'+message+'</p>'+'</li>'+list.innerHTML
+					
+					txt.value=""
+					}
+			}
+			reset.onclick=function(){
+				list.innerHTML="";
+			}
+		</script>
+	</body>
+</html>

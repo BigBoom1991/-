@@ -1,0 +1,192 @@
+/* CSS Document */
+.nav{
+	height:25px;
+	background-color:#f2f2f2;
+	border-bottom:1px solid #e5e5e5;
+	position:fixed;
+	z-index:3;
+	width:100%;
+	}
+.nav div{
+	width:1190px;
+	margin:0 auto;	
+	}
+.nav div p{
+	font:12px/25px "微软雅黑";
+	}
+.nav p .title{
+	padding-left:22px;
+	padding-right:12px;
+	background:url(../images/bjxt.png) 7px 0px no-repeat;
+	}
+.nav p i{
+	color:#aaaaaa;
+	}
+.nav div .right span{
+	padding:0 16px 0 3px;
+	}
+.nav div .right .xiala{
+	background:url(../images/bjxt.png) right -56px no-repeat;
+	}
+.nav div .right .dif{
+	padding:0 10px 0 3px;
+	}
+.nav div .right .fwzx{
+	padding:0 10px 0 13px;
+	margin-left:3px;
+	border-left:1px solid #e3dde3;
+	}
+.nav div .right .wzdh{
+	padding-left:20px;
+	background:url(../images/bjxt.png) -2px -124px no-repeat;
+	margin-left:-6px;
+	}
+.subnav{
+	height:943px;
+	width:36px;
+	position:fixed;
+	right:0px;
+	top:0px;
+	z-index:4;
+	background:#000 url(../images/fbtbj.png) 0px 805px no-repeat;
+	overflow:auto;}
+.subnav{
+	}
+header{
+	background:url(../images/bj1.png) center 26px no-repeat;
+	padding-top:74px;
+	border-bottom:2px solid #3ea3ff;
+	height:104px;
+	}
+header dl{
+	margin:0 auto;
+	width:1190px;
+	position:relative;
+	}
+header dl h1{
+	font-size:0px;
+	padding-top:27px;
+	}
+header dl .fl{
+	margin:23px 12px 0px;
+	font:bold 16px/1 "微软雅黑";
+	color:#23516e;
+	}
+header dl .fl:hover{
+	color:#3ea3ff;
+	}
+header dl .gg{
+	position:absolute;
+	right:0;
+	top:8px;
+	}
+header dl .select{
+	width:170px;
+	height:31px;
+	border:1px solid #dce0e5;
+	position:absolute;
+	top:13px;
+	right:195px;
+	background:url(../images/bjxt.png) 10px -234px no-repeat;
+	padding-left:40px;
+	font:12px/31px "微软雅黑";
+	}
+header dl .select a{
+	height:31px;
+	width:36px;
+	background:url(../images/bjxt.png) 0px -288px no-repeat;
+	}
+footer{
+	width:1190px;
+	margin:0 auto;
+	}
+footer .top{
+	width:1168px;
+	border:1px solid #e1e1e1;
+	font:12px/18px "宋体";
+	padding:11px 17px 9px 3px;
+	}
+footer .top a{
+	width:61px;
+	padding:0 6px 0 6px;
+	border-right:1px solid #a594c4;
+	}
+footer .center{
+	margin-top:10px;
+	border-top:3px solid #3ea3ff;
+	padding-top:40px;
+	padding-bottom:40px;
+	border-bottom:1px solid #e1e1e1;
+	}
+footer .center div{
+	width:200px;
+	border-right:1px solid #e1e1e1;
+	height:76px;
+	padding-top:4px;
+	padding-left:25px;
+	padding:4px 25px 0px 25px;
+	font:12px/18px "宋体";
+	color:#8a9ca8;
+	word-spacing:14px;
+	}
+footer .center h5{
+	font:bold 16px/1 "宋体";
+	color:#2b577a;
+	padding-bottom:20px;
+	}
+footer .line1{
+	padding:8px 3px 6px;
+	border-bottom:1px dashed #e1e1e1;
+	}
+footer .line1 a{
+	padding-right:6px;
+	border-right:1px solid #e2d5e2;
+	margin-right:6px;
+	}
+footer .line2{
+	padding-top:8px;
+	}
+footer .line3{
+	padding-top:14px;
+	color:#999999;
+	}
+.color1{
+  color: #6c6c6c;
+}
+/*头部导航烂颜色*/
+.color2{
+  color: #aaaaaa;
+}
+/*头部导航烂hi字体颜色*/
+@font-face {
+  font-family: logo;
+  src: url('fangzheng.ttf');
+}
+/*导入艺术字体*/
+.top_nav .color3{
+  color: #3ea3ff;
+}
+.index_menu_serch .color4{
+  color: #9fa4aa;
+}
+.wrap .color5{
+  color: #ff684d;
+}
+.index_column_left .color6{
+  color: #ff684d;
+}
+.wrap .margin_right_clear{
+  margin-right: 0;
+}
+.wrap .margin_bottom_clear{
+  margin-bottom: 0;
+}
+.wrap .border_clear{
+  border: 0;
+}
+body .margin_right_clear{
+  margin-right: 0;
+}
+.wrap .margin_left_clear{
+  margin-left: 0;
+}

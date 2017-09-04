@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width:960px;
+				height:540px;
+			}
+			#box *{
+				float: left;
+				width:79px;
+				height:59px;
+				box-sizing: border-box;
+				background:url(img/timg.jpg);
+				background-size:960px 540px;
+				opacity: 0.5;
+				margin:1px 1px 0 0;
+				transition: .5s;
+			}
+			#box *:hover{
+				transform: scale(1.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		</div>
+		<script>
+			var box =document.getElementById("box");
+			var bh;
+			for(var i=0;i<108;i++){
+				box.innerHTML+='<div style="background-position:'+80*i*-1+'px '+Math.floor(i/12)*-60+'px;"></div>';				
+			}
+			var nb =document.querySelectorAll("#box div")
+			for(var n=0;n<108;n++){
+				nb[n].onmousemove=function(){
+					this.style.opacity=1;
+				}
+			}
+		</script>
+	</body>
+</html>

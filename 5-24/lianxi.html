@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin:0;
+				padding:0;
+				
+			}
+			div{
+				width:200px;
+				height:30px;
+				border:2px solid BLACK;
+				MARGIN:20PX auto;
+				overflow: hidden;
+			}
+			p{	
+				height:30px;
+				background-image:-webkit-repeating-linear-gradient(45deg,red,red 10px,green 10px,green 20px);
+				transition:3s;
+			}
+			p:hover{
+				background-position:-200px;
+			}
+			.cat{
+				width:400px;
+				height:400px;
+				background-image:-webkit-linear-gradient(45deg,red,red 48%,rgba(255,255,255,0) 48%,rgba(255,255,255,1) 50%,red 50%);
+				background-color:red;
+				transition:3s;
+				background-position:0 400px;
+			}
+			.cat:hover{
+				background-position:0 -400px;
+				}
+			.yuan{
+				width:800px;
+				height:800px;
+				background:-webkit-radial-gradient(center,400px 400px,red 0%,red 50%,yellow 50%,yellow 100%);
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p></p>
+		</div>
+		<div class="cat"></div>
+		<div class="yuan"></div>
+	</body>
+</html>

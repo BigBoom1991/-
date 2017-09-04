@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				background:url(bg.png);
+				width:658px;
+				 height:517px;
+				 overflow: hidden;
+				 padding-left:4px;
+			}
+			div{
+				width:380px;
+				height:290px;
+				margin:8px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			ul{
+				margin:0;
+				padding:0;
+				width:1900px;
+				height:290px;
+				position: relative;
+				font:0 "微软雅黑";
+			}
+			li{
+				width:380px;
+				height:290px;
+				position: relative;
+				display: inline-block;
+			}
+			p{
+				position:relative ;
+				color:#fff;
+				font:44px "微软雅黑";
+				background: -webkit-repeating-linear-gradient(bottom,black 0%,transparent 100%);;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>			
+				</ul>
+				<p></p>
+			</div>
+			<button id="btn"></button>
+		</section>
+		<script src="utils.js"></script>
+		<script>
+			var ul = $("ul")[0];
+			var p = $("p")[0];
+			var li = $("li");
+			for(var i=0;i<li.length;i++){
+				li[i].style.background="url(t"+i+".png)";	
+			}
+			var n=0;
+			var arr=["内容1","内容2","内容3","内容4","内容5"];
+			window.onload=function(){
+				p.innerHTML=arr[0];
+				p.style.top=-100+"px";
+			}
+			var tab =function(){
+				var t = -380*n;
+				mTween(ul,"left",t,500,"linear",xs)
+			}
+			var xx= function(){
+				n++;
+				mTween(p,"top",0,1000,"linear",tab)
+			}
+			var xs=function(){
+				p.innerHTML=arr[n];
+				mTween(p,"top",-100,1000,"linear",xx)
+			}
+			btn.onclick=xx;
+		</script>
+	</body>
+</html>

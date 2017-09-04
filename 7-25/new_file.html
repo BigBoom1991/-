@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var arr1=[];
+			var arr2=[];
+			for(var i =0;i<100;i++){
+				arr1.push(i);
+			}
+			for(var i =0;i<100;i++){
+				var n=parseInt(Math.random()*arr1.length);
+				arr2.push(arr1[n]);
+				arr1.splice(n,1);
+			}
+			console.log(arr2);
+		</script>
+	</body>
+</html>

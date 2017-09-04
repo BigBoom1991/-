@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button"id="1" value="1" />
+		<input type="button"id="3" value="3" />
+		<input type="button"id="2" value="2" />
+		<script>
+			"use strict"
+			var an=document.getElementsByTagName("input")
+			for(let i=0;i<an.length;i++){
+				an[i].onclick=function(){
+					setTimeout(function(){
+						an[i].style.backgroundColor="red";
+					},1000)
+				}
+			}
+		</script>
+	</body>
+</html>

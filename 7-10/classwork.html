@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <style>
+		 *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .wrap{
+      width: 1024px;
+      height: 701px;
+      background: url(imgs/bg.png) no-repeat;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    .title{
+      width: 59px;
+      height: 61px;
+      float: left;
+      background: url(imgs/sec1.png) no-repeat;
+      margin: 25px 20px;
+    }
+    .box{
+      width: 625px;
+      height: 116px;
+      background: url(imgs/clockBg.png) no-repeat;
+      margin-top: 261px;
+      margin-left: 200px;
+    }
+    #content{
+      width: 520px;
+      height: 90px;
+      float: left;
+      margin-top: 20px;
+    }
+    #content img{
+      width: 60px;
+      height: 80px;
+      float: left;
+      margin-left: 2px;
+    }
+    .mid{
+      height: 90px;
+      margin-left: 5px;
+      float: left;
+    }
+    li{
+      width: 60px;
+      height: 80px;
+      float: left;
+      position: relative;
+      -overflow: hidden;
+    }
+    .bottom{
+      position: absolute;
+      top:80px;
+      left: 0;
+    }
+    .top{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    </style>
+	</head>
+	<body>
+		<div class="wrap">
+      <div class="box">
+        <span class="title"></span>
+        <ul id="content">
+          <li>
+            <img class="top" src="imgs/0.png" alt="">
+            <img class="bottom" src="imgs/0.png" alt="">
+          </li>
+          <li>
+            <img class="top" src="imgs/0.png" alt="">
+            <img class="bottom" src="imgs/0.png" alt="">
+          </li>
+          <li>
+            <img class="top bottom" src="imgs/fuh.png" alt="">
+          </li>
+          <li>
+            <img class="top" src="imgs/0.png" alt="">
+            <img class="bottom" src="imgs/0.png" alt="">
+          </li>
+          <li>
+            <img class="top" src="imgs/0.png" alt="">
+            <img class="bottom" src="imgs/0.png" alt="">
+          </li>
+          <li>
+            <img class="top bottom" src="imgs/fuh.png" alt="">
+          </li>
+          <li>
+            <img class="top" src="imgs/0.png" alt="">
+            <img class="bottom" src="imgs/0.png" alt="">
+          </li>
+          <li>
+            <img class="top" src="imgs/0.png" alt="">
+            <img class="bottom" src="imgs/0.png" alt="">
+          </li>
+        </ul>
+      </div>
+    </div>
+		<script src="utils.js"></script>
+		<script>	
+			function addZero(n){
+				return n < 10 ? '0'+n : n+"";
+			}
+			i();
+			var oldtime=[];
+			var time1=document.getElementsByClassName("top");
+			console.log(time1);
+			var time2=document.getElementsByClassName("bottom");			window.onclick=function(){
+				var jx=setInterval(function(){
+					d= new Date();
+					hn=d.getHours();
+					mn=d.getMinutes();
+					sn = d.getSeconds();
+					times = ""+addZero(hn)+":"+addZero(mn)+":"+addZero(sn);
+					for(let i=0;i<times.length;i++){
+						time1[i].nb=i;
+						if(times[i]==":"){
+							time1[i].src="imgs/fuh.png";
+						}else{
+							if(times[i]==oldtime[i]){
+							}else{
+									time2[i].src="imgs/"+times[i]+".png";
+									mTween(time1[i],"top",-80,220);
+									mTween(time2[i],"top",0,220,"linear",function(){	
+										
+										console.log(i)
+									
+										time1[i].src='imgs/'+times[i]+'.png';
+										time1[i].style.top="0px";
+										time2[i].style.top="80px";
+										console.log(i);			
+									}
+							}
+						}
+					oldtime=times;
+				},1000)
+				
+			}
+			
+		</script>
+	</body>
+</html>

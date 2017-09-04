@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				width:500px;
+				height:500px;
+				border:1px solid salmon;
+				margin:20px auto;
+				position: relative;
+			}
+			.k{
+				position: absolute;
+				margin:200px;
+				width:98px;
+				height:98px;
+				border:1px solid #000000;
+				text-align: center;
+				font-size: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="k">1</div>
+			<div class="k">2</div>
+			<div class="k">3</div>
+			<div class="k">4</div>
+			<div class="k">5</div>
+		</section>
+		<button id="btn"></button>
+		<script>
+			var arr1 =[[-200,200,-200,-200],[-100,100,-100,-100],[0,0,0,0],[100,100,100,-100],[200,200,200,-200]];
+			var arr2 = [[200,-200,-200,-200],[100,-100,-100,-100],[0,0,0,0],[100,100,-100,100],[200,200,-200,200]]
+			var n=0;
+			var k=document.querySelectorAll(".k");
+			btn.onclick=function(){
+				for(var i=0;i<k.length;i++){
+					k[i].style.left=arr1[i][n%4]+"px";
+					k[i].style.top=arr2[i][n%4]+"px";
+				}
+				n++
+			}
+		</script>
+	</body>
+</html>

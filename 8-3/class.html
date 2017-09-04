@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				background:#00B1DC;
+				position: absolute;
+				opacity: 0.5;
+			}
+			.box{
+				margin:50px;
+				width:100px;
+				height:100px;
+				position: inherit;
+				float: left;
+				opacity: 1;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<script>
+			 var box=document.getElementsByClassName("box")
+			 document.onmousedown=function(ev){
+			 	var x1 =ev.clientX;
+			 	var y =ev.clientY;
+			 	div=document.createElement("div");
+			 	document.body.appendChild(div);
+			 	document.onmousemove=function(ev){
+			 		console.log(x1-ev.clientX);
+		 			div.style.left=Math.min(x1,ev.clientX)+"px";
+		 			div.style.width=Math.abs(x1-ev.clientX)+"px";
+		 			div.style.top=Math.min(y,ev.clientY)+"px";
+		 			div.style.height=Math.abs(y-ev.clientY)+"px";
+			 		var divrect=div.getBoundingClientRect();
+			 		for(var x=0;x<box.length;x++){
+			 			var div2rect=box[x].getBoundingClientRect(); 
+				 		if(divrect.bottom<div2rect.top||divrect.top>div2rect.bottom||divrect.left>div2rect.right||divrect.right<div2rect.left){
+				 			box[x].style.backgroundColor="#00B1DC";
+				 		}else{
+				 			box[x].style.backgroundColor="red";
+				 		}
+				 	}
+			 	}
+			 	document.onmouseup=function(){
+			 		document.onmousemove=null;
+			 		div.remove();
+			 	}
+			 	ev.preventDefault()
+			 }
+			
+		</script>
+	</body>
+</html>

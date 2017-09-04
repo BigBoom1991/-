@@ -1,0 +1,819 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/reset.css">
+<style>
+	header{
+		background-color:#2f2f2f;
+		width:100%;
+		height:30px;
+		position:fixed;
+		overflow:hidden;
+		}
+	header .contert{
+		width:960px;
+		margin: auto;
+		}
+	header .contert div{
+		float:right;
+		padding:9px 0 0 0;
+		}
+	header .xx{
+		font:12px/1 "宋体";
+		float:left;
+		color:#b5b5b5;
+		padding:0 10px;
+		border-right:1px solid #3d3d3d;
+		text-algin:center;
+		}
+	header .xx i{
+		color:#8b8b8b;
+		}
+	header .xx .ff{
+		position:relative;
+		top:-4px;
+		}
+	.top{
+		border-bottom:1px solid #dddddd;
+		height:113px;
+		width:1;
+		padding-top:30px;
+		}
+	.hang1{
+		width:960px;
+		margin:0 auto;
+		}
+	.hang1 .left{
+		float:left;
+		}
+	.hang1 .center{
+		float:left;
+		width:462px;
+		height:113px;
+		}
+	.center .yyg{
+		height:26px;
+		background:url(images/yygbj.png) no-repeat;
+		font:16px/1 "宋体";
+		padding-top:49px;
+		}
+	.center .yyg li{
+		float:left;
+		padding:0 17px 0;
+		}
+	.center .yyg .first{
+		color:#fff;
+		padding:0 28px 0 20px;
+		}
+	.hang1 .center .xx{
+		height:38px;
+		padding:13px 0;
+		}
+	.hang1 .center .xx li{
+		font:12px/1 "宋体";
+		padding:0 16px 0 18px;
+		border-left:1px solid #d7c5d7;
+		float:left;
+		color:#6e6e6e;
+		}
+	.hang1 .center .xx .first{
+		font-weight:bold;
+		color:#0dad51;
+		padding-left:20px;
+		border-left:0;
+		}
+	.hang1 .right{
+		float:right;
+		width:230px;
+		padding-top:38px;
+		}
+	.body{
+		width:960px;
+		margin:20px auto 125px;
+		height:1993px;
+		}
+	.body .left{
+		float:left;
+		width:700px;
+		}
+	.body .right{
+		float:right;
+		width:220px;
+		}
+	#banner{
+		margin-bottom:12px;
+		}
+	.body .left .tm{
+		height:30px;
+		margin-top:28px;
+		}
+	.body .left .tm span{
+		padding-left:10px;
+		font:27px/30px "幼圆";
+		float:left;
+		border-left:2px solid #000;
+		}
+	.body .left .tm span a{
+		padding-left:10px;
+		font:14px/14px "宋体";
+		color:#0c8f44;
+		}
+	.body .left .tm i{
+		float:right;
+		}
+	.body .left .tm i p{
+		padding:9px 12px 0;
+		}
+	.body .left .tm i p a{
+		color:black;
+		}
+	.body .left .tm i p b{
+		color:#0c8f44;
+		}
+	.body .left .zxsf ul{
+		padding-top:18px;
+		height:288px;
+		}
+	.body .zxsf ul dt img{
+		height:130px;
+		width:130px;
+		}
+	.body .zxsf ul dl{
+		position:relative;
+		height:130px;
+		width:130px;
+		margin-right:12px;
+		margin-bottom:10px;
+		float:left;
+		}
+	.body .zxsf ul dd{
+		position:absolute;
+		bottom:0;
+		}
+	.body .zxsf ul dd p{
+		font:13px/24px "宋体";
+		color:#11c651;
+		text-overflow:ellipsis; 
+		white-space:nowrap;	
+		overflow:hidden;
+		width:122px;	
+		padding-left:8px;
+		}
+	.body .zxsf ul dd p i{
+		font:12px/24px "宋体";
+		color:#fff;
+		}
+	.body .zxsf ul .js{
+		z-index:1;
+		}
+	.body .zxsf ul .bj{
+		height:48px;
+		width:130px;
+		background-color:black;
+		opacity:0.4;
+		filter:alpha(opacity=40);
+		}		
+	.body .mvsb ul{
+		height:368px;
+		}
+	.body .mvsb ul p{
+		font:12px/23px "宋体";
+		color:#8b8b8b;
+		width:160px;
+		overflow:hidden;
+		text-overflow:ellipsis; 
+		white-space:nowrap;
+		}
+	.body .mvsb ul li{
+		float:left;
+		width:160px;
+		margin-right:20px;
+		margin-top:18px;
+		}
+	.body .mvsb ul p a{
+		color:#0c8f44;
+		}
+	.body .mvsb ul p i{
+		color:#515151;
+		}
+	.body div ul .last{
+		margin-right:0;
+		}
+	.body .mvsb ul p e{
+		float:right;
+		}
+	.body .gq{
+		width:350px;
+		float:left;
+		}
+	.body .gq2{
+		position:relative;
+		}
+	.body .gq li{
+		font:13px/36px "宋体";
+		
+		}
+	.body .gq li p{
+		color:#0c8f44;
+		max-width:180px;
+		overflow:hidden;
+		float:left;
+		font:13px/36px "宋体";
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		}
+	.body .gq2 ul{
+		border-left:1px solid #e5e5e5;
+		padding-left:20px;
+		}
+	.body .left .jxj .tm{
+		margin:0;
+		}
+	.body .left .jxj dt{
+		font:12px/24px "宋体";
+		float:left;
+		position:relative;
+		}
+	.body .left .jxj dt a{
+		position:absolute;
+		bottom:-48px;
+		left:0px;
+		color:#3e8f67;
+		} 
+	.body .left .jxj dt a i{
+		color:#8b8b8b;
+		}
+	.body .left .jxj dd{
+		float:right;
+		width:430px;
+		}
+	.body .jxj dd li{
+		float:left;
+		margin-left:12px;
+		}
+	.body .jxj dd li p{
+		margin-top:8px;
+		margin-bottom:36px;
+		color:#628f7c;
+		}
+	.body .right .tm2{
+		font:30px "幼圆";
+		color:#e4e4e4;
+		text-align:center;
+		}
+	.body .right .dl{
+		padding:25px 0 35px;
+		text-align:center;
+		border-bottom:1px solid #e4e4e4;
+		}
+	.body .right aside{
+		margin-top:20px;
+		}
+	.body .right .dfb{
+		height:355px;
+		margin-top:20px;
+		border-bottom:1px dashed #c6c6c6;
+		}
+	.body .right .dfb div p{
+		font:16px/30px "幼圆";
+		color:#8d8d8d;
+
+		}
+	.body .right .dfb p{
+		font:12px/36px "宋体";
+		color:#d8d8d8;
+		}
+	.body .right .dfb p i{
+		font-weight:bold;
+		color:black;
+		}
+	.body .right .dfb p a{
+		color:#0c8f44;
+		}
+	.body .right .dfb ul li p{
+		font:12px/24px "宋体";
+		color:#515151;
+		}
+	.body .right .dfb ul li p i{
+		font-weight:normal;
+		float:right;
+		color:#515151;
+		max-width:70px;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		overflow:hidden;
+		}
+	.body .right .dfb ul li p a,.body .right .dfb ul li p b{
+		float:left;
+		}
+	.body .right .dfb ul li p a{
+		padding-left:28px;
+		max-width:108px;
+		overflow:hidden;
+		white-space:nowrap;
+		text-overflow:ellipsis;		
+		}
+	.body .right .dfb ul dl{
+		display:none;
+		}
+	.body .right .dfb li:hover p{
+		display:none;
+		}
+	.body .right .dfb li:hover dl{
+		display:block;
+		}
+	.body .right .dfb li dl dt{
+		float:left;
+		
+		}
+	.body .right .dfb li dl b{
+		float:left;
+		font:21px "宋体";
+		color:#ff5400;
+		padding-right:10px;
+		}
+	.body .right .dfb li dl dd{
+		float:left;
+		width:90px;
+		margin-left:10px;
+		} 
+	.body .right .dfb dl dd a{
+		font:21px/27px "宋体";
+		padding-bottom:10px;
+		color:#ff5400;
+		max-width:100px;
+		overflow:hidden;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		float:left;
+		} 
+	.body .right .dfb dl dd i{
+		color:#515151;
+		}
+	.body .right .bd{
+		padding-top:20px;
+		padding-bottom:8px;
+		border-bottom:1px solid #e4e4e4;
+		}
+	.body .right .bd p{
+		min-width:80px;
+		float:left;
+		padding-bottom:12px;
+		}
+	.body .right .bd .last{
+		min-width:40px;
+		}
+	.body .right .rmgs{
+		padding-top:27px;
+		border-bottom:1px dashed #e4e4e4;
+		}
+	.body .right .rmgs .tm{
+		font:14px "幼圆";
+		color:#8d8d8d;
+		margin-bottom:20px;
+		}
+	.body .right .rmgs .tm a{
+		font:12px "宋体";
+		color:#0c8f44;
+		}
+	.body .right .rmgs li{
+		margin-right:34px;
+		float:left;
+		}
+	.body .right .rmgs li p{
+		font:12px/20px "宋体";
+		color:#0c8f44;
+		margin-bottom:11px;
+		}
+	.body .right .rmgs .last{
+		margin-right:0;
+		}
+	.body .right .gslb p{
+		word-spacing:18px;
+		line-height:24px;
+		padding-top:12px;
+		color:#515151;
+		border-bottom:1px solid #e4e4e4;
+		}
+	.body .right aside h3{
+		font:18px/58px "幼圆";
+		color:#8d8d8d;
+		}
+	.body .right aside p{
+		color:#0c8f44;
+		font:12px/24px "宋体";
+		color:#0c8f44;
+		padding-bottom:7px;
+		}
+	.body .right aside{
+		padding-bottom:13px;
+		border-bottom:1px solid #e4e4e4;}
+</style>
+</head>
+
+<body>
+    <header class="clearfix">
+        <div class="contert clearfix">
+            <div class="clearfix">
+                <span class="xx"><i>您还未登录，</i>马上登陆</span>
+                <span class="xx"><img src="images/lz.png"/>绿钻</span>
+                <span class="xx"><img class="ff" src="images/ff.png">付费音乐包</span>
+                <span class="xx">全民k歌</span>
+                <span class="xx">QQ演出</span>
+                <span class="xx">QPlay</span>
+                <span class="xx">全民k歌</span>
+                <span class="xx">全民k歌</span>
+            </div>        
+        </div>
+    </header>
+    <div class="top">
+        <div class="hang1 clearfix">
+            <div class="left"><img src="images/QQyy.png"/></div>
+            <div class="center">
+                <ul class="yyg">
+                    <li class="first clearfix">音乐馆</li>
+                    <li>MV</li>
+                    <li>我的音乐</li>
+                    <li>下载客户端</li>
+                </ul>
+                <ul class="xx clearfix">
+                    <li class="first">首页</li>
+                    <li>排行榜</li>
+                    <li>歌单广场</li>
+                    <li>电台</li>
+                    <li>歌手</li>
+                    <li>专辑</li>
+                </ul>          
+            </div>  
+            <div class="right"><img src="images/ssl.png"/>
+            </div> 
+        </div>
+    </div>
+    <div class="body clearfix">
+    	<div class="left">
+        	<img id="banner" src="images/banner.png"/>
+            <div class="zxsf">
+            	<div class="tm clearfix">
+                	<span>在线首发<a>/更多</a></span>
+                    <i><img src="images/xiangzuo.png"/><img src="images/xiangyou.png"/></i>
+                </div>
+                <ul>
+                	<li>
+                         <dl>
+                            <dt><img src="images/sf1.png"/></dt>
+                            <dd class="js">
+                                <p>trap</p>
+                                <p><i>林峯</i></p>
+                            </dd>
+                            <dd class="bj"></dd>
+                            
+                         </dl>
+                    </li>
+                    <li>
+                         <dl>
+                            <dt><img src="images/sf2.png"/></dt>
+                            <dd class="js">
+                                <p>谁是大歌神 第3期</p>
+                                <p><i>谁是大歌神</i></p>
+                            </dd>
+                            <dd class="bj"></dd>
+                            
+                         </dl>
+                    </li>
+                    <li>
+                         <dl>
+                            <dt><img src="images/sf3.png"/></dt>
+                            <dd class="js">
+                                <p>中国好歌曲第三季你也不知道我写的是什么</p>
+                                <p><i>中国好歌曲</i></p>
+                            </dd>
+                            <dd class="bj"></dd>
+                            
+                         </dl>
+                    </li>
+                    <li>
+                         <dl>
+                            <dt><img src="images/sf4.png"/></dt>
+                            <dd class="js">
+                                <p>我是潘云安</p>
+                                <p><i>潘云安</i></p>
+                            </dd>
+                            <dd class="bj"></dd>
+                            
+                         </dl>
+                    </li>
+                    <li>
+                         <dl class="last">
+                            <dt><img src="images/sf5.png"/></dt>
+                            <dd class="js">
+                                <p>国民美少女 第10期</p>
+                                <p><i>国民美少女</i></p>
+                            </dd>
+                            <dd class="bj"></dd>
+                            
+                         </dl>
+                    </li>
+                    <li>
+                         <dl>
+                            <dt><img src="images/sf6.png"/></dt>
+                            <dd class="js">
+                                <p>乐做人生</p>
+                                <p><i>钟汉良</i></p>
+                            </dd>
+                            <dd class="bj"></dd>
+                            
+                         </dl>
+                    </li>
+                    <li>
+                         <dl>
+                            <dt><img src="images/sf7.png"/></dt>
+                            <dd class="js">
+                                <p>如愿吉祥</p>
+                                <p><i>刘相子</i></p>
+                            </dd>
+                            <dd class="bj"></dd>
+                            
+                         </dl>
+                    </li>
+                    <li>
+                         <dl>
+                            <dt><img src="images/sf8.png"/></dt>
+                            <dd class="js">
+                                <p>This Is What the fuck?</p>
+                                <p><i>Gwen Stefani</i></p>
+                            </dd>
+                            <dd class="bj"></dd>
+                            
+                         </dl>
+                    </li>
+                    <li>
+                         <dl>
+                            <dt><img src="images/sf9.png"/></dt>
+                            <dd class="js">
+                                <p>冥明</p>
+                                <p><i>苏运莹</i></p>
+                            </dd>
+                            <dd class="bj"></dd>
+                            
+                         </dl>
+                    </li>
+                    <li>
+                         <dl class="last">
+                            <dt><img src="images/sf10.png"/></dt>
+                            <dd class="js">
+                                <p>这是一串我打不出来的韩国文字哦也</p>
+                                <p><i>也这是一串我打不出来的韩国文字哦也</i></p>
+                            </dd>
+                            <dd class="bj"></dd>
+                         </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="mvsb">
+            	<div class="tm clearfix">
+                	<span>MV首播<a>/更多</a></span>
+                    <i><img src="images/xiangzuo.png"/><img src="images/xiangyou.png"/></i>
+                </div>
+                <ul>
+                    <li>
+                    	<img src="images/mvsb1.png"/>
+                        <p><a>不认识</a><i>-不认识的语言啊啊啊</i></p>
+                        <p>泰国性感热舞女神最新桑巴巴拉拉小魔仙</p>
+                        <p class="date"><e>2016-3-16</e></p>
+                    </li>
+                    <li>
+                    	<img src="images/mvsb2.png"/>
+                        <p><a>当我们混在一起</a>-兄弟本色</p>
+                        <p>张震岳热狗组队玩爆PAR跟谁瞎玩玩？</p>
+                        <p class="date"><e>2016-3-23</e></p>
+                    </li>
+                    <li>
+                    	<img src="images/mvsb3.png"/>
+                        <p><a>星星的爸爸</a>-华语群星</p>
+                        <p>关爱自闭症儿童公益歌曲《我也不知道什么》</p>
+                        <p class="date"><e>2016-3-23</e></p>
+                    </li>
+                    <li class="last">
+                    	<img src="images/mvsb4.png"/>
+                        <p><a>Hearts on Fire</a>-Cimorelli</p>
+                        <p>6个亲姐妹组成乐团 原创新什么鬼</p>
+                        <p class="date"><e>2016-3-20</e></p>
+                    </li>
+                    <li>
+                    	<img src="images/mvsb5.png"/>
+                        <p><a>Crazy Sexy Cool</a>-银色灰尘</p>
+                        <p>唯美与躁动碰撞 银色灰尘带发生了什么鬼</p>
+                        <p class="date"><e>2016-3-23</e></p>
+                    </li>
+                    <li>
+                    	<img src="images/mvsb6.png"/>
+                        <p><a>Celebration~不认识日文啊啊啊啊啊啊</a></p>
+                        <p>圭贤日文歌曲首播 前AKB48成员我也不认识是谁</p>
+                        <p class="date"><e>2016-3-22</e></p>
+                    </li>
+                    <li>
+                    	<img src="images/mvsb7.png"/>
+                        <p><a>One Shot One Kill</a>-U-KISS</p>
+                        <p>欧巴们复古风好帅 独特拐棍李大显神通？</p>
+                        <p class="date"><e>2016-3-15</e></p>
+                    </li>
+                    <li class="last">
+                    	<img src="images/mvsb8.png"/>
+                        <p><a>Doin'Good</a>-KittiB/啊啊啊啊啊啊啊啊啊</p>
+                        <p>V叔助阵KittiB打造新单《Doin'Good》</p>
+                        <p class="date"><e>2016-3-21</e></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix">   
+            		<div class="gq clearfix">
+                        <div class="tm clearfix">
+                            <span>最新推荐<a> <img src="images/bofang.png"/> <img src="images/tianjia.png"></a>
+                            </span>
+                            <i><p><a>华语</a> | <b>韩语</b> | <b>欧美</b></p></i>
+                        </div>
+                        <ul>
+                            <li><p>Make It Big</p><a>-张靓颖</a></li>
+                            <li><p>原谅我(《我的特工爷爷》电影主题曲)</p><a>-刘德华</a></li>
+                            <li><p>破绽(《冰河追凶》电影主题曲)</p><a>-魏晨</a></li>
+                            <li><p>主题曲</p><a>-陈小春</a></li>
+                            <li><p>记忆(《生命中的好日子电影主题曲》)</p><a>-孙楠</a></li>
+                            <li><p>只愿与你(《十五年等待候鸟后边不知道》)</p><a>-何洁/苏醒</a></li>
+                            <li><p>这一刻，爱吧(女声版)(腾讯游戏？)</p><a>-付雪君</a></li>
+                            <li><p>当爱靠近</p><a>-林峯</a></li>
+                            <li><p>心跳(《女汉子真爱公式》电影主题曲)</p><a>-汪苏泷</a></li>
+                            <li><p>他比我更适合(《因为爱情有天意》)</p><a>-胡夏</a></li>
+                            <li><p>真心话太冒险</p><a>-TFBOYS</a></li>
+                            <li><p>封印(Excited)</p><a>-鹿晗</a></li>
+                        </ul>
+                	</div>
+                	<div class="gq gq2 clearfix">
+                        <div class="tm clearfix">
+                            <span>最热推荐<a> <img src="images/bofang.png"/> <img src="images/tianjia.png"></a>
+                            </span>
+                            <i><p><a>华语</a> | <b>韩语</b> | <b>欧美</b></p></i>
+                        </div>
+                        <ul>
+                            <li><p>不完美小孩</p><a>-TFBOYS</a></li>
+                            <li><p>不将就(《何以笙箫默》电影主题曲)</p><a>-李荣浩</a></li>
+                            <li><p>原动力(星战版)(《星球大战》电影主题曲)</p><a>-鹿晗</a></li>
+                            <li><p>星星泪(《美丽的秘密》电视剧主题曲)</p><a>-宋茜</a></li>
+                            <li><p>可念不可说(《太子妃升职记》电视剧主题曲)</p><a>-崔子格</a></li>
+                            <li><p>表白</p><a>-陈伟霆</a></li>
+                            <li><p>不说再见(《谁的青春不迷茫》电影主题曲)</p><a>-好妹妹乐队</a></li>
+                            <li><p>无敌(《美人鱼》电影宣传曲)</p><a>-邓超</a></li>
+                            <li><p>从你的全世界路过</p><a>-牛奶咖啡</a></li>
+                            <li><p>大王叫我来巡山(《万万没想到》电影主题曲)</p><a>-赵英俊</a></li>
+                            <li><p>国王与乞丐</p><a>-华晨宇/杨宗纬</a></li>
+                            <li><p>萨瓦迪卡(《唐人街探案》电影主题曲)</p><a>-南征北战</a></li>
+                        </ul>
+                    </div>
+                </div>
+            <div class="jxj clearfix">
+                <div class="tm clearfix">
+                    <span>精选集</span>
+                </div>
+                <dl>
+                    <dt>
+                        <img src="images/jxj1.png">
+                        <a>MV精选</br><i>音乐抚慰青春之痛，追忆那时的甜言蜜语。</i></a>
+                    </dt>
+                    <dd>
+                    	<ul>
+                        	<li><img src="images/jxj2.png">
+                        		<p>相恋跨越时空</p>
+                            </li>
+                            <li><img src="images/jxj3.png">
+                        		<p>一枝独秀更耀眼</p>
+                            </li>
+                            <li><img src="images/jxj4.png">
+                        		<p>音乐和短裙更配</p>
+                            </li>
+                            <li><img src="images/jxj5.png">
+                        		<p>音乐时尚两不误</p>
+                            </li>
+                            <li><img src="images/jxj6.png">
+                        		<p>好的歌手会搞怪</p>
+                            </li>
+                            <li><img src="images/jxj7.png">
+                        		<p>静享一曲中国风</p>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="right">
+        	<div class="tm2">发现更多好音乐</div>
+            <div class="dl"><img src="images/yhdl.png"/></div>
+            <aside><img src="images/gg.png"/></aside>
+            <div class="dfb">
+            	<div>
+                	<p>巅峰榜 <img src="images/bofang.png"/> <img src="images/tianjia.png"/></p>
+                </div>
+                <p><i>流行指数</i> | <a>内地</a> | <a>港台</a> | <a>欧美</a> | <a>韩国</a></p>
+                <ul>
+                	<li>
+                    	<p class="clearfix"><b>01</b><a>π之歌(不知道是什么)</a><i>汪苏泷</i></p>
+                        <dl class="clearfix"><b>01.</b><dt><img src="images/wsl.png"/></dt><dd><a>π之歌（不知道是什么）</a><i>汪苏泷</i></dd></dl>
+                    </li>
+                    <li>
+                    	<p class="clearfix"><b>02</b><a>独一无二(Live)</a><i>南征北战</i></p>
+                        <dl class="clearfix"><b>01.</b><dt><img src="images/wsl.png"/></dt><dd><a>π之歌（不知道是什么）</a><i>汪苏泷</i></dd></dl>
+                    </li>
+                    <li>
+                    	<p class="clearfix"><b>03</b><a>原谅我(《我的特工爷爷》)</a><i>龙奔</i></p>
+                        <dl class="clearfix"><b>01.</b><dt><img src="images/wsl.png"/></dt><dd><a>π之歌（不知道是什么）</a><i>汪苏泷</i></dd></dl>
+                    </li>
+                    <li>
+                    	<p class="clearfix"><b>04</b><a>社会摇</a><i>龙奔</i></p>
+                        <dl class="clearfix"><b>01.</b><dt><img src="images/wsl.png"/></dt><dd><a>π之歌（不知道是什么）</a><i>汪苏泷</i></dd></dl>
+                    </li>
+                     <li>
+                    	<p class="clearfix"><b>05</b><a>不为谁而作的歌(哈哈哈</a><i>林俊杰/张什么鬼</i></p>
+                        <dl class="clearfix"><b>01.</b><dt><img src="images/wsl.png"/></dt><dd><a>π之歌（不知道是什么）</a><i>汪苏泷</i></dd></dl>
+                    </li>
+                     <li>
+                    	<p class="clearfix"><b>06</b><a>一夜成长(Live)...</a><i>于文文</i></p>
+                        <dl class="clearfix"><b>01.</b><dt><img src="images/wsl.png"/></dt><dd><a>π之歌（不知道是什么）</a><i>汪苏泷</i></dd></dl>
+                    </li>
+                    <li>
+                    	<p class="clearfix"><b>07</b><a>Welcome To The Party</a><i>Adam Laasdfasdf</i></p>
+                        <dl class="clearfix"><b>01.</b><dt><img src="images/wsl.png"/></dt><dd><a>π之歌（不知道是什么）</a><i>汪苏泷</i></dd></dl>
+                    </li>
+                    <li>
+                    	<p class="clearfix"><b>08</b><a>修炼爱情(我是歌手？)</a><i>林俊杰</i></p>
+                        <dl class="clearfix"><b>01.</b><dt><img src="images/wsl.png"/></dt><dd><a>π之歌（不知道是什么）</a><i>汪苏泷</i></dd></dl>
+                    </li>
+                    <li>
+                    	<p class="clearfix"><b>09</b><a>我才没有那样呢(终极？)</a><i>曾沛慈</i></p>
+                        <dl class="clearfix"><b>01.</b><dt><img src="images/wsl.png"/></dt><dd><a>π之歌（不知道是什么）</a><i>汪苏泷</i></dd></dl>
+                    </li>
+                    <li>
+                    	<p class="clearfix"><b>08</b><a>突然想爱你(我是歌神)</a><i>许茹芸</i></p>
+                        <dl class="clearfix"><b>01.</b><dt><img src="images/wsl.png"/></dt><dd><a>π之歌（不知道是什么）</a><i>汪苏泷</i></dd></dl>
+                    </li>
+                </ul>
+            </div> 
+            <div class="bd clearfix">
+            	<p>iTunes榜</p>
+                <p>美国公告牌</p>
+                <p class="last">英国uk榜</p>
+                <p>香港新城榜</p>
+                <p>日本公信榜</p>
+                <p class="last">韩国MNET</p>
+                <p>英国UK榜</p>
+                <p>香港电台榜</p>
+                <p class="last">MTV光荣榜</p>
+            </div>
+            <div class="rmgs clearfix">
+            	<div class="tm">
+                	<span>热门歌手 <a>/更多</a></span>
+                </div>
+                <ul>
+                    <li>
+                        <img src="images/gs1.png"/>
+                        <p>BIGBANG</p>
+                    </li>
+                    <li>
+                        <img src="images/gs2.png"/>
+                        <p>周杰伦</p>
+                    </li>
+                    <li class="last">
+                        <img src="images/gs3.png"/>
+                        <p>陈奕迅</p>
+                    </li>
+                    <li>
+                        <img src="images/gs4.png"/>
+                        <p>庄心妍</p>
+                    </li>
+                    <li>
+                        <img src="images/gs5.png"/>
+                        <p>李荣浩</p>
+                    </li>
+                    <li class="last">
+                        <img src="images/gs6.png"/>
+                        <p>林俊杰</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="gslb">
+            	<p><a>华语男歌手</a> <a>华语女歌手</a> <a>华语组合</a><a>韩国男歌手</a> <a>韩国女歌手</a> <a>韩国组合</a> <a>日本男歌手</a> <a>日本女歌手</a> <a>日本组合</a> <a>欧美男歌手</a> <a>欧美女歌手</a> <a>欧美组合</a>
+            	</p>
+            </div>
+            <aside>
+            	<h3>精彩活动</h3>
+            	<img src="images/gg2.png"/>
+                <p>[精彩活动]BIGBANG演唱会</p>
+                <img src="images/gg3.png"/>
+                <p>[精彩活动]周杰伦演唱会</p>
+            </aside>
+        </div>  
+    </div>
+    <div class="footer">
+    <img src="images/foot.png"/>
+    </div>
+</body>
+</html>

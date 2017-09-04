@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width:1000px;
+				height:500px;
+				border:6px solid #e9e6e5;
+				margin:30px auto;
+			}
+			.left{
+				width:125px;
+				float:left;
+				
+			}
+			.left div{
+				width:125px;
+				height:123px;
+				margin-bottom: 1px;
+				background:#000000;
+				font:18px/123px "微软雅黑";
+				text-align: center;
+				color: #fff;
+			}
+			.right{
+				float:left;
+				position:relative;
+			}
+			img{
+				width:875px;
+				height:500px;
+			}
+			.con2{
+				position:absolute;
+				bottom:4px;
+				left:0;
+				width:100%;
+				height:37px;
+			}
+			.bg{
+				
+				
+				background: #000;
+				height:37px;
+				opacity:0.5;
+				border-right:1px solid #fff;
+			}
+			.con4{
+				float:left;
+				width:25%;
+				position:relative;
+			}
+			.con3{
+				position: absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				font:19px/37px "微软雅黑";
+				color:#fff;
+				text-align: center;
+			}
+		</style>
+		<script>
+			window.onload= function (){
+				var arr =["./images/img1.gif","./images/img2.gif","./images/img3.gif","./images/img4.gif","./images/img5.gif","./images/img6.gif","./images/img7.gif","./images/img8.gif","./images/img9.gif","./images/img10.gif","./images/img11.gif","./images/img12.gif"];  
+				//定义存放图片的数组
+				var arr2=["暖色键盘","惬意时光","午后","一杯苦咖啡","街边夕阳","金色稻草","灰色通讯","咖啡配饼干","孤单键盘","枯树","baby素材","baby素材二"];
+				//定义存放图片描述的数据
+				var left= document.querySelectorAll(".left div");  //定义左侧的按钮
+				var bg=document.querySelectorAll(".bg");      //定义描述的背景
+				var con3=document.querySelectorAll(".con3");  //定义描述的内容
+				var con4=document.querySelectorAll(".con4");  //定义描述内容的父级
+				var img=document.querySelector("img");
+				left[0].style.background="red";
+				left[0].style.color="black";
+				 bg[0].style.background="deeppink";
+				 var prev =0;  //定义保存保存左侧被点击按钮的序号的变量
+				 //var prevCon3=0;
+				 var prev0=0;   //定义保存各个图片对应的按钮的序号的变量
+				 var prev1=0;
+				 var prev2=0;
+				 var prev3=0;
+				  for(var i=0;i<con3.length;i++){  
+				 	con3[i].index=i;
+				 	con3[i].onclick = function (){  //图片对应的按钮被点击时执行如下代码
+				 		
+//				 		bg[prevCon3].style.background="";
+//				 		bg[this.index].style.background="deeppink";
+//				 		prevCon3=this.index;
+				 		if(prev==0){   //如果左侧按钮0被点中
+				 			bg[prev0].style.background=""; //清除之前的按钮的背景色
+				 		bg[this.index].style.background="deeppink";  //给被点击的按钮加背景色
+				 		prev0=this.index;     //保存被点击按钮的虚汗
+				 			img.src=arr[this.index]  //将按钮对应的图片赋给img元素
+				 		
+				 		}else if(prev==1){
+				 			bg[prev1].style.background="";
+				 		bg[this.index].style.background="deeppink";
+				 		prev1=this.index;
+				 			img.src=arr[this.index+4]
+				 		}else if(prev==2){
+				 			bg[prev2].style.background="";
+				 		bg[this.index].style.background="deeppink";
+				 		prev2=this.index;
+				 			img.src=arr[this.index+6]
+				 		}else{
+				 			bg[prev3].style.background="";
+				 		bg[this.index].style.background="deeppink";
+				 		prev3=this.index;
+				 			img.src=arr[this.index+10]
+				 		}
+				 	}
+				 }
+				 
+				 
+				 for(var i=0;i<left.length;i++){
+				 	left[i].index=i;
+				 	left[i].onclick = function (){   //当左侧按钮被点击时执行如下代码
+//				 		bg[prevCon3].style.background="";
+//				 		bg[0].style.background="deeppink";
+//				 		prevCon3=0;
+							for(var i=0;i<con3.length;i++){ //将所有图片对应的按钮的背景色都改为黑色
+								bg[i].style.background="black";
+							}
+							if(this.index==0){   //如果是左侧第一个按钮被点中，执行如下代码
+								bg[prev0].style.background="deeppink";  //将之前被点中的图片对应按钮的颜色变为红色色，图片路径也改为之前点击按钮对应的图片
+								img.src=arr[prev0];      //
+							}else if(this.index==1){
+								bg[prev1].style.background="deeppink";
+								img.src=arr[prev1+4];
+							}else if(this.index==2){
+								bg[prev2].style.background="deeppink";
+								img.src=arr[prev2+6];
+							}else{
+								bg[prev3].style.background="deeppink";
+								img.src=arr[prev3+10];
+							}
+				 		left[prev].style.background="black";
+				 		left[prev].style.color="#fff";
+				 		this.style.background ="red";
+				 		this.style.color = "black";
+				 		prev=this.index;
+				 		if(prev==0){  //如果左侧第一个按钮被点中
+				 			con4[2].style.display="block";  //图片对应按钮3显示
+				 			con4[3].style.display="block";//图片对应按钮4显示
+				 			con4[0].style.width="25%"; //图片对应按钮1的宽度变为总宽度的四分之一
+				 			con4[1].style.width="25%";//图片对应按钮2的宽度变为总宽度的四分之一
+				 			//img.src=arr[0];
+				 			for(var i=0;i<4;i++){
+				 			
+				 				con3[i].innerHTML=arr2[i];//改变推片对应按钮的内容
+				 			}
+				 		}else if(prev==1){
+				 			con4[2].style.display="none";//图片对应按钮3隐藏
+				 			con4[3].style.display="none";//图片对应按钮4隐藏
+				 			con4[0].style.width="50%";//图片对应按钮1的宽度变为总宽度的二分之一
+				 			con4[1].style.width="50%";//图片对应按钮1的宽度变为总宽度的二分之一
+				 			//img.src=arr[4];
+				 			for(var i=0;i<2;i++){
+				 				con3[i].innerHTML=arr2[i+4];//改变推片对应按钮的内容
+				 			}
+				 		}else if(prev==2){
+				 			con4[2].style.display="block";
+				 			con4[3].style.display="block";
+				 			con4[0].style.width="25%";
+				 			con4[1].style.width="25%";
+				 			//img.src=arr[6];
+				 			for(var i=0;i<4;i++){
+				 			
+				 				con3[i].innerHTML=arr2[i+6];
+				 			}
+				 		}else{
+				 			con4[2].style.display="none";
+				 			con4[3].style.display="none";
+				 			con4[0].style.width="50%";
+				 			con4[1].style.width="50%";
+				 			//img.src=arr[10];
+				 			for(var i=0;i<2;i++){
+				 				con3[i].innerHTML=arr2[i+10];
+				 			}
+				 		}
+				 		// alert(prev)
+				 	}
+				 	
+				 }
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="left">
+				<div>暖色调</div>
+				<div>金色夕阳</div>
+				<div>灰色格调</div>
+				<div>baby</div>
+			</div>
+			<div class="right">
+				<img src="./images/img1.gif"/>
+				<div class="con2">
+					<div class="con4">
+						<div class="bg"></div>
+						<div class="con3">暖色键盘</div>
+					</div>
+					<div class="con4">
+						<div class="bg"></div>
+						<div class="con3">惬意时光</div>
+					</div>
+					<div class="con4">
+						<div class="bg"></div>
+						<div class="con3">午后</div>
+					</div>
+					<div class="con4">
+						<div class="bg"></div>
+						<div class="con3">一杯苦咖啡</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			section{
+				width:480px;
+				height:600px;
+				background: url(img/bg1.png) 0px 0px/480px 100%;
+				margin:0 auto;
+				padding-top:42px;
+				overflow: hidden;
+				position:relative;
+				border-radius: 30px;
+			}
+			h1{
+				text-align: center;
+				margin-bottom:20px;
+			}
+			div[class^=xz]{
+				height:36px;
+				padding:10px 40px;
+			}
+			div[class^=xz] button{
+				border-radius: 4px;
+				width:44px;
+				height:36px;
+				margin:0 10px;
+				vertical-align: middle;
+				box-sizing: border-box;
+				border: 1px solid #FFFFFF;
+				background:#2d2f2e;
+				color:#FFFFFF;
+				font:30px/30px "微软雅黑";
+			}
+			b{
+				box-sizing: border-box;
+				height:36px;
+				width:44px;
+				margin:0;
+				padding:0;
+				vertical-align: middle;
+				font:20px/36px "微软雅黑";
+				text-align: center;
+				background: #ebebeb;
+				border-radius: 4px;
+				display: inline-block;
+				text-align: center;
+				text-indent: 0;
+				color:#000000;
+			}
+			span{
+				display: inline-block;
+				box-sizing: border-box;
+				vertical-align: middle;
+				font:20px/30px "微软雅黑";
+				background:#000000;
+				border-radius: 4px;
+				font:16px/36px "宋体";
+				text-align: left;
+			
+			}
+			.jie{
+				text-indent: 10px;	
+				height:36px;
+				width:220px;
+				color:#acacac;
+				}
+			i{
+				font:16px/36px "宋体";
+				color:#FFFFFF;
+			}
+			.hj{
+				height:154px;
+				position:absolute;
+				bottom: 0;
+				background: #000000;
+				width:100%;
+				padding:20px 40px;
+				box-sizing: border-box;
+			}
+			.hj span{
+				line-height: 50px;
+				color:#acacac;
+			}
+			.hj .w{
+				width:60px;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h1><img src="img/logo.png"></h1>
+			<div class="box">
+			</div>
+			<div class="hj">
+				<span>商品合计共：<b class="gj">0</b> 件 共花费了：<b class="w">0</b> 元<br/>其中最贵的商品单价：<b class='w'>0</b> 元</span>
+			</div>
+		</section>
+		<script>
+			var box =document.querySelector(".box")
+			var arr=[12.5,10.5,8.5,8,14.5];
+			for(var i=0;i<arr.length;i++){
+				box.innerHTML+='<div class="xz'+[i]+'"><button id="s'+[i]+'">-</button><b>'+0+'</b><button id="b'+[i]+'">+</button><span class="jie">单价：'+arr[i]+'元  小计：<i>0元</i></span></div>';
+			}
+			var s =document.querySelectorAll(".box div *[id^=s]");
+			var b =document.querySelectorAll(".box div *[id^=b]");
+			var xz =document.querySelectorAll(".box *[class^=xz]");
+			var zj =document.querySelectorAll("i");
+			var inp=document.querySelectorAll(".box b");
+			var gj=document.querySelector(".gj")
+			var w=document.querySelectorAll(".w");
+			var gjsl=0;
+			var max=0;
+			var zd=0;
+			var prev=0;
+			for(var i=0;i<arr.length;i++){
+				  s[i].nb=i;
+				  b[i].nb=i;
+				  xz[i].nb=i;
+				  xz[i].sl=0;
+				s[i].onclick=function(){
+					if(xz[this.nb].sl!=0){
+						xz[this.nb].sl=xz[this.nb].sl-1;
+						zj[this.nb].innerHTML=xz[this.nb].sl*arr[this.nb]+'元';
+						inp[this.nb].innerHTML=xz[this.nb].sl;
+						gjsl-=1;
+						gj.innerHTML=gjsl;
+						max-=arr[this.nb];
+						w[0].innerHTML=max;
+						if(xz[this.nb].sl==0){
+							if(zd==arr[this.nb]){
+								zd=0;
+								for(var x=0;x<arr.length;x++){
+									if(xz[x].sl!=0){
+										if(zd<arr[x]){
+											zd=arr[x];
+											console.log(zd);
+										}
+									}
+								}
+							}
+						}
+					}
+					w[1].innerHTML=zd;
+				}
+				b[i].onclick=function(){
+					xz[this.nb].sl=xz[this.nb].sl+1;
+					zj[this.nb].innerHTML=xz[this.nb].sl*arr[this.nb]+'元';
+					inp[this.nb].innerHTML=xz[this.nb].sl;
+					gjsl+=1;
+					gj.innerHTML=gjsl;
+					max+=arr[this.nb];
+					w[0].innerHTML=max;
+					if(arr[this.nb]>zd){
+						zd=arr[this.nb];
+					}
+					w[1].innerHTML=zd;
+				}
+			}
+		</script>
+	</body>
+</html>

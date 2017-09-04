@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>	
+		<link rel="stylesheet" type="text/css" href="slide.css" />
+		<style type="text/css">
+			body{
+				background-color: #ffd800;
+			}
+			.nav .blue {
+				background-color: blue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="slide">
+			<div  class="tagClient">
+				<ul class="list">
+					<li><img src="./ads/1.png" /></li> 
+					<li><img src="./ads/2.png" /></li> 
+					<li><img src="./ads/3.png" /></li> 
+					<li><img src="./ads/4.png" /></li> 
+					<li><img src="./ads/5.png" /></li>
+					<li><img src="./ads/1.png" /></li>
+				</ul>
+			</div>
+			<div class="prev"></div>
+			<div class="next"></div>
+			<div class="nav">
+				<span style="background-color: #6cd2eb;"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<script src="./utils.js"></script>
+		<script>
+			var next=$(".next")[0];
+			var prev=$(".prev")[0];
+			var list=$(".list")[0];
+			var d=$("span");
+			console.log(next);
+			var n=0;
+			next.onclick=function(){
+				for(var i=0;i<5;i++){
+					d[i].style.backgroundColor="";
+				}
+				n++;
+				
+				list.style.left=n*-530+"px";				
+				if(n>=5){
+					d[0].style.backgroundColor="#6cd2eb";
+					var x = setTimeout(function() {
+						list.style.transition="0s";
+						n=0;
+						d[n].style.backgroundColor="#6cd2eb";
+						list.style.left="0px";
+						var x1=setTimeout(function() {
+							list.style.transition="0.5s"
+						},20);
+					}, 500);
+				}else{
+				d[n].style.backgroundColor="#6cd2eb";
+				}
+			}
+			prev.onclick=function(){
+				for(var i=0;i<5;i++){
+					d[i].style.backgroundColor="";
+				}
+				n--;
+				
+				if(n<0){
+					n=4;
+					d[n].style.backgroundColor="#6cd2eb";
+					list.style.transition="0s";
+					list.style.left=-530*5 	+"px";
+					var x1=setTimeout(function() {
+							list.style.transition="0.5s";
+							list.style.left=n*-530+"px";
+						},20);
+				}else{
+				list.style.left=n*-530+"px";
+				d[n].style.backgroundColor="#6cd2eb";}
+			}
+			var k=setInterval(next.onclick,1000);
+			next.onmouseover=prev.onmouseover=function(){
+				clearInterval(k);
+			}
+			next.onmouseout=prev.onmouseout=function(){
+				k=setInterval(next.onclick,1000);
+			}
+		</script>
+	</body>
+
+</html>

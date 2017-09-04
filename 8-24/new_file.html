@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="inp" value="" />
+		<div id="txt" style="font-size: 20px;"></div>
+		<script type="text/javascript">
+			inp.oninput=function(){
+				if(/\d+/g.test(this.value)){
+					txt.innerHTML="输入数字啦，数字为:"+this.value.match(/\d+/g).join(",").replace(/[1357]/g,"*");
+				}else{
+					txt.innerHTML="没有输入数字";
+				}
+			}
+		</script>
+	</body>
+</html>

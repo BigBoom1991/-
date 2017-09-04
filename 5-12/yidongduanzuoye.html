@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/yd_reset.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/public.css">
+		<script>
+			var iScale=1/window.devicePixelRatio;
+			document.write('<meta name="viewport" content="width=device-width,initial-scale='+iScale+',minimum-scale='+iScale+',maximum-scale='+iScale+',user-scalable=no"/>');
+			var iWidth=document.documentElement.clientWidth;
+			document.getElementsByTagName('html')[0].style.fontSize=iWidth/32+ 'px';
+		</script>
+		<style>
+			body{
+				background-color:#cce3d1;
+				width:100%;
+			}
+			header{
+				height:3.75rem;
+				position: fixed;
+				background-color:#fabc09;
+				width:100%;
+				z-index:2;
+				}
+			header a{
+				font:0.8rem helvetica;
+				width:3.5rem;
+				text-align:center;
+				padding-top:0.4rem;
+				img{
+					width:2rem;
+					height:2rem;
+				}
+				}
+			header form{
+				display: inline-block;
+				margin-top:0.7rem;
+			}
+			header input{
+				border-radius: 0.4rem;
+				width:24rem;
+				height:2.5rem;
+				padding-left:2.5rem;
+				font-size:1rem;
+				color:#a5a4a9;
+				background:url(images/ss.png) no-repeat 0.8rem 0.2rem/1rem 2rem #d5dba9;
+			}
+			section .pic1{
+				width:100%;
+				height:13.5rem;
+				margin-top:3.75rem;
+			}
+			section .pic2{
+				width:100%;
+				height:8.5rem;
+			}
+			section nav{
+				background-color:#cce3d1;
+				padding-top:1rem;
+				border-top:2px solid #acd3b3;
+			}
+			section nav a{
+				width:20%;
+				}
+			section nav a dl{
+				width:5.5rem;
+				margin:0 auto;
+				}	
+			section nav a dt img{
+				width:3.5rem;
+				margin:0 1rem;
+				}
+			section nav dl dd{
+				font:1rem/2.5rem helvetica;
+				color: #717278;
+				height:2.7rem;
+				text-align: center;
+				white-space: nowrap;
+				width:5.5rem;
+			}
+			section hgroup{
+				position:relative;
+				height:4.5rem;
+				border-top:2px solid #acd3b3;
+				width:100%;
+				padding:1rem 0 1rem;
+			}
+			section hgroup h2{
+				position: absolute;
+				margin: auto;
+				top:0;
+				bottom:0;
+				width:7rem;
+				height:2rem;
+			}
+			section hgroup h2 img{
+				width:7rem;
+				height:2rem;
+			}
+			section hgroup h3,section hgroup h4{
+				font:1rem/1 "宋体";
+				padding-left:7rem;
+				padding-bottom:0.4rem;
+				text-indent:2em;
+				background:url(images/tb3.png) no-repeat 8.4rem 0.3rem;
+			}
+			section hgroup h3{
+				color:#141013;
+			}
+			section hgroup h4{
+				color:#8c868a;
+			}
+			section .part1{
+				height:40rem;
+				background-color:#b8d9be;
+				padding-top:1rem;
+			}
+			section .part1 img{
+				border:1px solid transparent;
+			}
+			section .zsq{
+				height:28.2rem;
+				border-top: 0.7rem solid #ccd9c9;
+				overflow-x:hidden;
+			}
+			section .zsq h3{
+				background:url(images/zsq.png) no-repeat 0/6rem 2.7rem;
+				color:transparent;
+				height:2.7rem;
+				width:6.8rem;
+				padding-left:0.8rem;
+			}
+			section .zsq div{
+				height:2.7rem;
+				font:1rem/2.7rem helvetica;
+				color:red;
+			}
+			section .zsq div p{
+				border:2px solid #92a78a;
+				border-radius: 3px;
+				font:1rem "微软雅黑";
+				color:#272526;
+				margin:0.5rem 0.3rem;
+				}
+			section .zsq div .spe{
+				border-color:red;
+				color:red;
+			}
+			section .zsq div i{
+				color:#272526;
+				font-weight: bold;
+			}
+			section .zsq a{
+				margin-top:10px;
+				width:6rem;
+				background:url(images/tb-4.png) no-repeat right 0/0.75rem 1.2rem;
+				height:1.4rem;
+				margin-right:0.75rem;
+			}
+			section .zsq a p{
+				font:0.8rem/1.4rem helvetica;
+				height:1.4rem;
+				border:0px solid #000000;
+				border-radius:0.5rem/0.75rem;
+				background-color:#ffc001;
+				width:5.1rem;
+				text-indent:0.5rem;
+				color:#4a6f23;
+			}
+			section .zsq ul{
+				width:300%;
+				overflow-x:auto;
+				padding-left:0.8rem;
+			}
+			section .zsq ul img{
+				height:10.2rem;
+				width:9.5rem;
+				margin-right:0.4rem;
+				overflow:scroll;			}
+			section .zsq div img{
+				width:50%;
+				border-right:1px solid transparent;
+				height:12.8rem;
+			}
+			section h6{
+				text-align: center;
+				font:1.2rem/2.5rem helvetica;
+			}
+			section .djh{
+				background-color:#FFFFFF;
+				color:#fe2b4a;
+			}
+			section div img{
+				border:1px solid #b8d9be;
+			}
+			section .tshh{
+				background-color:#FFFFFF;
+				color:#42bb0a;
+			}
+			section .rmsc{
+				background-color:#FFFFFF;
+				color:#765dfa;
+				margin-top:1rem;
+			}
+			section .snjr{
+				background-color:#FFFFFF;
+				color:#4298fd;
+				margin-top:1rem;
+			}
+			section .hdtj{
+				background-color:#FFFFFF;
+				color:#802900;
+				margin-top:1rem;
+			}
+			legend{
+				text-align: center;
+				font:1.2rem/2.5rem helvetica;
+				color:#204f04;
+				margin:0 0.8rem;
+				background:url(images/bj.png) no-repeat 0 5px #b8d9be;
+				text-indent:3rem;
+				}
+			fieldset{
+				border-top:1px solid #aec8ab;
+				margin:0 0.8rem;
+			}
+			section .cnxh{
+				background-color:#b8d9be;
+				padding-top:1.25rem;
+			}
+			section .cnxh dl{
+				margin-left:0.7rem;
+				width:15rem;
+				background-color:#CCE3D1;
+				padding:2px;
+				height:20.5rem;
+				margin-bottom: 0.8rem;
+			}
+			section .cnxh dd{
+				height:6rem;
+				font:1rem/2rem helvetica;
+				color: black;
+				margin:0 0.4rem;
+			}
+			section .cnxh dd i{
+				color:red;
+			}
+			section .app{
+				height:6.5rem;
+				border-top:1px solid #ff5147;
+				border-bottom:1px solid #ff5147;
+				font:1.2rem helvetica;
+				color:#fff;
+				padding-top:1.8rem;
+				padding-left:7rem;
+				background:url(images/bj-2.png) 2.5rem 1.5rem no-repeat #fe6155;
+			}
+			section .app i{
+				font-weight:bold;
+				font-family:"黑体";
+				width:12rem;
+			}
+			section .app .fr{
+				width:8rem;
+				height: 2.5rem;
+				border:1px solid #fff;
+				border-radius:7px/5px;
+				margin-right:2.2rem;
+				font:1.25rem/2.5rem helvetica;
+				text-align:center;
+				background:url(images/bj_3.png) no-repeat 2px 4px;
+				text-indent: 1rem;
+				
+			}	
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="fl"><img src="images/tb1.png"/><br/>分类</a>
+			<form>
+				<input style="text" value="荣耀4x最后一天预订！"/>
+			</form>
+			<a class="fr"><img src="images/tb2.png"/><br/>购物车</a>
+		</header>
+		<section>
+			<a><img class="pic1" src="images/pic1.png"/></a>
+			<a><img class="pic2" src="images/pic2.png"/></a>
+			<nav class="clearfix">
+				<a class="fl">
+					<dl>
+						<dt><img src="images/nav1.png"></dt>
+					<dd><span>大聚会</span></dd>
+					</dl>
+				</a>
+				<a class="fl">
+					<dl>
+						<dt><img src="images/nav2.png"></dt>
+					<dd><span>海外购</span></dd>
+					</dl>
+				</a>
+				<a class="fl">
+					<dl>
+						<dt><img src="images/nav3.png"></dt>
+					<dd><span>大聚惠</span></dd>
+					</dl>
+				</a>
+				<a class="fl">
+					<dl>
+						<dt><img src="images/nav4.png"></dt>
+					<dd><span>红孩子</span></dd>
+					</dl>
+				</a>
+				<a class="fl">
+					<dl>
+						<dt><img src="images/nav5.png"></dt>
+					<dd><span>嗨够精选</span></dd>
+					</dl>
+				</a>
+				<a class="fl">
+					<dl>
+						<dt><img src="images/nav6.png"></dt>
+					<dd><span>我的易购</span></dd>
+					</dl>
+				</a>
+				<a class="fl">
+					<dl>
+						<dt><img src="images/nav7.png"></dt>
+					<dd><span>金融</span></dd>
+					</dl>
+				</a>
+				<a class="fl">
+					<dl>
+						<dt><img src="images/nav8.png"></dt>
+					<dd><span>领云钻</span></dd>
+					</dl>
+				</a>
+				<a class="fl">
+					<dl>
+						<dt><img src="images/nav9.png"></dt>
+					<dd><span>门店导购</span></dd>
+					</dl>
+				</a>
+				<a class="fl">
+					<dl>
+						<dt><img src="images/nav10.png"></dt>
+					<dd><span>客户端下载</span></dd>
+					</dl>
+				</a>
+			</nav>
+			<hgroup>
+				<h2><img src="images/pic3.png"/></h2>
+				<h3>分分钟KO宋仲基，撩妹"时"力派</h3>
+				<h4>火爆小短裤，穿出最精致的你~</h4>
+			</hgroup>
+			<div class="part1">
+				<div class="line1 clearfix">
+					<a class="fl"><img src="images/pic4.png" style="height:12.5rem;width:16rem;"/></a>
+					<a class="fr"><img src="images/pic5.png" style="height:6.26rem;width:16rem;"/></a>
+					<a class="fr"><img src="images/pic6.png" style="height:6.26rem;width:16rem;"/></a>
+				</div>
+				<div class="line2 clearfix">
+					<a class="fl"><img src="images/pic7.png"/ style="height:12.8rem;width:8rem;"></a>
+					<a class="fl"><img src="images/pic8.png"/ style="height:12.8rem;width:8rem"></a>
+					<a class="fl"><img src="images/pic9.png"/ style="height:12.8rem;width:8rem"></a>
+					<a class="fl"><img src="images/pic10.png"/ style="height:12.8rem;width:8rem;"></a>
+					<a class="fl"><img src="images/pic11.png"/ style="height:12.8rem;width:8rem;"></a>
+					<a class="fl"><img src="images/pic12.png"/ style="height:12.8rem;width:8rem"></a>
+					<a class="fl"><img src="images/pic13.png"/ style="height:12.8rem;width:8rem"></a>
+					<a class="fl"><img src="images/pic14.png"/ style="height:12.8rem;width:8rem;"></a>
+				</div>
+			</div>
+			<div class="zsq">
+				<div class="clearfix>
+					<h3 class="fl">掌上抢</h3>
+					<div class="fl">
+						<span class="fl">20点场 </span>
+						<p class="fl">03</p>
+						<i class="fl">:</i>
+						<p class="fl">54</p>
+						<i class="fl">:</i>
+						<p class="fl spe">20</p>	
+					</div>
+					<a class="fr">
+						<p>吃货上新季</p>
+					</a>
+				</div>
+				<ul>
+					<li class="fl"><img src="images/zsq1.png"/></li>
+					<li class="fl"><img src="images/zsq1.png"/></li>
+					<li class="fl"><img src="images/zsq1.png"/></li>
+					<li class="fl"><img src="images/zsq1.png"/></li>
+					<li class="fl"><img src="images/zsq1.png"/></li>
+					<li class="fl"><img src="images/zsq1.png"/></li>
+				</ul>
+				<div>
+					<img src="images/pic15.png"/><img src="images/pic16.png"/>
+				</div>
+			</div>
+			<div class="djh">
+				<h6>大聚惠·精编</h6>
+				<div class="clearfix">
+					<a class="fl"><img src="images/pic17.png"/ style="height:17rem;width:16rem;"></a>
+					<a class="fr"><img src="images/pic18.png"/ style="height:6.4rem;width:16rem;"></a>
+					<a class="fr"><img src="images/pic20.png"/ style="height:10.6rem;width:8rem;"></a>
+					<a class="fr"><img src="images/pic19.png"/ style="height:10.6rem;width:8rem;"></a>
+				</div>
+			</div>
+			<a><img src="images/pic21.png"/ style="height:8.5rem;width:100%;margin:1rem 0;"></a>
+			<div class="tshh clearfix">
+				<h6>特色好货</h6>
+				<a class="fl"><img src="images/pic22.png"/ style="height:12.5rem;width:16rem;"></a>
+				<a class="fr"><img src="images/pic23.png"/ style="height:6.25rem;width:16rem;"></a>
+				<a class="fr"><img src="images/pic24.png"/ style="height:6.25rem;width:16rem;"></a>
+				<a class="fl"><img src="images/pic25.png"/ style="height:6.25rem;width:16rem;"></a>
+				<a class="fr"><img src="images/pic26.png"/ style="height:6.25rem;width:16rem;"></a>
+				<a class="fr"><img src="images/pic27.png"/ style="height:6.25rem;width:16rem;"></a>
+				<a class="fr"><img src="images/pic28.png"/ style="height:6.25rem;width:16rem;"></a>
+				<a class="fr"><img src="images/pic29.png"/ style="height:6.25rem;width:16rem;"></a>
+				<a class="fr"><img src="images/pic30.png"/ style="height:6.25rem;width:16rem;"></a>
+			</div>
+			<a><img src="images/pic31.png"/ style="height:8.5rem;width:100%;margin:1rem 0;"></a>
+			<div class="tshh clearfix">
+				<h6>特色好货</h6>
+				<a class="fl"><img src="images/pic32.png"/ style="height:12.8rem;width:16rem;"></a>
+				<a class="fl"><img src="images/pic33.png"/ style="height:12.8rem;width:16rem;"></a>
+				<a class="fl"><img src="images/pic34.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic35.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic36.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic37.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic38.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic39.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic40.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic41.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic42.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic43.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic44.png"/ style="height:11rem;width:10.6rem;"></a>
+				<a class="fl"><img src="images/pic45.png"/ style="height:11rem;width:10.6rem;"></a>
+			</div>
+			<div class="rmsc clearfix">
+				<h6>品牌荟萃</h6>
+				<a class="fl"><img src="images/pic46.png"/ style="height:12.8rem;width:16rem;"></a>
+				<a class="fl"><img src="images/pic47.png"/ style="height:12.8rem;width:8rem;"></a>
+				<a class="fl"><img src="images/pic48.png"/ style="height:12.8rem;width:8rem;"></a>
+			</div>
+			<div class="snjr clearfix">
+				<h6>苏宁金融</h6>
+				<a class="fl"><img src="images/pic49.png"/ style="height:12.8rem;width:16rem;"></a>
+				<a class="fr"><img src="images/pic50.png"/ style="height:6.4rem;width:16rem;"></a>
+				<a class="fl"><img src="images/pic51.png"/ style="height:6.4rem;width:16rem;"></a>
+			</div>
+			<div class="hdtj clearfix">
+				<h6>好店推荐</h6>
+				<a class="fl"><img src="images/pic52.png"/ style="height:17.7rem;width:32rem;"></a>
+			</div>
+			<div class="cnxh clearfix">
+				<fieldset>
+					<legend><span>猜你喜欢</span></legend>
+				</fieldset>
+				<dl class="fl">
+					<dt><img src="images/pic53.png"/ style="height:14.8rem;width:14.8rem;"></dt>
+					<dd>记原装联想ThinkPad电脑包14寸15寸笔本双肩背包男女士背...
+						<i>￥89.00</i>
+					</dd>
+				</dl>
+				<dl class="fl">
+					<dt><img src="images/pic54.png"/ style="height:14.8rem;width:14.8rem;"></dt>
+					<dd>ThinkPad联想笔记本电脑包14寸15双肩包背包男女士...
+						<i>￥69.00</i>
+					</dd>
+				</dl>
+				<dl class="fl">
+					<dt><img src="images/pic53.png"/ style="height:14.8rem;width:14.8rem;"></dt>
+					<dd>记原装联想ThinkPad电脑包14寸15寸笔本双肩背包男女士背...
+						<i>￥89.00</i>
+					</dd>
+				</dl>
+				<dl class="fl">
+					<dt><img src="images/pic54.png"/ style="height:14.8rem;width:14.8rem;"></dt>
+					<dd>ThinkPad联想笔记本电脑包14寸15双肩包背包男女士...
+						<i>￥69.00</i>
+					</dd>
+				</dl>
+			</div>
+			<div class="app">
+					<i class="fl">下载苏宁易购客户端
+					<b>享手机专享价专属实惠</b></i>
+					<p class="fr">立即下载</p>
+			</div>
+			<a class="fl"><img src="images/pic55.png"/ style="height:9.5rem;width:32rem;"></a>
+		</section>
+	</body>
+</html>

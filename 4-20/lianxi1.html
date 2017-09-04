@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/reset.css"/>
+<style>
+	.wrap{
+		height:461px;
+		width:760px;
+		position:relative;
+		margin:50px auto;
+		background:yellow;
+		}
+	.box{
+		
+		position:absolute;
+		right:18px;
+		bottom:13px;
+		border:1px solid #909090;
+		background-color:#fff;
+		}
+	.shadow{
+		position:absolute;
+		left:7px;
+		top:7px;
+		background-color:#000;
+		width:278px;
+		height:179px;
+		z-index:0;
+		opacity:0.2; 
+
+		}
+	.text{
+		z-index:1;
+		position:relative;
+		background-color:#fff;
+		width:278px;
+		height:179px;}
+</style>
+</head>
+
+<body>
+	<div class="wrap">
+    	<div class="box">
+        	<div class="text"></div>
+            <div class="shadow">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

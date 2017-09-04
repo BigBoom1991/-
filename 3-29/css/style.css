@@ -1,0 +1,23 @@
+/* CSS Document */
+#big1{
+	width:496px;
+	height:616px;
+	border:2px solid #e15671;
+	border-top:2px solid #f19552;
+}
+#top1{
+	width:496px;
+	height:121px;
+	border-bottom:1px solid #8c1f34;
+	border-top:2px solid #f19552;	
+}
+#top2{
+	width:496px;
+	height:119px;
+	border-bottom:1px solid #8c1f34;
+}
+#top3{
+	width:496px;
+	height:195px;
+	border-bottom:1px solid #8c1f34;
+}
