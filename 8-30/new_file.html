@@ -21,12 +21,12 @@
 					super(name,age,sex)
 					this.money=money;
 				}
-				zhuan(n){
-					console.log("我能赚"+n+"k工资")
+				zhuan(){
+					return "我能赚"+this.money+"k工资"
 				}
 			}
 			let c= new Coder("joe",26,"man",20)
-			console.log(c.age)
+			console.log(c.zhuan())
 		</script>
 	</body>
 </html>

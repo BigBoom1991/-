@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			.red{
+				color: red;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="./css/base.css">
+    	<link rel="stylesheet" type="text/css" href="./css/index.css">
+		<!--<script src="./js/react.js"></script>
+		<script src="./js/react-dom.js"></script>
+		<script src="./js/browser.min.js"></script>
+		<script src="./data.js"></script>
+		<script src="./tools.js"></script>
+		<script src="./controller.js"></script>-->
+	</head>
+
+	<body>
+		<section class="todoapp"></section>
+
+<script type="text/babel">
+
+	/*
+		渲染结构：
+			1. 结构放在变量中
+			2. 直接写结构
+			3. 放在组件中
+			4. 结构数组中（组件中）
+	*/
+
+	var ItemComponet = React.createClass({
+		render(){
+			//completed
+			//var completed = this.props.isChecked ? "completed" : "";
+
+
+
+			return <li className={classNams({
+						completed:this.props.isChecked
+					})}>
+	                    <div className="view">
+	                        <input 
+	                        	className="toggle" 
+	                        	type="checkbox" 
+	                        	checked={this.props.isChecked}
+	                        	onChange={this.changeHandle}
+	                        />
+	                        <label>{this.props.title}</label>
+	                        <button onClick={this.clickHandle} className="destroy"></button>
+	                    </div>
+	                </li>
+		},
+		changeHandle(){
+			this.props.toggleItem(this.props.id);
+		},
+		clickHandle(){
+			//点击，告诉父组件要删除一条数据
+
+			this.props.delectItem(this.props.id);
+
+		}
+	})
+
+
+	
+	var Main = React.createClass({
+		render(){
+			//数据
+			var data = this.props.data;
+
+			var content,footer,n = 0,len = data.length;
+
+			//var _this = this;
+
+			//没有数据，中间和底部是不显示的
+			if(data.length !== 0){
+
+				data.forEach(function (item){
+					if( item.isChecked ){
+						n++;
+					}
+				});
+
+
+				content = <section className="main">
+			                <input 
+			                	className="toggle-all" 
+			                	type="checkbox" 
+			                	checked={n === len}
+			                	onChange={this.toggleAllItem}
+			                />
+			                <ul className="todo-list">
+			                    
+			                    {
+			                    	data.map(function (item,index){
+			                    		/*
+											{
+												id:1,
+												title:"这是第一条数据"
+											}
+			                    		*/
+			                    		return  <ItemComponet 
+			                    					key={index} 
+			                    					{...item}
+			                    					delectItem={this.mainDelectItem}
+			                    					toggleItem={this.mainToggoleItem}
+			                    				/>	
+			                    	}.bind(this))
+			                    }
+			                </ul>
+			            </section>
+
+			    footer = <footer className="footer">
+				            <span className="todo-count">
+				            	<strong>{len-n}</strong>
+				            	<span>条未选中</span>
+				            </span>
+			            </footer>
+			}
+
+			return (
+				<div>
+					 <header className="header" >
+		                <h1>todos</h1>
+		                <input 
+		                	className="new-todo" 
+		                	placeholder="请输入内容" 
+		                	onKeyDown={this.downHandle}
+		                />
+		            </header>
+		            {content}
+		            {footer}   
+				</div>
+			)
+		},
+		downHandle(ev){
+			if( ev.keyCode === 13 ){
+				var value = ev.target.value;
+
+				this.props.addItem(value);
+
+				ev.target.value = "";
+
+			}
+		},
+		mainDelectItem(id){
+			this.props.delectItem(id);
+		},
+		mainToggoleItem(id){
+			this.props.toggleItem(id);
+		},
+		toggleAllItem(ev){
+			var checked = ev.target.checked;
+			this.props.toggleAllItem(checked);
+
+		}
+	});
+
+	var html = <h1>hello</h1>
+
+	function render(){
+		ReactDOM.render(
+			<Main data={data} {...controller} />,
+			document.getElementsByClassName("todoapp")[0]
+		)
+	}
+
+	render();
+
+	controller.render = render;
+
+	
+</script>
+	
+
+
+
+	</body>
+</html>
+ 

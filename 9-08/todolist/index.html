@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todos</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <section class="todoapp">
+        <div>
+            <header class="header" >
+                <h1>todos</h1>
+                <input class="new-todo" placeholder="请输入内容" value="">
+            </header>
+            <section class="main">
+                <input class="toggle-all" id ="qx" type="checkbox" checked="">
+                <ul class="todo-list">
+                </ul>
+            </section>
+            <footer class="footer">
+	            <span class="todo-count">
+	            	<strong>0</strong>
+	            	<span>条未选中</span>
+	            </span>
+            </footer>
+        </div>
+    </section>
+    <script>
+    	let todoList=document.getElementsByClassName("todo-list")[0]
+    	let strong=document.getElementsByTagName("strong")[0]
+    	let n=0;
+    	let n1=0;
+    	class newObj{
+    		constructor(n){
+					this.newLi=document.createElement("li")
+					this.newLi.innerHTML=`
+                        <div class="view">
+                            <input class="toggle" type="checkbox">
+                            <label>${n}</label>
+                            <button class="destroy"></button>
+                        </div>
+                        <input class="edit"/>
+	                            `
+				}
+    			init(){
+    				todoList.appendChild(this.newLi);
+    				this.newLi.children[0].children[0].onclick=this.xz.bind(this);
+    				this.newLi.ondblclick=this.db.bind(this);
+    				this.newLi.children[0].children[2].onclick=this.sc.bind(this);
+    				n1++;
+    				pd();
+    			}
+    			db(){
+    				this.newLi.children[1].style="display:block;";
+    				this.newLi.children[0].children[1].style="display:none;"
+    				this.newLi.children[1].value=this.newLi.children[0].children[1].innerHTML;
+    				this.newLi.addEventListener("keydown",(ev)=>{
+    					if(ev.keyCode!=13){
+			    			return;
+			    		}
+						if(ev.target==this.newLi.children[1]){
+							this.newLi.children[0].children[1].innerHTML=this.newLi.children[1].value;
+						}
+						this.qxdb();
+					})
+    				document.addEventListener("click",(ev)=>{
+    					if(ev.target!=this.newLi.children[1]){
+	    					this.qxdb();
+	    				}
+    				})
+    			}
+    			qxdb(){
+    				this.newLi.children[1].style="";
+    				this.newLi.children[0].children[1].style="";
+    			}
+    			xz(ev){
+    				this.newLi.classList.toggle("completed")
+    				if(this.newLi.className){
+    					n++
+    				}else{
+    					n--
+    				}
+    				pd();
+    			}
+    			sc(){
+    				if(!this.newLi.className){
+    					n++
+    				}else{
+    					n--
+    				}
+    				pd();
+    				this.newLi.remove();
+    			}
+    	}
+    	let arr=localStorage.getItem('shuju').split(",")
+	  	arr.map(function(ev){
+	  		let k= new newObj(ev);
+		    	k.init();
+	  	})
+    	document.addEventListener("keydown",function(ev){
+    		if(ev.keyCode!=13){
+    			return;
+    		}
+    		if(ev.target.tagName!="INPUT"){
+    			return
+    		}
+    		if(ev.target.className=="new-todo"){
+    			if(ev.target.value){
+	    			let k= new newObj(ev.target.value);
+	    			k.init();
+	    			arr.push(ev.target.value)
+					localStorage.setItem('shuju',arr);
+					console.log(localStorage.getItem('shuju',arr));ev.target.value="";
+    			return
+    			}
+    		}
+    	})
+    	function pd(){
+    		if(n==n1&&n!=0){
+    			qx.checked=true;
+    		}else{
+    			qx.checked=false;
+    		}
+    		strong.innerHTML=n1-n;
+    	};
+		pd();
+		let x=document.getElementsByClassName("todo-list")[0];
+		let xm=x.getElementsByTagName("li");
+		qx.onclick=function(){
+			if(qx.checked==true){
+				for(let i=0;i<xm.length;i++){
+					xm[i].children[0].children[0].checked=true;
+					
+				}
+				n=n1;
+				strong.innerHTML=n1-n;
+			}else{
+				for(let i=0;i<xm.length;i++){
+					xm[i].children[0].children[0].checked=false;
+				}
+				n=0;
+				strong.innerHTML=n1-n;
+			}
+		}
+		
+		
+    </script>
+</body>
+
+</html>

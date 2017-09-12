@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="file" name="xz" id="xz"/>
+		<input type="submit" value="上传" id="sc"/>
+		<script>
+			sc.onclick=function(){
+				let x = new XMLHttpRequest();
+				x.open(
+					'post',
+					"http://localhost/backend/post_file.php",
+					true
+					)
+			}
+		</script>
+	</body>
+</html>
